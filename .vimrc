@@ -22,7 +22,7 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plugin 'kien/ctrlp.vim'
 " CtrlP settings
-let g:ctrlp_match_window = 'top,order:ttb'
+let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 " install ag first and try the one below
@@ -110,6 +110,12 @@ inoremap kj <esc>
 
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
+
+" edit vimrc/zshrc and load vimrc bindings
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ez :vsp ~/.zshrc<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
 
 " # file saving
 " Return to last edit position when opening files (You want this!)
