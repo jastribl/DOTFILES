@@ -44,6 +44,9 @@ Plugin 'tpope/vim-fugitive'
 " A git mirror of gundo.vim ('super' undo tree)
 Plugin 'sjl/gundo.vim'
 
+" Vim script for text filtering and alignment
+Plugin 'godlygeek/tabular'
+
 " A code-completion engine for Vim
 " Plugin 'valloric/youcompleteme'
 
@@ -89,6 +92,7 @@ set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
 set cursorline
+set scrolloff=10
 
 
 " # Searching
@@ -143,6 +147,7 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
+autocmd FileType h,c,cpp,java,php,tex autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " # clipboard
 " yank to clipboard
@@ -168,4 +173,15 @@ nnoremap <C-H> <C-W><C-H>
 " # other
 command! Q q
 
+" Disable Arrow keys in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
