@@ -36,7 +36,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'sickill/vim-monokai'
 
 " Lean & mean status/tabline for vim that's light as air.
-" Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
@@ -50,8 +49,8 @@ Plugin 'tpope/vim-fugitive'
 " A git mirror of gundo.vim ('super' undo tree)
 Plugin 'sjl/gundo.vim'
 
-" Vim script for text filtering and alignment
-Plugin 'godlygeek/tabular'
+" Help folks to align text, eqns, declarations, tables, etc
+Plugin 'Align'
 
 " A code-completion engine for Vim
 " Plugin 'valloric/youcompleteme'
@@ -66,8 +65,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_cpp_compiler = 'gpp'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " A modern vim plugin for editing LaTeX files.
 Plugin 'lervag/vimtex'
