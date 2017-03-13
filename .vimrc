@@ -54,6 +54,10 @@ Plugin 'godlygeek/tabular'
 " let g:livepreview_previewer = 'open -a Skim'
 " let g:livepreview_previewer = 'open -a Skim'
 
+" True Sublime Text style multiple selections for Vim
+Plugin 'terryma/vim-multiple-cursors'
+
+
 " A modern vim plugin for editing LaTeX files.
 Plugin 'lervag/vimtex'
 let g:Tex_DefaultTargetFormat = 'pdf' " Change default target to pdf, if not dvi is used
