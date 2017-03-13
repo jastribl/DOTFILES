@@ -37,6 +37,12 @@ Plugin 'sickill/vim-monokai'
 
 " Lean & mean status/tabline for vim that's light as air.
 " Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+set laststatus=2
 
 " git wrapper
 Plugin 'tpope/vim-fugitive'
@@ -50,13 +56,18 @@ Plugin 'godlygeek/tabular'
 " A code-completion engine for Vim
 " Plugin 'valloric/youcompleteme'
 
-" Plugin 'xuhdev/vim-latex-live-preview'
-" let g:livepreview_previewer = 'open -a Skim'
-" let g:livepreview_previewer = 'open -a Skim'
-
 " True Sublime Text style multiple selections for Vim
 Plugin 'terryma/vim-multiple-cursors'
 
+" Syntax checking hacks for vim
+Plugin 'scrooloose/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
 " A modern vim plugin for editing LaTeX files.
 Plugin 'lervag/vimtex'
@@ -97,7 +108,6 @@ set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
 set cursorline
 set scrolloff=10
-set spell
 set spelllang=en_ca
 set mouse=a
 
