@@ -93,7 +93,18 @@ set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
 set cursorline
 set scrolloff=10
+set spell
+set spelllang=en_ca
+set mouse=a
 
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
 " # Searching
 set incsearch               " search as characters are entered
@@ -172,16 +183,19 @@ nnoremap <C-H> <C-W><C-H>
 
 " # other
 command! Q q
+command! W w
 
 " Disable Arrow keys in Escape mode
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
 
 " Disable Arrow keys in Insert mode
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
+
+inoremap <S-Tab> <C-d>
 
