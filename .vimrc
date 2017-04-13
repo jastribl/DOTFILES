@@ -14,16 +14,23 @@ Plugin 'scrooloose/nerdtree'
 " Vim plugin to list, select and switch between buffers.
 Plugin 'jeetsukumaran/vim-buffergator'
 
-" Lightweight Toolbox for LaTeX - New Official repository
-" Plugin 'latex-box-team/latex-box'
-
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
-" install ag first and try the one below
-" let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_show_hidden = 1
+" The Silver Searcher
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git --nocolor -g ""'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+endif
 
 " Vim plugin for intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
@@ -39,8 +46,8 @@ Plugin 'sickill/vim-monokai'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 1
 set laststatus=2
 
 " git wrapper
@@ -52,11 +59,9 @@ Plugin 'sjl/gundo.vim'
 " Help folks to align text, eqns, declarations, tables, etc
 Plugin 'Align'
 
-" A code-completion engine for Vim
-" Plugin 'valloric/youcompleteme'
-
 " True Sublime Text style multiple selections for Vim
 Plugin 'terryma/vim-multiple-cursors'
+let g:multi_cursor_exit_from_insert_mode = 0
 
 " Syntax checking hacks for vim
 Plugin 'scrooloose/syntastic'
@@ -64,11 +69,16 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_cpp_compiler = 'gpp'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_java_javac_config_file_enabled = 1
+let g:syntastic_quiet_messages = {
+    \ "!level":  "warnings",
+    \ "type":    "syntax",
+    \ "regex":   'serializable class Stroke has no definition of serialVersionUID'}
 
 " A modern vim plugin for editing LaTeX files.
 Plugin 'lervag/vimtex'
@@ -84,8 +94,8 @@ function! UpdateSkim(status)
   let l:cmd = [g:vimtex_view_general_viewer, '-r', '-g']
   call job_start(l:cmd + [line('.'), l:out, l:tex])
 endfunction
-filetype plugin indent on
 
+filetype plugin indent on
 
 " # General
 " Sets how many lines of history VIM has to remember
@@ -109,6 +119,7 @@ set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
 set cursorline
 set scrolloff=10
+" set spell
 set spelllang=en_ca
 set mouse=a
 
@@ -119,7 +130,8 @@ function! Tab_Or_Complete()
     return "\<Tab>"
   endif
 endfunction
-:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
 
 " # Searching
 set incsearch               " search as characters are entered
@@ -127,32 +139,35 @@ set hlsearch                " highlight matches
 set ignorecase              " Ignore case when searching
 set smartcase               " When searching try to be smart about cases
 
+" turn off search highlightd
+nnoremap <leader><space> :nohlsearch<CR>
+
+" bind <leader / to grep shortcut
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap <leader>/ :Ag<SPACE>
+
 
 " # Movement
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+nnoremap <down> g<down>
+nnoremap <up> g<up>
 
-" move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-
-" $/^ doesn't do anything
-nnoremap $ <nop>
-nnoremap ^ <nop>
+" map ctrl-e and ctrl-a to beginning and end of line like in terminal
+imap <C-e> <ESC>A
+imap <C-a> <ESC>I
+nmap <C-E> A
+nmap <C-A> I
 
 " make certain keys wrap lines
 set whichwrap+=<,>,h,l,[,]
 
-" highlight last inserted text
-" nnoremap gV `[v`]
+" map shift tab to tab backward in insert mode
+inoremap <S-Tab> <C-d>
 
 
 " # Leader key shortcuts
-" let mapleader=","       " leader is comma
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
-
 " jk is escape
 inoremap kj <esc>
 
@@ -173,6 +188,7 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
+" trim extra whitespaces at ends of lines for certain file types
 autocmd FileType h,c,cpp,java,php,tex autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " # clipboard
@@ -196,21 +212,17 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
-" # other
+" because I can't type :)
 command! Q q
 command! W w
+command! WQ wq
+command! QW wq
 
-" Disable Arrow keys in Escape mode
-" map <up> <nop>
-" map <down> <nop>
-" map <left> <nop>
-" map <right> <nop>
+" Selecting and moving things like in Sublime
+" nnoremap <C-S-L> V
+vnoremap <C-S-L> j
 
-" Disable Arrow keys in Insert mode
-" imap <up> <nop>
-" imap <down> <nop>
-" imap <left> <nop>
-" imap <right> <nop>
-
-inoremap <S-Tab> <C-d>
+" mapping F5 to build latex
+autocmd Filetype tex nnoremap <buffer> <F5> :w<CR><Bar>:VimtexView<CR>
+autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR><Bar>:VimtexView<CR>
 

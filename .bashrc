@@ -1,0 +1,58 @@
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+alias ssh_ece='ssh jastribl@ecelinux.uwaterloo.ca'
+alias ssh_cs='ssh jastribl@linux.student.cs.uwaterloo.ca'
+
+# use vim installed through brew, not the built in vim
+alias vim='/usr/local/bin/vim'
+
+# turn php-unit coverage off and on
+alias coverageoff='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini.bk'
+alias coverageon='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini.bk /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini'
+
+# quick commands for unit testing php
+alias test='bin/phpunit -c tests/phpunit.xml'
+alias testonly='bin/phpunit -c tests/phpunit.xml --filter '
+alias coveronly='bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
+alias integrationtest='bin/phpunit -c tests/phpunit.xml integration-tests'
+
+# quick commands for vagrant setup at TextNow
+alias vagranton='cd ~/Documents/GitHub/puppet/contrib && gl --prune && vagrant box update && vagrant up && vagrant ssh server'
+alias vagrantoff='cd ~/Documents/GitHub/puppet/contrib && vagrant halt'
+
+# my trusty git hacks
+alias wipit='git add . && git commit -nam "WIP"'
+alias unwipit='git reset --soft HEAD~ && git reset'
+
+# checkout local branched only
+_git_checkout ()
+{
+        __git_has_doubledash && return
+
+        case "$cur" in
+        --conflict=*)
+                __gitcomp "diff3 merge" "" "${cur##--conflict=}"
+                ;;
+        --*)
+                __gitcomp "
+                        --quiet --ours --theirs --track --no-track --merge
+                        --conflict= --orphan --patch
+                        "
+                ;;
+        *)
+                # check if --track, --no-track, or --no-guess was specified
+                # if so, disable DWIM mode
+                local flags="--track --no-track --no-guess" track=1
+                if [ -n "$(__git_find_on_cmdline "$flags")" ]; then
+                        track=''
+                fi
+                if [ "$command" = "checkoutr" ]; then
+                    __gitcomp_nl "$(__git_refs '' $track)"
+                else
+                    __gitcomp_nl "$(__git_heads '' $track)"
+                fi
+                ;;
+        esac
+}
+
