@@ -1,6 +1,6 @@
 # !/bin/bash
 
-files="bashrc vimrc zshrc gitconfig"
+files="bashrc vimrc zshrc gitconfig gitignore_global"
 
 dotfileDir="$PWD/dotfiles"
 backupDir="$PWD/dotfiles_old/backup_$(date +%Y-%m-%d:%H:%M:%S)"
