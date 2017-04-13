@@ -121,7 +121,7 @@ set cursorline
 set scrolloff=10
 " set spell
 set spelllang=en_ca
-set mouse=a
+" set mouse=a
 
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
