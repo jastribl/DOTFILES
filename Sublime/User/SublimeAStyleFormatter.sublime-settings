@@ -1,0 +1,21 @@
+{
+    "autoformat_on_save": true,
+    "options_default": {
+        "style": "java",
+
+        "indent-classes": true,
+        "indent-switches": true,
+        "indent-cases": true,
+        "indent-namespaces": true,
+        "indent-labels": true,
+        "break-blocks": "default",
+
+        "unpad-paren": true,
+        "align-pointer": "type",
+        "align-reference": "name",
+
+        "add-brackets": true,
+
+        "align-method-colon": true
+    }
+}

@@ -1,0 +1,25 @@
+{
+	"added_words":
+	[
+	],
+	"always_show_minimap_viewport": true,
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 11,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"ignored_words":
+	[
+	],
+	"scroll_past_end": true,
+	"show_line_endings": true,
+	"show_tab_close_buttons": true,
+	"spell_check": true,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": false,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true
+}

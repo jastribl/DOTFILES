@@ -1,0 +1,13 @@
+{
+  "user": {
+    "transformations": {
+      "PDF": {
+        "pandoc-arguments": [
+          "-t", "pdf",
+          "--latex-engine", "/Library/TeX/texbin/pdflatex",
+          "-V", "geometry:margin=1.25in"
+        ]
+      }
+    }
+  }
+}

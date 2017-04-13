@@ -1,0 +1,8 @@
+[
+    // Reassign expand_selection to ctrl+l, ctrl+l
+    { "keys": ["super+l"], "command": "expand_selection", "args": {"to": "line"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    }
+]
