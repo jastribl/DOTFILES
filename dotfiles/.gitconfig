@@ -1,0 +1,18 @@
+[credential]
+	helper = osxkeychain
+[user]
+[gui]
+	fontdiff = -family Monaco -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+	tabsize = 4
+[user]
+	name = Justin Stribling
+	email = justin.stribling@textnow.com
+[push]
+	default = current
+[pull]
+	default = current
+[alias]
+	checkoutr = checkout
+[diff]
+	tool = vimdiff
+
