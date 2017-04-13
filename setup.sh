@@ -1,7 +1,7 @@
-#!/bin/bash
+# !/bin/bash
 
 echo "---------- installing brew stuff ----------"
-./install_brew.sh
+./setup-brew.sh
 
 echo "---------- installing dotfiles ----------"
-./install_dotfiles.sh
+./setup-dotfiles.sh
