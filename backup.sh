@@ -1,5 +1,7 @@
 #!/bin/bash
 
-cp ~/.bashrc ./.bashrc
-cp ~/.zshrc ./.zshrc
-cp ~/.vimrc ./.vimrc
+mkdir -p dotfiles
+
+cp ~/.bashrc ./dotfiles/.bashrc
+cp ~/.zshrc ./dotfiles/.zshrc
+cp ~/.vimrc ./dotfiles/.vimrc
