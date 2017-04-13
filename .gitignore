@@ -2,3 +2,6 @@
 Sublime/User/Package\ Control.cache/*
 Sublime/User/Package\ Control.last-run
 dotfiles_old
+vim/.netrwhist
+vim/bundle/*
+!vim/bundle/vundle
