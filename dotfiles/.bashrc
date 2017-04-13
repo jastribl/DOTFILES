@@ -25,6 +25,10 @@ alias vagrantoff='cd ~/Documents/GitHub/puppet/contrib && vagrant halt'
 alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
 
+alias set_git_email_textnow='git config --local user.email "justin.stribling@textnow.com"'
+alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
+alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
+
 # checkout local branched only
 _git_checkout ()
 {
