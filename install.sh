@@ -1,13 +1,7 @@
 #!/bin/bash
-brew install gcc
-brew install git
-brew install htop
-brew install pandoc
-brew install python
-brew install ssh-copy-id
-brew install the_silver_searcher
-brew install valgrind
-brew install vim --override-system-vi --with-client-server --force
-brew install wget
-brew install zsh
-brew install zsh-completions
+
+echo "---------- installing brew stuff ----------"
+./install_brew.sh
+
+echo "---------- installing dotfiles ----------"
+./install_dotfiles.sh
