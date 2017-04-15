@@ -1,20 +1,12 @@
 {
 	"added_words":
 	[
+		"Stribling"
 	],
 	"always_show_minimap_viewport": true,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 11,
-	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"ignored_words":
-	[
-	],
 	"file_exclude_patterns":
 	[
 		".DS_Store"
@@ -23,6 +15,15 @@
 	[
 		".git",
 		"node_modules"
+	],
+	"font_size": 11,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"ignored_words":
+	[
 	],
 	"scroll_past_end": true,
 	"show_line_endings": true,
