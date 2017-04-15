@@ -100,6 +100,11 @@ endfunction
 
 filetype plugin indent on
 
+if !has("gui_running")
+    set t_Co=256
+    set term=screen-256color
+endif
+
 " # General
 " Sets how many lines of history VIM has to remember
 set history=700
