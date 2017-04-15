@@ -17,6 +17,7 @@ apps=(gcc
       wget
       zsh
       zsh-completions
+      tmux
 )
 
 for app in "${apps[@]}"; do
