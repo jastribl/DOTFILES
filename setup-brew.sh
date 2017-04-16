@@ -13,7 +13,7 @@ apps=(gcc
       python
       ssh-copy-id
       the_silver_searcher
-      "vim --override-system-vi --with-client-server"
+      "vim --override-system-vi"
       wget
       zsh
       zsh-completions
