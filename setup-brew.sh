@@ -20,11 +20,30 @@ apps=(gcc
       zsh
       zsh-completions
       tmux
+      cask
 )
 
 for app in "${apps[@]}"; do
     echo "> brew install $app"
     brew install $app
+done
+
+caskapps=(
+    sublime-text
+    ccleaner
+    flux
+    puush
+    iterm2
+    google-chrome
+    google-drive
+    skim
+    slack
+    spectacle
+)
+
+for app in "${caskapps[@]}"; do
+    echo "brew cask install $app"
+    brew cask install $app
 done
 
 echo "---------- getting oh my zsh ----------"
