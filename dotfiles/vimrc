@@ -86,6 +86,11 @@ let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSuppor
 let g:vimtex_view_general_options = '-r -g @line @pdf @tex'
 let g:vimtex_echo_ignore_wait = 1
 
+" Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
+Plugin 'bronson/vim-trailing-whitespace'
+" trim extra whitespaces at ends of lines
+nnoremap <leader>w :FixWhitespace<CR>
+
 filetype plugin indent on
 
 if !has("gui_running")
@@ -186,9 +191,6 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
-" trim extra whitespaces at ends of lines for certain file types
-autocmd FileType h,c,cpp,java,php,tex autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " # clipboard
 " yank to clipboard
