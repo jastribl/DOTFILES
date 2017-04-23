@@ -1,7 +1,7 @@
 # !/bin/bash
 
-echo "---------- installing brew stuff ----------"
-./setup-brew.sh
+echo "---------- installing stuff ----------"
+./setup-installs.sh
 
 echo "---------- installing vim stuff ----------"
 ./setup-vim.sh
