@@ -73,30 +73,18 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_cpp_compiler = 'gpp'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 let g:syntastic_java_javac_config_file_enabled = 1
-let g:syntastic_quiet_messages = {
-    \ "!level":  "warnings",
-    \ "type":    "syntax",
-    \ "regex":   'serializable class Stroke has no definition of serialVersionUID'}
 
 " A modern vim plugin for editing LaTeX files.
 Plugin 'lervag/vimtex'
 let g:Tex_DefaultTargetFormat = 'pdf' " Change default target to pdf, if not dvi is used
 let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r -g @line @pdf @tex'
-let g:vimtex_latexmk_callback_hooks = ['UpdateSkim']
 let g:vimtex_echo_ignore_wait = 1
-function! UpdateSkim(status)
-  if !a:status | return | endif
-  let l:out = b:vimtex.out()
-  let l:tex = expand('%:p')
-  let l:cmd = [g:vimtex_view_general_viewer, '-r', '-g']
-  call job_start(l:cmd + [line('.'), l:out, l:tex])
-endfunction
 
 filetype plugin indent on
 
@@ -234,6 +222,6 @@ command! QW wq
 vnoremap <C-S-L> j
 
 " mapping F5 to build latex
-autocmd Filetype tex nnoremap <buffer> <F5> :w<CR><Bar>:VimtexView<CR>
-autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR><Bar>:VimtexView<CR>
+autocmd Filetype tex nnoremap <buffer> <F5> :w<CR>:VimtexView<CR>
+autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR>:VimtexView<CR>a
 
