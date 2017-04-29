@@ -4,6 +4,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 alias ssh_ece='ssh jastribl@ecelinux.uwaterloo.ca'
 alias ssh_cs='ssh jastribl@linux.student.cs.uwaterloo.ca'
 
+export VAGRANT_CWD=/Users/justin.stribling/Documents/GitHub/puppet/contrib
+
 # use vim installed through brew, not the built in vim
 alias vim='/usr/local/bin/vim'
 
@@ -12,13 +14,13 @@ alias coverageoff='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini /usr/local/et
 alias coverageon='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini.bk /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini'
 
 # quick commands for unit testing php
-alias test='bin/phpunit -c tests/phpunit.xml'
-alias testonly='bin/phpunit -c tests/phpunit.xml --filter '
-alias coveronly='bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
+alias test='coverageoff;bin/phpunit -c tests/phpunit.xml'
+alias testonly='coverageoff;bin/phpunit -c tests/phpunit.xml --filter '
+alias coveronly='coverageon;bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
 alias integrationtest='bin/phpunit -c tests/phpunit.xml integration-tests'
 
 # quick commands for vagrant setup at TextNow
-alias vagranton='cd ~/Documents/GitHub/puppet/contrib && gl --prune && vagrant box update && vagrant up && vagrant ssh server'
+alias vagranton='cd ~/Documents/GitHub/puppet/contrib && gl --prune && vagrant box update && vagrant up ubuntu-server; vagrant up ubuntu-web && vagrant ssh ubuntu-server'
 alias vagrantoff='cd ~/Documents/GitHub/puppet/contrib && vagrant halt'
 
 # my trusty git hacks
