@@ -6,5 +6,8 @@ echo "---------- installing stuff ----------"
 echo "---------- installing vim stuff ----------"
 ./setup-vim.sh
 
+echo "---------- installing tmux stuff ----------"
+./setup-tmux.sh
+
 echo "---------- installing dotfiles ----------"
 ./setup-dotfiles.sh

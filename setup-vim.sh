@@ -5,7 +5,6 @@ if [[ -e ~/.vim ]]; then
 else
     echo === Checking out vundle
     git submodule update --init
-    cd -
 
     echo === Linking vim directories
     ln -s "$PWD/vim" ~/.vim
