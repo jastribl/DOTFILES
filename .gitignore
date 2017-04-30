@@ -9,3 +9,5 @@ tmux/plugins/*
 !tmux/plugins/tpm
 tmux/resurrect/*.txt
 tmux/resurrect/last
+
+Sublime/User/oscrypto-ca-bundle.crt
