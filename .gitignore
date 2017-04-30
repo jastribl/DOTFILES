@@ -10,4 +10,6 @@ tmux/plugins/*
 tmux/resurrect/*.txt
 tmux/resurrect/last
 
+/* sublime stuff */
 Sublime/User/oscrypto-ca-bundle.crt
+Package\ Control.merged-ca-bundle
