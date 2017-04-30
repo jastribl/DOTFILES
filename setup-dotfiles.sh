@@ -1,5 +1,7 @@
 # !/bin/bash
 
+echo "---------- installing dotfiles ----------"
+
 files="bashrc vimrc zshrc gitconfig gitignore_global tmux.conf"
 
 dotfileDir="$PWD/dotfiles"

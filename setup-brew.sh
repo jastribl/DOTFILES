@@ -45,9 +45,3 @@ for app in "${caskapps[@]}"; do
     echo "brew cask install $app"
     brew cask install $app
 done
-
-echo "---------- getting oh my zsh ----------"
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-
-echo "---------- setting default shell ----------"
-chsh -s $(which zsh)

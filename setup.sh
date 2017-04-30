@@ -1,13 +1,8 @@
 # !/bin/bash
 
-echo "---------- installing stuff ----------"
-./setup-installs.sh
-
-echo "---------- installing vim stuff ----------"
+./setup-submodules.sh
+./setup-brew.sh
+./setup-zsh.sh
 ./setup-vim.sh
-
-echo "---------- installing tmux stuff ----------"
 ./setup-tmux.sh
-
-echo "---------- installing dotfiles ----------"
 ./setup-dotfiles.sh
