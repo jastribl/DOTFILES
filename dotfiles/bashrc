@@ -38,6 +38,8 @@ alias set_git_email_textnow='git config --local user.email "justin.stribling@tex
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
 
+alias remove_ds_store_files='sudo find . -name '.DS_Store' -type f -delete'
+
 PR () {
     BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\.git//'`
     BASE_BRANCH='develop'
