@@ -17,3 +17,5 @@ for file in $files; do
     echo "> ln -s $dotfileDir/$file ~/.$file"
     ln -s $dotfileDir/$file ~/.$file
 done
+
+touch ~/.hushlogin
