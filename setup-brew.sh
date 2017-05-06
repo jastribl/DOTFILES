@@ -52,6 +52,7 @@ caskapps=(
     messenger
     postman
     sourcetree
+    dash
 )
 
 for app in "${caskapps[@]}"; do
