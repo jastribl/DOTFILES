@@ -21,6 +21,7 @@ apps=(gcc
       zsh-completions
       tmux
       cask
+      node
 )
 
 for app in "${apps[@]}"; do
@@ -39,6 +40,11 @@ caskapps=(
     skim
     slack
     spectacle
+    java
+    intellij-idea
+    clion
+    xquartz
+    virtualbox
 )
 
 for app in "${caskapps[@]}"; do
