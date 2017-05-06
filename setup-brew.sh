@@ -22,6 +22,7 @@ apps=(gcc
       tmux
       cask
       node
+      mongodb
 )
 
 for app in "${apps[@]}"; do
@@ -45,6 +46,12 @@ caskapps=(
     clion
     xquartz
     virtualbox
+    isyncr-desktop
+    4k-youtube-to-mp3
+    android-file-transfer
+    messenger
+    postman
+    sourcetree
 )
 
 for app in "${caskapps[@]}"; do
