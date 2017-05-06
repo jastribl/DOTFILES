@@ -4,6 +4,13 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 alias ssh_ece='ssh jastribl@ecelinux.uwaterloo.ca'
 alias ssh_cs='ssh jastribl@linux.student.cs.uwaterloo.ca'
 
+alias sde1='ssh root@10.20.1.51'
+alias sde2='ssh root@10.20.1.52'
+alias spb1='ssh root@10.20.1.54'
+alias spb2='ssh root@10.20.1.55'
+alias pts1='ssh root@10.20.1.57'
+alias pts2='ssh root@10.20.1.58'
+
 export VAGRANT_CWD=/Users/justin.stribling/Documents/GitHub/puppet/contrib
 
 # use vim installed through brew, not the built in vim
