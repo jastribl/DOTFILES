@@ -14,8 +14,7 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>echo vim /Users/justin.stribling/Google\ Drive/3A/CS\ 341/Assignments/Assignment\ 4/assignment-4.tex +</string>
-		<string>echo vim /Users/justin.stribling/Google\ Drive/3A/CS\ 341/Assignments/Assignment\ 3/assignment-3.tex +</string>
+		<string></string>
 	</array>
 	<key>CopySelection</key>
 	<true/>
@@ -1557,7 +1556,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/justin.stribling</string>
+			<string>~</string>
 		</dict>
 	</array>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>

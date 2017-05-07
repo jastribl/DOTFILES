@@ -11,7 +11,7 @@ alias spb2='ssh root@10.20.1.55'
 alias pts1='ssh root@10.20.1.57'
 alias pts2='ssh root@10.20.1.58'
 
-export VAGRANT_CWD=/Users/justin.stribling/Documents/GitHub/puppet/contrib
+export VAGRANT_CWD=~/Documents/GitHub/puppet/contrib
 
 # use vim installed through brew, not the built in vim
 alias vim='/usr/local/bin/vim'
