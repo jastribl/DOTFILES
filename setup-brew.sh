@@ -53,6 +53,8 @@ caskapps=(
     postman
     sourcetree
     dash
+    mactex
+    microsoft-office
 )
 
 for app in "${caskapps[@]}"; do
