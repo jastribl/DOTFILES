@@ -91,6 +91,9 @@ Plugin 'bronson/vim-trailing-whitespace'
 " trim extra whitespaces at ends of lines
 nnoremap <leader>w :FixWhitespace<CR>
 
+" CoffeeScript support for vim
+Plugin 'kchmck/vim-coffee-script'
+
 filetype plugin indent on
 
 if !has("gui_running")
