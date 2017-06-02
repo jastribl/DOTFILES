@@ -56,6 +56,7 @@ caskapps=(
     mactex
     microsoft-office
     disk-inventory-x
+    diff-so-fancy
 )
 
 for app in "${caskapps[@]}"; do
