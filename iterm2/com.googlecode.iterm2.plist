@@ -295,9 +295,9 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>398 358 796 473 0 0 1680 1027 </string>
+	<string>398 329 1016 502 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 5 1680 1022 0 0 1680 1027 </string>
+	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 101 570 473 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_F378F856-B266-46EF-8E21-37815A16D937</key>
@@ -715,9 +715,9 @@
 				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string>b</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -743,9 +743,9 @@
 				<key>0xf703-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string>f</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -886,7 +886,7 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -1639,7 +1639,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-14T16:42:40Z</date>
+	<date>2017-05-26T00:29:01Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
