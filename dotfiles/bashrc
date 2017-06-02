@@ -14,6 +14,8 @@ alias pts2='ssh root@10.20.1.58'
 
 export VAGRANT_CWD=~/Documents/GitHub/puppet/contrib
 
+alias reindex_spotlight='sudo mdutil -E -i on /'
+
 # use vim installed through brew, not the built in vim
 alias vim='/usr/local/bin/vim'
 
@@ -34,6 +36,7 @@ alias vagrantoff='cd ~/Documents/GitHub/puppet/contrib && vagrant halt'
 # my trusty git hacks
 alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
+alias gap='git add --patch'
 
 alias set_git_email_textnow='git config --local user.email "justin.stribling@textnow.com"'
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
