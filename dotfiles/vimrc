@@ -125,7 +125,7 @@ set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
 " set cursorline
-set scrolloff=10
+set scrolloff=7
 " set spell
 set spelllang=en_ca
 " set mouse=a
