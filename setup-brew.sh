@@ -23,6 +23,7 @@ apps=(gcc
       cask
       node
       mongodb
+      reattach-to-user-namespace
 )
 
 for app in "${apps[@]}"; do
