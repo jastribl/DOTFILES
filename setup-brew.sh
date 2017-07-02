@@ -64,3 +64,9 @@ for app in "${caskapps[@]}"; do
     echo "brew cask install $app"
     brew cask install $app
 done
+
+# some specific settings for the things installed above
+
+# allow key presses to releat on hold in sublime
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+
