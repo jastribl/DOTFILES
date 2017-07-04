@@ -185,6 +185,8 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>ev :tabedit $MYVIMRC<CR>
 nnoremap <leader>ez :tabedit ~/.zshrc<CR>
 nnoremap <leader>eb :tabedit ~/.bashrc<CR>
+nnoremap <leader>et :tabedit ~/.tmux.conf<CR>
+nnoremap <leader>etl :tabedit ~/.tmux.conf.local<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 
