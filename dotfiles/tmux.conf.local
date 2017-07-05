@@ -264,6 +264,9 @@ unbind C-f
 # move status line to top
 set -g status-position top
 
+# lower the timeout for key repeats
+set -sg repeat-time 400
+
 # toggle synchronize-panes
 bind a set-window-option synchronize-panes
 
