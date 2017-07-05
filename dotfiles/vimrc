@@ -181,12 +181,20 @@ inoremap kj <esc>
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 
+function! TabEditSmart(file)
+  if bufname("%") == ""
+    execute "edit " . a:file
+  else
+    execute "tabedit " a:file
+  endif
+endfunction
+
 " edit vimrc/zshrc and load vimrc bindings
-nnoremap <leader>ev :tabedit $MYVIMRC<CR>
-nnoremap <leader>ez :tabedit ~/.zshrc<CR>
-nnoremap <leader>eb :tabedit ~/.bashrc<CR>
-nnoremap <leader>et :tabedit ~/.tmux.conf<CR>
-nnoremap <leader>etl :tabedit ~/.tmux.conf.local<CR>
+nnoremap <leader>ev :call TabEditSmart($MYVIMRC)<CR>
+nnoremap <leader>ez :call TabEditSmart("~/.zshrc")<CR>
+nnoremap <leader>eb :call TabEditSmart("~/.bashrc")<CR>
+nnoremap <leader>et :call TabEditSmart("~/.tmux.conf")<CR>
+nnoremap <leader>etl :call TabEditSmart("~/.tmux.conf.local")<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 
