@@ -58,6 +58,8 @@ Plugin 'tpope/vim-fugitive'
 
 " A git mirror of gundo.vim ('super' undo tree)
 Plugin 'sjl/gundo.vim'
+" toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
 
 " Help folks to align text, eqns, declarations, tables, etc
 Plugin 'Align'
@@ -107,6 +109,8 @@ set history=1000
 
 set number
 set smartindent
+set breakindent
+set breakindentopt=shift:4
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -126,9 +130,10 @@ set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
 " set cursorline
 set scrolloff=7
-" set spell
+set linebreak
+set spell
 set spelllang=en_ca
-set mouse=a
+" set mouse=a
 
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
@@ -168,6 +173,7 @@ nmap <C-E> A
 nmap <C-A> I
 
 " make certain keys wrap lines
+" todo: consider turning this off and seeing how it is
 set whichwrap+=<,>,h,l,[,]
 
 " map shift tab to tab backward in insert mode
@@ -178,8 +184,9 @@ inoremap <S-Tab> <C-d>
 " jk is escape
 inoremap kj <esc>
 
-" toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
+" indent multiple times while in visual mode
+vnoremap < <gv
+vnoremap > >gv
 
 function! TabEditSmart(file)
   if bufname("%") == ""
