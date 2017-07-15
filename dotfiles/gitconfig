@@ -25,3 +25,12 @@
 	autoStash = true
 [remote "origin"]
 	prune = true
+[color]
+	ui = true
+[color "diff"]
+	meta = blue bold
+	frag = magenta bold
+	commit = blue bold
+	whitespace = red reverse
+[diff-so-fancy]
+	first-run = false
