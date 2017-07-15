@@ -8,23 +8,24 @@ else
     brew update
 fi
 
-apps=(gcc
-      git
-      htop
-      pandoc
-      python
-      ssh-copy-id
-      the_silver_searcher
-      "vim --override-system-vi"
-      wget
-      zsh
-      zsh-completions
-      tmux
-      cask
-      node
-      mongodb
-      reattach-to-user-namespace
-      diff-so-fancy
+apps=(
+    gcc
+    git
+    htop
+    pandoc
+    python
+    ssh-copy-id
+    the_silver_searcher
+    "vim --override-system-vi"
+    wget
+    zsh
+    zsh-completions
+    tmux
+    cask
+    node
+    mongodb
+    reattach-to-user-namespace
+    diff-so-fancy
 )
 
 for app in "${apps[@]}"; do
