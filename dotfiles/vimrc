@@ -171,7 +171,6 @@ vmap <C-e> $
 vmap <C-a> ^
 
 " make certain keys wrap lines
-" todo: consider turning this off and seeing how it is
 set whichwrap+=<,>,h,l,[,]
 
 " map shift tab to tab backward in insert mode
