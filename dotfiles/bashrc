@@ -1,50 +1,23 @@
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-alias ssh_ece='ssh jastribl@ecelinux.uwaterloo.ca'
-alias ssh_cs='ssh jastribl@linux.student.cs.uwaterloo.ca'
-alias ssh_lifeofapunter='ssh lifeofap@23.91.70.29'
-
-alias sde1='ssh root@10.20.1.51'
-alias sde2='ssh root@10.20.1.52'
-alias spb1='ssh root@10.20.1.54'
-alias spb2='ssh root@10.20.1.55'
-alias pts1='ssh root@10.20.1.57'
-alias pts2='ssh root@10.20.1.58'
-
-export VAGRANT_CWD=~/Documents/GitHub/puppet/contrib
-
 alias reindex_spotlight='sudo mdutil -E -i on /'
+alias remove_ds_store_files='sudo find . -name '.DS_Store' -type f -delete'
 
-# use vim installed through brew, not the built in vim
+# use vim installed through brew, not the built-in vim
 alias vim='/usr/local/bin/vim'
-
-# turn php-unit coverage off and on
-alias coverageoff='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini.bk'
-alias coverageon='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini.bk /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini'
-
-# quick commands for unit testing php
-alias test='coverageoff;bin/phpunit -c tests/phpunit.xml'
-alias testonly='coverageoff;bin/phpunit -c tests/phpunit.xml --filter '
-alias coveronly='coverageon;bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
-alias integrationtest='bin/phpunit -c tests/phpunit.xml integration-tests'
-
-# quick commands for vagrant setup at TextNow
-alias vagranton='cd ~/Documents/GitHub/puppet/contrib && gl --prune && vagrant box update && vagrant up ubuntu-server; vagrant up ubuntu-web && vagrant ssh ubuntu-server'
-alias vagrantoff='cd ~/Documents/GitHub/puppet/contrib && vagrant halt'
 
 # my trusty git hacks
 alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
 alias gap='git add --patch'
-alias gbgone='git branch -vv | grep gone'
+alias gbgone='git branch -vv | grep ": gone"'
 
+# quick aliases to help set per-repo emails for git (for use with "useConfigOnly = true" in gitconfig)
 alias set_git_email_textnow='git config --local user.email "justin.stribling@textnow.com"'
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
 
-alias remove_ds_store_files='sudo find . -name '.DS_Store' -type f -delete'
-
+# easy way to open a PR against develop
 PR () {
     BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\.git//'`
     BASE_BRANCH='develop'
@@ -52,3 +25,7 @@ PR () {
     PR_URL="$BASE_URL/compare/$BASE_BRANCH...$COMPARE_BRANCH?expand=1"
     open ${PR_URL}
 }
+
+if [[ -e ~/.bashrc.local ]]; then
+    source ~/.bashrc.local
+fi

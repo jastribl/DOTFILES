@@ -1,0 +1,5 @@
+alias ssh_ece='ssh jastribl@ecelinux.uwaterloo.ca'
+alias ssh_cs='ssh jastribl@linux.student.cs.uwaterloo.ca'
+alias ssh_lifeofapunter='ssh lifeofap@23.91.70.29'
+
+export VAGRANT_CWD=~/Documents/GitHub/LOFP
