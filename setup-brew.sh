@@ -24,6 +24,7 @@ apps=(gcc
       node
       mongodb
       reattach-to-user-namespace
+      diff-so-fancy
 )
 
 for app in "${apps[@]}"; do
@@ -57,7 +58,7 @@ caskapps=(
     mactex
     microsoft-office
     disk-inventory-x
-    diff-so-fancy
+    phpstorm
 )
 
 for app in "${caskapps[@]}"; do
