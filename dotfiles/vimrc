@@ -171,6 +171,8 @@ imap <C-e> <ESC>A
 imap <C-a> <ESC>I
 nmap <C-E> A
 nmap <C-A> I
+vmap <C-e> $
+vmap <C-a> ^
 
 " make certain keys wrap lines
 " todo: consider turning this off and seeing how it is
