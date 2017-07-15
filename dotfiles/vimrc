@@ -42,9 +42,6 @@ Plugin 'airblade/vim-gitgutter'
 " precision colorscheme for the vim text editor
 Plugin 'altercation/vim-colors-solarized'
 
-" Monokai color scheme for Vim converted from Textmate theme
-Plugin 'sickill/vim-monokai'
-
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -124,7 +121,6 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
-" colorscheme monokai
 set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
