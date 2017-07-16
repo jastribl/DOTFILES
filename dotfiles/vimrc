@@ -111,6 +111,7 @@ set smartindent
 if has("patch-7.4.338")
     set breakindent
     set breakindentopt=shift:4
+    let &showbreak = '↳ '
 endif
 set tabstop=4
 set softtabstop=4
