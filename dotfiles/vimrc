@@ -83,6 +83,9 @@ let g:Tex_DefaultTargetFormat = 'pdf' " Change default target to pdf, if not dvi
 let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r -g @line @pdf @tex'
 let g:vimtex_echo_ignore_wait = 1
+" mapping F5 to build latex
+autocmd Filetype tex nnoremap <buffer> <F5> :w<CR>:VimtexView<CR>
+autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR>:VimtexView<CR>a
 
 " Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
 Plugin 'bronson/vim-trailing-whitespace'
@@ -195,10 +198,12 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " # file saving
 " Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+if has("autocmd")
+    autocmd BufReadPost *
+         \ if line("'\"") > 0 && line("'\"") <= line("$") |
+         \   exe "normal! g`\"" |
+         \ endif
+endif
 
 
 " # clipboard
@@ -221,20 +226,9 @@ endif
 set splitbelow
 set splitright
 
-" remap ctrl-w, ? -> ctrl-? for plit movement
-" nnoremap <C-J> <C-W><C-J>
-" nnoremap <C-K> <C-W><C-K>
-" nnoremap <C-L> <C-W><C-L>
-" nnoremap <C-H> <C-W><C-H>
-
-
 " because I can't type :)
 command! Q q
 command! W w
-
-" mapping F5 to build latex
-autocmd Filetype tex nnoremap <buffer> <F5> :w<CR>:VimtexView<CR>
-autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR>:VimtexView<CR>a
 
 " moving line up and down live in sublime
 nnoremap <C-j> :m .+1<CR>==
