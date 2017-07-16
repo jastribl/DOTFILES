@@ -231,8 +231,6 @@ set splitright
 " because I can't type :)
 command! Q q
 command! W w
-command! WQ wq
-command! QW wq
 
 " mapping F5 to build latex
 autocmd Filetype tex nnoremap <buffer> <F5> :w<CR>:VimtexView<CR>
