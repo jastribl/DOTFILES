@@ -20,11 +20,7 @@ let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_show_hidden = 1
-" The Silver Searcher
 if executable('ag')
-    " Use ag over grep
-    set grepprg=ag\ --nogroup\ --nocolor
-
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
     let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git --nocolor -g ""'
 
@@ -41,6 +37,9 @@ Plugin 'airblade/vim-gitgutter'
 
 " precision colorscheme for the vim text editor
 Plugin 'altercation/vim-colors-solarized'
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'vim-airline/vim-airline'
@@ -112,31 +111,25 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-
 set backspace=indent,eol,start
 
 
 " UI Config
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
 set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
 set showmatch               " highlight matching [{()}]
-" set cursorline
 set scrolloff=7
 set linebreak
 set spell
 set spelllang=en_ca
-" set mouse=a
 
 function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
+    if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+        return "\<C-N>"
+    else
+        return "\<Tab>"
+    endif
 endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
@@ -176,8 +169,6 @@ set whichwrap+=<,>,h,l,[,]
 " map shift tab to tab backward in insert mode
 inoremap <S-Tab> <C-d>
 
-
-" # Leader key shortcuts
 " jk is escape
 inoremap kj <esc>
 
@@ -186,11 +177,11 @@ vnoremap < <gv
 vnoremap > >gv
 
 function! TabEditSmart(file)
-  if bufname("%") == ""
-    execute "edit " . a:file
-  else
-    execute "tabedit " a:file
-  endif
+    if bufname("%") == ""
+        execute "edit " . a:file
+    else
+        execute "tabedit " a:file
+    endif
 endfunction
 
 " edit vimrc/zshrc and load vimrc bindings
@@ -209,14 +200,20 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
+
 " # clipboard
 " yank to clipboard
 if has("clipboard")
-  set clipboard=unnamed " copy to the system clipboard
+    set clipboard=unnamed " copy to the system clipboard
 
-  if has("unnamedplus") " X11 support
-    set clipboard+=unnamedplus
-  endif
+    if has("unnamedplus") " X11 support
+        set clipboard+=unnamedplus
+    endif
+endif
+
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
 endif
 
 " # splitting
@@ -235,10 +232,6 @@ command! Q q
 command! W w
 command! WQ wq
 command! QW wq
-
-" Selecting and moving things like in Sublime
-" nnoremap <C-S-L> V
-vnoremap <C-S-L> j
 
 " mapping F5 to build latex
 autocmd Filetype tex nnoremap <buffer> <F5> :w<CR>:VimtexView<CR>
