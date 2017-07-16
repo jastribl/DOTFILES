@@ -70,5 +70,4 @@ done
 # some specific settings for the things installed above
 
 # allow key presses to releat on hold in sublime
-defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
-
+defaults write -g ApplePressAndHoldEnabled -bool false
