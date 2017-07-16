@@ -108,8 +108,10 @@ set history=1000
 
 set number
 set smartindent
-set breakindent
-set breakindentopt=shift:4
+if has("linebreak")
+    set breakindent
+    set breakindentopt=shift:4
+endif
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
