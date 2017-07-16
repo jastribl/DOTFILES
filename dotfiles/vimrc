@@ -38,8 +38,8 @@ Plugin 'airblade/vim-gitgutter'
 " precision colorscheme for the vim text editor
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
-set background=dark
 colorscheme solarized
+set background=dark
 
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'vim-airline/vim-airline'
