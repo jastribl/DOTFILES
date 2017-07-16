@@ -108,7 +108,7 @@ set history=1000
 
 set number
 set smartindent
-if has("linebreak")
+if has("patch-7.4.338")
     set breakindent
     set breakindentopt=shift:4
 endif
