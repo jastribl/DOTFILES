@@ -94,4 +94,7 @@ nnoremap <leader>w :FixWhitespace<CR>
 " CoffeeScript support for vim
 Plugin 'kchmck/vim-coffee-script'
 
+" Seamless navigation between tmux panes and vim splits
+Plugin 'christoomey/vim-tmux-navigator'
+
 filetype plugin indent on
