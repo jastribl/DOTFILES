@@ -25,6 +25,7 @@ set backspace=indent,eol,start
 syntax enable
 set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
+set updatetime=1500         " update more often (this helps git gutter show faster)
 set showmatch               " highlight matching [{()}]
 set scrolloff=7
 set linebreak

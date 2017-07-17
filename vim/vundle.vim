@@ -9,6 +9,10 @@ Plugin 'gmarik/vundle'
 
 " A tree explorer plugin for vim.
 Plugin 'scrooloose/nerdtree'
+map <C-t> :NERDTreeToggle<CR>
+
+" A plugin of NERDTree showing git status
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Vim plugin to list, select and switch between buffers.
 Plugin 'jeetsukumaran/vim-buffergator'
@@ -42,11 +46,14 @@ set background=dark
 
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tabs = 1
 set laststatus=2
+
+" A collection of themes for vim-airline
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='dark'
 
 " git wrapper
 Plugin 'tpope/vim-fugitive'
