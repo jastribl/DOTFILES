@@ -5,6 +5,7 @@ alias remove_ds_store_files='sudo find . -name '.DS_Store' -type f -delete'
 
 # use vim installed through brew, not the built-in vim
 alias vim='/usr/local/bin/vim'
+alias vi="vim -u NONE"
 
 # my trusty git hacks
 alias wipit='git add . && git commit -nam "WIP"'
