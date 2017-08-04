@@ -40,7 +40,7 @@ caskapps=(
     puush
     iterm2
     google-chrome
-    google-drive
+    google-backup-and-sync
     skim
     slack
     spectacle
