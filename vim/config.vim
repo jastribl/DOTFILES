@@ -7,6 +7,9 @@ endif
 " Sets how many lines of history VIM has to remember
 set history=1000
 
+" store swap files in their own place
+set directory=$HOME/.vim/swapfiles//
+
 set number
 set smartindent
 if has("patch-7.4.338")
