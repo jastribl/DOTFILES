@@ -34,6 +34,7 @@ endif
 " Vim plugin for intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
+map <C-_> <plug>NERDCommenterToggle
 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 Plugin 'airblade/vim-gitgutter'

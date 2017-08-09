@@ -5,6 +5,7 @@ dotfiles_old
 vim/.netrwhist
 vim/bundle/*
 !vim/bundle/vundle
+vim/swapfiles/*
 tmux/plugins/*
 !tmux/plugins/tpm
 tmux/resurrect/*.txt
