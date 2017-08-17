@@ -22,7 +22,8 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set backspace=indent,eol,start
-
+set pastetoggle=<F2>
+nnoremap <F7> :set spell!<CR>
 
 " UI Config
 syntax enable
