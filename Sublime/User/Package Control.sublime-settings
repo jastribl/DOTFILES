@@ -12,6 +12,8 @@
 		"Calculate",
 		"ColorPicker",
 		"Diffy",
+		"Dockerfile Syntax Highlighting",
+		"Generic Config",
 		"Git",
 		"JSX",
 		"LaTeXTools",
@@ -20,6 +22,7 @@
 		"PackageResourceViewer",
 		"Pandoc",
 		"Pretty JSON",
+		"Puppet",
 		"SCSS",
 		"SublimeAStyleFormatter",
 		"Terminal"
