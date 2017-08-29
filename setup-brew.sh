@@ -26,6 +26,7 @@ apps=(
     mongodb
     reattach-to-user-namespace
     diff-so-fancy
+    watch
 )
 
 for app in "${apps[@]}"; do
