@@ -7,6 +7,8 @@ alias remove_ds_store_files='sudo find . -name '.DS_Store' -type f -delete'
 alias vim='/usr/local/bin/vim'
 alias vi="vim -u NONE"
 
+alias grepv='grep -v'
+
 # my trusty git hacks
 alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
