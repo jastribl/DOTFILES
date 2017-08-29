@@ -105,4 +105,6 @@ Plugin 'kchmck/vim-coffee-script'
 " Seamless navigation between tmux panes and vim splits
 Plugin 'christoomey/vim-tmux-navigator'
 
+Plugin 'Puppet-Syntax-Highlighting'
+
 filetype plugin indent on
