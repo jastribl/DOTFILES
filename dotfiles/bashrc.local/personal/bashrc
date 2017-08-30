@@ -2,4 +2,14 @@ alias ssh_ece='ssh jastribl@ecelinux.uwaterloo.ca'
 alias ssh_cs='ssh jastribl@linux.student.cs.uwaterloo.ca'
 alias ssh_lifeofapunter='ssh lifeofap@23.91.70.29'
 
-export VAGRANT_CWD=~/Documents/GitHub/LOFP
+# export VAGRANT_CWD=~/Documents/GitHub/LOFP
+
+# turn php-unit coverage off and on
+alias coverageoff='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini.bk'
+alias coverageon='mv /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini.bk /usr/local/etc/php/5.6/conf.d/ext-xdebug.ini'
+
+# quick commands for unit testing php
+alias test='coverageoff;vendor/bin/phpunit -c tests/phpunit.xml'
+alias testonly='coverageoff;vendor/bin/phpunit -c tests/phpunit.xml --filter '
+alias cover='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage'
+alias coveronly='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
