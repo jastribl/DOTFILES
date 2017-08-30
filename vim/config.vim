@@ -140,6 +140,10 @@ set splitright
 " because I can't type :)
 command! Q q
 command! W w
+command! Wq wq
+command! WQ wq
+command! QW wq
+command! Qw wq
 
 " moving line up and down live in sublime
 " nnoremap <C-j> :m .+1<CR>==
