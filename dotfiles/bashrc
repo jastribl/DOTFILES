@@ -8,6 +8,8 @@ alias vim='/usr/local/bin/vim'
 alias vi="vim -u NONE"
 
 alias grepv='grep -v'
+alias copy_location='pwd | pbcopy'
+alias cd_clipboard='cd `pbpaste`'
 
 # my trusty git hacks
 alias wipit='git add . && git commit -nam "WIP"'
