@@ -82,7 +82,7 @@ set whichwrap+=<,>,h,l,[,]
 inoremap <S-Tab> <C-d>
 
 " jk is escape
-inoremap kj <esc>
+" inoremap kj <esc>
 
 " indent multiple times while in visual mode
 vnoremap < <gv
