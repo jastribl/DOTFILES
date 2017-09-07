@@ -106,6 +106,7 @@ Plugin 'kchmck/vim-coffee-script'
 " Seamless navigation between tmux panes and vim splits
 Plugin 'christoomey/vim-tmux-navigator'
 
-Plugin 'Puppet-Syntax-Highlighting'
+" Search Dash.app from Vim
+Plugin 'rizzatti/dash.vim'
 
 filetype plugin indent on
