@@ -82,7 +82,7 @@ set whichwrap+=<,>,h,l,[,]
 inoremap <S-Tab> <C-d>
 
 " jk is escape
-" inoremap kj <esc>
+inoremap kj <esc>
 
 " indent multiple times while in visual mode
 vnoremap < <gv
@@ -102,6 +102,7 @@ nnoremap <leader>evc :call TabEditSmart("~/.vim/config.vim")<CR>
 nnoremap <leader>evv :call TabEditSmart("~/.vim/vundle.vim")<CR>
 nnoremap <leader>ez :call TabEditSmart("~/.zshrc")<CR>
 nnoremap <leader>eb :call TabEditSmart("~/.bashrc")<CR>
+nnoremap <leader>ebl :call TabEditSmart("~/.bashrc.local")<CR>
 nnoremap <leader>et :call TabEditSmart("~/.tmux.conf")<CR>
 nnoremap <leader>etl :call TabEditSmart("~/.tmux.conf.local")<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
