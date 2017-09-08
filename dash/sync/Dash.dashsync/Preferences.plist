@@ -6,26 +6,71 @@
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>PhpStorm</key>
+			<key>Git</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:05:12Z</date>
+				<date>2017-09-07T03:39:26Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
-					<array/>
+					<array>
+						<string>terminal</string>
+						<string>shell</string>
+						<string>bash</string>
+						<string>zsh</string>
+					</array>
 					<key>name</key>
-					<string>PhpStorm</string>
+					<string>Git</string>
 					<key>platform</key>
 					<string>cheatsheet</string>
 					<key>uniqueIdentifier</key>
-					<string>PhpStorm</string>
+					<string>Git</string>
+				</dict>
+			</dict>
+			<key>Git_Flow</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:39:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>terminal</string>
+						<string>shell</string>
+						<string>bash</string>
+						<string>zsh</string>
+					</array>
+					<key>name</key>
+					<string>Git Flow</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>Git_Flow</string>
+				</dict>
+			</dict>
+			<key>Regular_Expressions</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:39:10Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>RegEx</string>
+						<string>reg ex</string>
+					</array>
+					<key>name</key>
+					<string>Regular Expressions</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>Regular_Expressions</string>
 				</dict>
 			</dict>
 			<key>Sublime_Text_3</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:05:04Z</date>
+				<date>2017-09-07T03:39:02Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -38,10 +83,28 @@
 					<string>Sublime_Text_3</string>
 				</dict>
 			</dict>
+			<key>Unix_File_Permissions</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:38:53Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>chmod</string>
+					</array>
+					<key>name</key>
+					<string>Unix File Permissions</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>Unix_File_Permissions</string>
+				</dict>
+			</dict>
 			<key>Vim</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:05:08Z</date>
+				<date>2017-09-07T03:38:50Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -54,9 +117,68 @@
 					<string>Vim</string>
 				</dict>
 			</dict>
+			<key>screen</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:39:07Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>terminal</string>
+						<string>shell</string>
+						<string>bash</string>
+						<string>zsh</string>
+					</array>
+					<key>name</key>
+					<string>screen</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>screen</string>
+				</dict>
+			</dict>
+			<key>tmux</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:38:56Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>terminal</string>
+						<string>shell</string>
+						<string>bash</string>
+						<string>zsh</string>
+					</array>
+					<key>name</key>
+					<string>tmux</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>tmux</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>uninstalled</key>
-		<dict/>
+		<dict>
+			<key>PhpStorm</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:38:42Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>name</key>
+					<string>PhpStorm</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>PhpStorm</string>
+				</dict>
+			</dict>
+		</dict>
 	</dict>
 	<key>DHCocoaRepo</key>
 	<dict>
@@ -163,11 +285,6 @@
 				<key>date</key>
 				<date>2017-09-07T03:02:49Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/C.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:02:53Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/CSS.xml</key>
 			<dict>
 				<key>date</key>
@@ -178,16 +295,6 @@
 				<key>date</key>
 				<date>2017-09-07T03:00:58Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/CoffeeScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:01:10Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Docker.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:07:04Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Go.xml</key>
 			<dict>
 				<key>date</key>
@@ -196,107 +303,27 @@
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:11:22Z</date>
+				<date>2017-09-07T03:43:17Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/JavaScript.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:14:53Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Less.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:02:57Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Lo-Dash.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:02:53Z</date>
+				<date>2017-09-07T03:46:27Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2017-09-07T03:02:58Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/MongoDB.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:23:56Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Mongoose.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:07:18Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/MySQL.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:16:19Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/NodeJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:03:09Z</date>
+				<date>2017-09-08T20:12:48Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/PHP.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2017-09-07T03:26:03Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/PHPUnit.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:06:26Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Pug.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:06:29Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Puppet.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:24:26Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Python_3.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:22:18Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/React.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:20:26Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Redis.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:20:03Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/RequireJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:15:31Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Ruby.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:15:26Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Ruby_2.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:19:49Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Sass.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:24:30Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/TypeScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:07:37Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Vim.xml</key>
 			<dict>
@@ -308,19 +335,120 @@
 				<key>date</key>
 				<date>2017-09-07T03:28:16Z</date>
 			</dict>
+		</dict>
+		<key>uninstalled</key>
+		<dict>
+			<key>http://kapeli.com/feeds/C.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:37:42Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/CoffeeScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:37:28Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Docker.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:12Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Less.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:37:54Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Lo-Dash.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:37:40Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/MongoDB.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:18Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Mongoose.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:17Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/NodeJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:37:59Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/PHPUnit.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:39:57Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/PostgreSQL.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-08T20:12:53Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Pug.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:03Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Puppet.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:41:16Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Python_3.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:58Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/React.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:55Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Redis.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:52Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/RequireJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:38Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Ruby.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:42Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Ruby_2.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:41Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Sass.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:37:57Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/TypeScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-09-07T03:40:22Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/jQuery.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:23:10Z</date>
+				<date>2017-09-07T03:41:04Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/jQuery_UI.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-09-07T03:10:40Z</date>
+				<date>2017-09-07T03:41:03Z</date>
 			</dict>
 		</dict>
-		<key>uninstalled</key>
-		<dict/>
 	</dict>
 	<key>isPinned</key>
 	<true/>
