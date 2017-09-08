@@ -22,6 +22,12 @@ alias set_git_email_textnow='git config --local user.email "justin.stribling@tex
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
 
+# some simple aliases to get places
+alias go_desktop='cd ~/Desktop'
+alias go_documents='cd ~/Documents'
+alias go_git='cd ~/Documents/Github'
+alias go_downloads='cd ~/Downloads'
+
 # easy way to open a PR against develop
 PR () {
     BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\.git//'`
