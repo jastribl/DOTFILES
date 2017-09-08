@@ -30,7 +30,7 @@ alias go_downloads='cd ~/Downloads'
 
 # easy way to open a PR against develop
 PR () {
-    BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\.git//'`
+    BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\(.*\)\.git/\1/'`
     BASE_BRANCH='develop'
     COMPARE_BRANCH=`git symbolic-ref --short HEAD`
     PR_URL="$BASE_URL/compare/$BASE_BRANCH...$COMPARE_BRANCH?expand=1"
