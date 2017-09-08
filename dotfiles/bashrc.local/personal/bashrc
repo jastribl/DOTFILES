@@ -13,3 +13,7 @@ alias test='coverageoff;vendor/bin/phpunit -c tests/phpunit.xml'
 alias testonly='coverageoff;vendor/bin/phpunit -c tests/phpunit.xml --filter '
 alias cover='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage'
 alias coveronly='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
+
+function pandoc_latex() {
+    pandoc ${1} --latex-engine=`which pdflatex` -V geometry:margin=1.00in --table-of-contents --number-sections -o ${2}
+}
