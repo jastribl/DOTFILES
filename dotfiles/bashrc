@@ -27,6 +27,7 @@ alias go_desktop='cd ~/Desktop'
 alias go_documents='cd ~/Documents'
 alias go_git='cd ~/Documents/Github'
 alias go_downloads='cd ~/Downloads'
+alias go_drive='cd ~/Google\ Drive/'
 
 # easy way to open a PR against develop
 PR () {
