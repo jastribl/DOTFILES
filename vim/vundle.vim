@@ -121,9 +121,6 @@ let g:EasyMotion_do_mapping = 0
 " turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 
-" set the easy motion prefix to just a single leader
-map <Leader> <Plug>(easymotion-prefix)
-
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
 
