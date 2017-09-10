@@ -109,4 +109,34 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Search Dash.app from Vim
 Plugin 'rizzatti/dash.vim'
 
+" pandoc integration and utilities for vim
+Plugin 'vim-pandoc/vim-pandoc'
+autocmd Filetype markdown nnoremap <buffer> <F5> :w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>
+autocmd Filetype markdown inoremap <buffer> <F5> <ESC>:w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>a
+
+" pandoc markdown syntax, to be installed alongside vim-pandoc
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+let g:pandoc#modules#disabled = ["folding"]
+
+" Vim motions on speed!
+Plugin 'easymotion/vim-easymotion'
+" disable default mappings
+let g:EasyMotion_do_mapping = 0
+" turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" set the easy motion prefix to just a single leader
+map <Leader> <Plug>(easymotion-prefix)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
 filetype plugin indent on
