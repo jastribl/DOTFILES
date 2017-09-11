@@ -49,6 +49,7 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 " # Searching
 set incsearch               " search as characters are entered
 set hlsearch                " highlight matches
+let @/ = ""                 " don't highlight last search when sourcing vimrc
 set ignorecase              " Ignore case when searching
 set smartcase               " When searching try to be smart about cases
 
