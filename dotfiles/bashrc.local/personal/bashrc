@@ -1,7 +1,7 @@
 alias ssh_ece='ssh jastribl@ecelinux.uwaterloo.ca'
 alias ssh_cs='ssh jastribl@linux.student.cs.uwaterloo.ca'
 alias ssh_lifeofapunter='ssh lifeofap@23.91.70.29'
-alias ssh_justin_server='ssh -i ~/.ssh/justins-server.pem ubuntu@ec2-34-234-169-130.compute-1.amazonaws.com'
+alias ssh_justin_server='ssh -i ~/.ssh/justins-server.pem ubuntu@34.234.169.130'
 
 # use vim installed through brew, not the built-in vim
 alias vim='/usr/local/bin/vim'
