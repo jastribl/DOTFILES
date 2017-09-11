@@ -146,6 +146,8 @@ command! Wq wq
 command! WQ wq
 command! QW wq
 command! Qw wq
+map q: <Nop>
+nnoremap Q <nop>
 
 " moving line up and down live in sublime
 " nnoremap <C-j> :m .+1<CR>==
