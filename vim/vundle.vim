@@ -20,7 +20,7 @@ Plugin 'jeetsukumaran/vim-buffergator'
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
+let g:ctrlp_switch_buffer = 'E'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_show_hidden = 1
 if executable('ag')
