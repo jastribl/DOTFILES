@@ -135,4 +135,10 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
+" Preview colours in source code while editing
+Plugin 'ap/vim-css-color'
+
+" Unobtrusive scratch window
+Plugin 'mtth/scratch.vim'
+
 filetype plugin indent on
