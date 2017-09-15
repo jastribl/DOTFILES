@@ -21,7 +21,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set backspace=indent,eol,start
+set backspace=2             " make backspace work like most other apps
 set pastetoggle=<F2>
 nnoremap <F7> :set spell!<CR>
 
