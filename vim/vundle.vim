@@ -109,6 +109,9 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 autocmd Filetype markdown nnoremap <buffer> <F5> :w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>
 autocmd Filetype markdown inoremap <buffer> <F5> <ESC>:w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>a
+autocmd Filetype markdown nnoremap <buffer> <F6> :w<CR>:Pandoc pdf -V geometry:margin=1.00in<CR>
+autocmd Filetype markdown inoremap <buffer> <F6> <ESC>:w<CR>:Pandoc pdf -V geometry:margin=1.00in<CR>a
+
 
 " pandoc markdown syntax, to be installed alongside vim-pandoc
 Plugin 'vim-pandoc/vim-pandoc-syntax'
