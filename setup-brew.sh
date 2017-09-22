@@ -27,6 +27,7 @@ apps=(
     reattach-to-user-namespace
     diff-so-fancy
     watch
+    "go --cross-compile-common"
 )
 
 for app in "${apps[@]}"; do

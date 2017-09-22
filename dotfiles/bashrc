@@ -18,12 +18,19 @@ alias set_git_email_textnow='git config --local user.email "justin.stribling@tex
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
 
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin
+
 # some simple aliases to get places
 alias go_desktop='cd ~/Desktop'
 alias go_documents='cd ~/Documents'
 alias go_git='cd ~/Documents/Github'
 alias go_downloads='cd ~/Downloads'
 alias go_drive='cd ~/Google\ Drive/'
+alias go_go='cd $GOPATH/src'
 
 # easy way to open a PR against develop
 PR () {
