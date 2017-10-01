@@ -22,7 +22,7 @@ export GOPATH=$HOME/golang
 export GOROOT=/usr/local/opt/go/libexec
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOROOT/bin:$GOBIN
 
 # some simple aliases to get places
 alias go_desktop='cd ~/Desktop'
