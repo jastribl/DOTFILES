@@ -204,7 +204,22 @@
 	<key>DHGoRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>github.com/jinzhu/gorm</key>
+			<dict>
+				<key>date</key>
+				<date>2017-10-02T03:49:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/jinzhu/gorm</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/jinzhu/gorm</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
@@ -260,7 +275,28 @@
 	<key>DHUserRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>Kotlin</key>
+			<dict>
+				<key>date</key>
+				<date>2017-10-02T00:20:47Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Kotlin#readme</string>
+					<key>authorLinkText</key>
+					<string>Marcel Jackwerth</string>
+					<key>name</key>
+					<string>Kotlin</string>
+					<key>platform</key>
+					<string>usercontribKotlin</string>
+					<key>uniqueIdentifier</key>
+					<string>Kotlin</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
@@ -310,6 +346,11 @@
 				<key>date</key>
 				<date>2017-09-07T03:46:27Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/Java_SE8.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-10-01T23:12:04Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/LaTeX.xml</key>
 			<dict>
 				<key>date</key>
@@ -324,6 +365,11 @@
 			<dict>
 				<key>date</key>
 				<date>2017-09-08T20:12:48Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/NodeJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-10-01T23:10:11Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/PHP.xml</key>
 			<dict>
@@ -377,11 +423,6 @@
 			<dict>
 				<key>date</key>
 				<date>2017-09-07T03:40:17Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/NodeJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2017-09-07T03:37:59Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/PHPUnit.xml</key>
 			<dict>
