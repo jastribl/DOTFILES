@@ -28,6 +28,9 @@ apps=(
     diff-so-fancy
     watch
     "go --cross-compile-common"
+    ant
+    maven
+    gradle
 )
 
 for app in "${apps[@]}"; do
@@ -62,6 +65,9 @@ caskapps=(
     microsoft-office
     disk-inventory-x
     phpstorm
+    gogland
+    skype
+    android-studio
 )
 
 for app in "${caskapps[@]}"; do

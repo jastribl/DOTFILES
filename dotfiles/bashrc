@@ -32,6 +32,20 @@ alias go_downloads='cd ~/Downloads'
 alias go_drive='cd ~/Google\ Drive/'
 alias go_go='cd $GOPATH/src'
 
+# android stuff
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+export ANT_HOME=/usr/local/opt/ant
+export MAVEN_HOME=/usr/local/opt/maven
+export GRADLE_HOME=/usr/local/opt/gradle
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_NDK_HOME=/usr/local/opt/android-ndk
+export PATH=$ANT_HOME/bin:$PATH
+export PATH=$MAVEN_HOME/bin:$PATH
+export PATH=$GRADLE_HOME/bin:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/build-tools/19.1.0:$PATH
+
 # easy way to open a PR against develop
 PR () {
     BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\(.*\)\.git/\1/'`
