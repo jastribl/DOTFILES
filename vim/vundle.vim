@@ -144,4 +144,6 @@ Plugin 'ap/vim-css-color'
 " Unobtrusive scratch window
 Plugin 'mtth/scratch.vim'
 
+Plugin 'dhruvasagar/vim-table-mode'
+
 filetype plugin indent on
