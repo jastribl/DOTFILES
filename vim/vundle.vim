@@ -42,6 +42,9 @@ Plugin 'airblade/vim-gitgutter'
 " precision colorscheme for the vim text editor
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
+if $SSH_CONNECTION
+    let g:solarized_termtrans=1
+endif
 colorscheme solarized
 set background=dark
 
