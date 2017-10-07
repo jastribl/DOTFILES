@@ -56,9 +56,11 @@ set smartcase               " When searching try to be smart about cases
 " turn off search highlightd
 nnoremap <leader><space> :nohlsearch<CR>
 
-" bind <leader / to grep shortcut
-command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap <leader>/ :Ag<SPACE>
+if executable('ag')
+    " bind <leader / to grep shortcut
+    command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap <leader>/ :Ag<SPACE>
+endif
 
 
 " # Movement
