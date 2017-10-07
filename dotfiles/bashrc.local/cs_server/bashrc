@@ -1,1 +1,2 @@
 PATH="$PATH:$HOME/diff-so-fancy"
+[ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
