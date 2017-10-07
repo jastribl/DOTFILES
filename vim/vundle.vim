@@ -141,9 +141,7 @@ map <Leader>k <Plug>(easymotion-k)
 " Preview colours in source code while editing
 Plugin 'ap/vim-css-color'
 
-" Unobtrusive scratch window
-Plugin 'mtth/scratch.vim'
-
+" VIM Table Mode for instant table creation
 Plugin 'dhruvasagar/vim-table-mode'
 
 filetype plugin indent on
