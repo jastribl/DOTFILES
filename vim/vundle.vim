@@ -7,13 +7,6 @@ call vundle#rc()
 " Vundle, the plug-in manager for Vim
 Plugin 'gmarik/vundle'
 
-" A tree explorer plugin for vim.
-Plugin 'scrooloose/nerdtree'
-map <C-t> :NERDTreeToggle<CR>
-
-" A plugin of NERDTree showing git status
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-
 " Vim plugin to list, select and switch between buffers.
 Plugin 'jeetsukumaran/vim-buffergator'
 
