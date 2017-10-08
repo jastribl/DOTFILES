@@ -10,7 +10,7 @@ set history=1000
 " store swap files in their own place
 set directory=$HOME/.vim/swapfiles//
 
-set number
+set nonumber
 set smartindent
 if has("patch-7.4.338")
     set breakindent

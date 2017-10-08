@@ -31,6 +31,7 @@ map <leader><leader> <plug>NERDCommenterToggle
 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 Plugin 'airblade/vim-gitgutter'
+let g:gitgutter_enabled = 0
 
 " precision colorscheme for the vim text editor
 Plugin 'altercation/vim-colors-solarized'
