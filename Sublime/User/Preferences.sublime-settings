@@ -4,7 +4,6 @@
 		"Stribling"
 	],
 	"always_show_minimap_viewport": true,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
@@ -20,7 +19,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Terminal",
 		"Vintage"
 	],
 	"ignored_words":
@@ -30,7 +28,7 @@
 	"show_line_endings": true,
 	"show_tab_close_buttons": true,
 	"spell_check": true,
-	"theme": "Default.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": false,
 	"trim_trailing_white_space_on_save": true,
