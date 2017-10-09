@@ -23,7 +23,7 @@ set shiftwidth=4
 set expandtab
 set backspace=2             " make backspace work like most other apps
 set pastetoggle=<F2>
-nnoremap <F3> :set number!<CR>:GitGutterToggle<CR>
+nnoremap <F3> :windo set number!<CR>:GitGutterToggle<CR>
 nnoremap <F7> :set spell!<CR>
 
 " UI Config
