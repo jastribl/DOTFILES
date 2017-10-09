@@ -1,17 +1,11 @@
-if !has("gui_running")
-    set t_Co=256
-    set term=screen-256color
-endif
-
 " # General
 " Sets how many lines of history VIM has to remember
 set history=1000
-
-" store swap files in their own place
-set directory=$HOME/.vim/swapfiles//
-
+set directory=$HOME/.vim/swapfiles// " store swap files in their own place
 set nonumber
 set smartindent
+set spell
+set spelllang=en_ca
 if has("patch-7.4.338")
     set breakindent
     set breakindentopt=shift:2
@@ -26,16 +20,20 @@ set pastetoggle=<F2>
 nnoremap <F3> :windo set number!<CR>:GitGutterToggle<CR>
 nnoremap <F7> :set spell!<CR>
 
+
 " UI Config
+if !has("gui_running")
+    set t_Co=256
+    set term=screen-256color
+endif
 syntax enable
 set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
 set updatetime=1500         " update more often (this helps git gutter show faster)
 set showmatch               " highlight matching [{()}]
-set scrolloff=7
+set scrolloff=3
 set linebreak
-set spell
-set spelllang=en_ca
+set colorcolumn=100
 
 function! Tab_Or_Complete()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
@@ -55,7 +53,7 @@ set ignorecase              " Ignore case when searching
 set smartcase               " When searching try to be smart about cases
 
 " turn off search highlightd
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <space> :nohlsearch<CR>
 
 if executable('ag')
     " bind <leader / to grep shortcut
@@ -72,12 +70,12 @@ nnoremap <down> g<down>
 nnoremap <up> g<up>
 
 " map ctrl-e and ctrl-a to beginning and end of line like in terminal
-imap <C-e> <ESC>A
-imap <C-a> <ESC>I
-nmap <C-E> A
-nmap <C-A> I
-vmap <C-e> $
-vmap <C-a> ^
+inoremap <C-e> <ESC>A
+inoremap <C-a> <ESC>I
+nnoremap <C-E> A
+nnoremap <C-A> I
+vnoremap <C-e> $
+vnoremap <C-a> ^
 
 " make certain keys wrap lines
 set whichwrap+=<,>,h,l,[,]
@@ -91,6 +89,15 @@ inoremap kj <esc>
 " indent multiple times while in visual mode
 vnoremap < <gv
 vnoremap > >gv
+
+" use tab and shift tab in visual mode for indentation
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+nnoremap <Tab> >>
+noremap <S-Tab> <<
+
+" get out of visual mode quicker
+vnoremap <ESC> <ESC><ESC>
 
 function! TabEditSmart(file)
     if bufname("%") == ""
@@ -149,15 +156,14 @@ command! Wq wq
 command! WQ wq
 command! QW wq
 command! Qw wq
-map q: <Nop>
+noremap q: <Nop>
+nnoremap q <Nop>
 nnoremap Q <nop>
 
-" moving line up and down live in sublime
-" nnoremap <C-j> :m .+1<CR>==
+" moving line up and down like in sublime
+" nnoremap <C-j> :m .+1<CR>== <- these don't work so well with my tmux setup
 " nnoremap <C-k> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
-
-set colorcolumn=100
