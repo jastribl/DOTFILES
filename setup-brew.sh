@@ -31,6 +31,10 @@ apps=(
     ant
     maven
     gradle
+    python3
+    composer
+    php56
+    php56-xdebug
 )
 
 for app in "${apps[@]}"; do
@@ -59,7 +63,6 @@ caskapps=(
     android-file-transfer
     messenger
     postman
-    sourcetree
     dash
     mactex
     microsoft-office
@@ -68,6 +71,7 @@ caskapps=(
     gogland
     skype
     android-studio
+    vagrant
 )
 
 for app in "${caskapps[@]}"; do
