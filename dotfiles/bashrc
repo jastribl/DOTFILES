@@ -19,6 +19,9 @@ alias set_git_email_textnow='git config --local user.email "justin.stribling@tex
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
 
+# disable auto titling to allow named tmux windows
+DISABLE_AUTO_TITLE=true
+
 export GOPATH=$HOME/golang
 export GOROOT=/usr/local/opt/go/libexec
 export GOBIN=$GOPATH/bin
