@@ -269,3 +269,6 @@ set -sg repeat-time 418
 
 # toggle synchronize-panes
 bind a set-window-option synchronize-panes
+
+# disable auto renaming of windows
+set-option -g allow-rename off
