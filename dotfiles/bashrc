@@ -12,6 +12,7 @@ alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
 alias gap='git add --patch'
 alias gbgone='git branch -vv | grep ": gone"'
+alias gdw='git diff -w'
 
 # quick aliases to help set per-repo emails for git (for use with "useConfigOnly = true" in gitconfig)
 alias set_git_email_textnow='git config --local user.email "justin.stribling@textnow.com"'
