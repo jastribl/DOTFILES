@@ -392,7 +392,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -414,13 +414,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>426 385 445 77 0 0 1680 1027 </string>
+	<string>-351 1314 445 77 -860 1050 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>490 322 700 622 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-90 1445 918 394 -860 1050 1920 1057 </string>
+	<string>2450 846 918 394 1680 257 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-860 1055 1920 1052 -860 1050 1920 1057 </string>
+	<string>1680 257 1920 1080 1680 257 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1800 863 570 452 1680 257 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -610,8 +610,10 @@
 			</dict>
 			<key>Blend</key>
 			<real>0.40905824318910261</real>
+			<key>Blink Allowed</key>
+			<false/>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<false/>
 			<key>Blur Radius</key>
@@ -1770,7 +1772,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-19T21:43:09Z</date>
+	<date>2017-10-21T21:45:09Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
