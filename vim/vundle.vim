@@ -137,4 +137,8 @@ Plugin 'ap/vim-css-color'
 " VIM Table Mode for instant table creation
 Plugin 'dhruvasagar/vim-table-mode'
 
+" autolist: Automatically continues lists
+Plugin 'bradford-smith94/vim-autolist'
+autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
+
 filetype plugin indent on
