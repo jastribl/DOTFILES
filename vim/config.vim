@@ -34,6 +34,10 @@ set showmatch               " highlight matching [{()}]
 set scrolloff=3
 set linebreak
 set colorcolumn=100
+" set syntax highlighting for sqx to cpp
+augroup filetypedetect
+    au BufRead,BufNewFile *.sqx set filetype=cpp
+augroup END
 
 function! Tab_Or_Complete()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
