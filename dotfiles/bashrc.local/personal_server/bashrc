@@ -1,0 +1,10 @@
+PATH="$PATH:$HOME/diff-so-fancy"
+
+[ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
+
+# Go stuff
+GOPATH=$HOME/go
+GOROOT=/usr/lib/go-1.9
+GOBIN=$GOPATH/bin
+PATH=$PATH:$GOPATH
+PATH=$PATH:$GOROOT/bin:$GOBIN
