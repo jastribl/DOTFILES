@@ -141,4 +141,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'bradford-smith94/vim-autolist'
 autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
 
+" Vim syntax file & snippets for Docker's Dockerfile
+Plugin 'ekalinin/dockerfile.vim'
+
 filetype plugin indent on
