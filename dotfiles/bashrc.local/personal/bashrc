@@ -3,9 +3,15 @@ alias ssh_cs='ssh jastribl@ubuntu1604-002.student.cs.uwaterloo.ca'
 alias ssh_lifeofapunter='ssh lifeofap@23.91.70.29'
 alias ssh_justin_server='ssh -i ~/.ssh/justins-server.pem ubuntu@34.234.169.130'
 
+alias reindex_spotlight='sudo mdutil -E -i on /'
+alias remove_ds_store_files='sudo find . -name '.DS_Store' -type f -delete'
+
 # use vim installed through brew, not the built-in vim
 alias vim='/usr/local/bin/vim'
 alias vi="vim -u NONE"
+
+alias copy_location='pwd | pbcopy'
+alias cd_clipboard='cd `pbpaste`'
 
 # export VAGRANT_CWD=~/Documents/GitHub/LOFP
 
@@ -18,6 +24,37 @@ alias test='coverageoff;vendor/bin/phpunit -c tests/phpunit.xml'
 alias testonly='coverageoff;vendor/bin/phpunit -c tests/phpunit.xml --filter '
 alias cover='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage'
 alias coveronly='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
+
+# some simple aliases to get places
+alias go_desktop='cd ~/Desktop'
+alias go_documents='cd ~/Documents'
+alias go_git='cd ~/Documents/Github'
+alias go_downloads='cd ~/Downloads'
+alias go_drive='cd ~/Google\ Drive/'
+alias go_go='cd $GOPATH/src'
+
+alias cd_desktop='cd ~/Desktop'
+alias cd_documents='cd ~/Documents'
+alias cd_git='cd ~/Documents/Github'
+alias cd_downloads='cd ~/Downloads'
+alias cd_drive='cd ~/Google\ Drive/'
+alias cd_go='cd $GOPATH/src'
+
+# Golang setup
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin:$GOBIN
+
+# easy way to open a PR against develop
+PR () {
+    BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\(.*\)\.git/\1/'`
+    BASE_BRANCH='develop'
+    COMPARE_BRANCH=`git symbolic-ref --short HEAD`
+    PR_URL="$BASE_URL/compare/$BASE_BRANCH...$COMPARE_BRANCH?expand=1"
+    open ${PR_URL}
+}
 
 function pandoc_latex() {
     pandoc ${1} --latex-engine=`which pdflatex` -V geometry:margin=1.00in --table-of-contents --number-sections -o ${2}
