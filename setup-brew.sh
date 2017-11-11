@@ -35,6 +35,7 @@ apps=(
     composer
     php56
     php56-xdebug
+    protobuf
 )
 
 for app in "${apps[@]}"; do
