@@ -69,7 +69,7 @@ caskapps=(
     microsoft-office
     disk-inventory-x
     phpstorm
-    gogland
+    goland
     skype
     android-studio
     vagrant
