@@ -34,6 +34,7 @@ set showmatch               " highlight matching [{()}]
 set scrolloff=3
 set linebreak
 set colorcolumn=100
+set textwidth=100
 " set syntax highlighting for sqx to cpp
 augroup filetypedetect
     au BufRead,BufNewFile *.sqx set filetype=cpp
