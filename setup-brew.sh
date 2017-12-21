@@ -28,14 +28,12 @@ apps=(
     diff-so-fancy
     watch
     "go --cross-compile-common"
-    ant
-    maven
-    gradle
     python3
     composer
     php56
     php56-xdebug
     protobuf
+    qt5
 )
 
 for app in "${apps[@]}"; do
