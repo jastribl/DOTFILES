@@ -144,4 +144,7 @@ autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
 " Vim syntax file & snippets for Docker's Dockerfile
 Plugin 'ekalinin/dockerfile.vim'
 
+" Go development plugin for Vim
+Plugin 'fatih/vim-go'
+
 filetype plugin indent on
