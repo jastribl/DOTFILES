@@ -146,5 +146,6 @@ Plugin 'ekalinin/dockerfile.vim'
 
 " Go development plugin for Vim
 Plugin 'fatih/vim-go'
+let g:go_fmt_command = "goimports"
 
 filetype plugin indent on
