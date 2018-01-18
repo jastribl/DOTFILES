@@ -22,6 +22,8 @@ nnoremap <F7> :set spell!<CR>
 
 
 " UI Config
+colorscheme solarized
+set background=dark
 if !has("gui_running")
     set t_Co=256
     set term=screen-256color

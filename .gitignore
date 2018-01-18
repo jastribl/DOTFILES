@@ -1,11 +1,8 @@
 *.DS_Store
-Sublime/User/Package\ Control.cache/*
-Sublime/User/Package\ Control.last-run
 dotfiles_old
 vim/.netrwhist
-vim/bundle/*
-!vim/bundle/vundle
 vim/swapfiles/*
+vim/plugged/
 tmux/plugins/*
 !tmux/plugins/tpm
 tmux/resurrect/*.txt
@@ -14,3 +11,5 @@ tmux/resurrect/last
 /* sublime stuff */
 Sublime/User/oscrypto-ca-bundle.crt
 Package\ Control.merged-ca-bundle
+Sublime/User/Package\ Control.cache/*
+Sublime/User/Package\ Control.last-run

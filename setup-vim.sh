@@ -9,7 +9,7 @@ else
     ln -s "$PWD/vim" ~/.vim
 
     echo === Vundling
-    vim +BundleInstall +qall
+    vim +PlugInstall +qall
 
     echo === Done
 fi

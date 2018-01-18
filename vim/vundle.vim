@@ -1,17 +1,12 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Vundle, the plug-in manager for Vim
-Plugin 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
 
 " Vim plugin to list, select and switch between buffers.
-Plugin 'jeetsukumaran/vim-buffergator'
+Plug 'jeetsukumaran/vim-buffergator'
 
 " Fuzzy file, buffer, mru, tag, etc finder.
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 'Et'
 let g:ctrlp_working_path_mode = 0
@@ -23,25 +18,23 @@ if executable('ag')
 endif
 
 " Vim plugin for intensely orgasmic commenting
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 map <leader><leader> <plug>NERDCommenterToggle
 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 let g:gitgutter_enabled = 0
 
 " precision colorscheme for the vim text editor
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
 if $SSH_CONNECTION
     let g:solarized_termtrans=1
 endif
-colorscheme solarized
-set background=dark
 
 " Lean & mean status/tabline for vim that's light as air.
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tabs = 1
@@ -49,22 +42,22 @@ let g:airline_powerline_fonts = 1
 set laststatus=2
 
 " git wrapper
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " A git mirror of gundo.vim ('super' undo tree)
-Plugin 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 
-" Help folks to align text, eqns, declarations, tables, etc
-Plugin 'Align'
+" :sunflower: A Vim alignment plugin
+Plug 'junegunn/vim-easy-align'
 
 " True Sublime Text style multiple selections for Vim
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 let g:multi_cursor_exit_from_insert_mode = 0
 
 " Asynchronous Lint Engine
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_enter = 0
 " let g:ale_lint_delay = 1000
@@ -73,7 +66,7 @@ nmap <silent> <S-k> <Plug>(ale_previous_wrap)
 nmap <silent> <S-j> <Plug>(ale_next_wrap)
 
 " A modern vim plugin for editing LaTeX files.
-Plugin 'lervag/vimtex'
+Plug 'lervag/vimtex'
 let g:Tex_DefaultTargetFormat = 'pdf' " Change default target to pdf, if not dvi is used
 let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r -g @line @pdf @tex'
@@ -84,21 +77,21 @@ autocmd Filetype tex nnoremap <buffer> <F5> :w<CR>:VimtexView<CR>
 autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR>:VimtexView<CR>a
 
 " Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
-Plugin 'bronson/vim-trailing-whitespace'
+Plug 'bronson/vim-trailing-whitespace'
 " trim extra whitespaces at ends of lines
 nnoremap <leader>w :FixWhitespace<CR>
 
 " CoffeeScript support for vim
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
 " Seamless navigation between tmux panes and vim splits
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Search Dash.app from Vim
-Plugin 'rizzatti/dash.vim'
+Plug 'rizzatti/dash.vim'
 
 " pandoc integration and utilities for vim
-Plugin 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc'
 autocmd Filetype markdown nnoremap <buffer> <F5> :w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>
 autocmd Filetype markdown inoremap <buffer> <F5> <ESC>:w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>a
 autocmd Filetype markdown nnoremap <buffer> <F6> :w<CR>:Pandoc pdf -V geometry:margin=1.00in<CR>
@@ -106,11 +99,11 @@ autocmd Filetype markdown inoremap <buffer> <F6> <ESC>:w<CR>:Pandoc pdf -V geome
 
 
 " pandoc markdown syntax, to be installed alongside vim-pandoc
-Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 let g:pandoc#modules#disabled = ["folding"]
 
 " Vim motions on speed!
-Plugin 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 " disable default mappings
 let g:EasyMotion_do_mapping = 0
 " turn on case insensitive feature
@@ -128,20 +121,20 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Preview colours in source code while editing
-Plugin 'ap/vim-css-color'
+Plug 'ap/vim-css-color'
 
 " VIM Table Mode for instant table creation
-Plugin 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 
 " autolist: Automatically continues lists
-Plugin 'bradford-smith94/vim-autolist'
+Plug 'bradford-smith94/vim-autolist'
 autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
 
 " Vim syntax file & snippets for Docker's Dockerfile
-Plugin 'ekalinin/dockerfile.vim'
+Plug 'ekalinin/dockerfile.vim'
 
 " Go development plugin for Vim
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
 
-filetype plugin indent on
+call plug#end()
