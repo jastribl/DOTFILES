@@ -33,12 +33,12 @@ set updatetime=1500         " update more often (this helps git gutter show fast
 set showmatch               " highlight matching [{()}]
 set scrolloff=3
 set linebreak
-set colorcolumn=100
-set textwidth=100
-" set syntax highlighting for sqx to cpp
-augroup filetypedetect
-    au BufRead,BufNewFile *.sqx set filetype=cpp
-augroup END
+" set colorcolumn=100
+" set textwidth=100
+
+" augroup filetypedetect
+    " au BufRead,BufNewFile *.sqx set filetype=cpp
+" augroup END
 
 function! Tab_Or_Complete()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
@@ -54,7 +54,7 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 set incsearch               " search as characters are entered
 set hlsearch                " highlight matches
 let @/ = ""                 " don't highlight last search when sourcing vimrc
-set ignorecase              " Ignore case when searching
+set ignorecase
 set smartcase               " When searching try to be smart about cases
 
 " turn off search highlightd
@@ -71,8 +71,14 @@ endif
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
-nnoremap <down> g<down>
-nnoremap <up> g<up>
+" nnoremap <up> g<up>
+" nnoremap <down> g<down>
+
+" break bad habits
+nnoremap <UP> <NOP>
+nnoremap <DOWN> <NOP>
+nnoremap <LEFT> <NOP>
+nnoremap <RIGHT> <NOP>
 
 " map ctrl-e and ctrl-a to beginning and end of line like in terminal
 inoremap <C-e> <ESC>A
