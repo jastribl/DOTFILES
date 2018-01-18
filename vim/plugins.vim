@@ -138,6 +138,9 @@ let g:go_fmt_command = "goimports"
 Plug 'scrooloose/nerdtree'
 
 " A code-completion engine for Vim
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
+
+" A VIM plugin for formatting saved JSON file.A VIM plugin for formatting saved JSON file.
+Plug 'XadillaX/json-formatter.vim', {'do': 'npm install jjson -g', 'for': ['json']}
 
 call plug#end()
