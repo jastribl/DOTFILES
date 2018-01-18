@@ -1,6 +1,6 @@
-" load vundle setting
-if filereadable(expand('~/.vim/vundle.vim'))
-    source ~/.vim/vundle.vim
+" load plugin settings
+if filereadable(expand('~/.vim/plugins.vim'))
+    source ~/.vim/plugins.vim
 end
 
 " load config

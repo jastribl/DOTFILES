@@ -8,7 +8,7 @@ else
     echo === Linking vim directories
     ln -s "$PWD/vim" ~/.vim
 
-    echo === Vundling
+    echo === Installing Plugins
     vim +PlugInstall +qall
 
     echo === Done

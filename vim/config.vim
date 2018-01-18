@@ -131,7 +131,7 @@ endfunction
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>evb :call TabEditSmart($MYVIMRC)<CR>
 nnoremap <leader>evc :call TabEditSmart("~/.vim/config.vim")<CR>
-nnoremap <leader>evv :call TabEditSmart("~/.vim/vundle.vim")<CR>
+nnoremap <leader>evv :call TabEditSmart("~/.vim/plugins.vim")<CR>
 nnoremap <leader>ez :call TabEditSmart("~/.zshrc")<CR>
 nnoremap <leader>eb :call TabEditSmart("~/.bashrc")<CR>
 nnoremap <leader>ebl :call TabEditSmart("~/.bashrc.local")<CR>
