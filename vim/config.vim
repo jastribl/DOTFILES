@@ -81,6 +81,14 @@ nnoremap <UP> <NOP>
 nnoremap <DOWN> <NOP>
 nnoremap <LEFT> <NOP>
 nnoremap <RIGHT> <NOP>
+inoremap <UP> <NOP>
+inoremap <DOWN> <NOP>
+inoremap <LEFT> <NOP>
+inoremap <RIGHT> <NOP>
+vnoremap <UP> <NOP>
+vnoremap <DOWN> <NOP>
+vnoremap <LEFT> <NOP>
+vnoremap <RIGHT> <NOP>
 
 " map ctrl-e and ctrl-a to beginning and end of line like in terminal
 inoremap <C-e> <ESC>A
@@ -169,9 +177,9 @@ command! Wq wq
 command! WQ wq
 command! QW wq
 command! Qw wq
-noremap q: <Nop>
-nnoremap q <Nop>
-nnoremap Q <nop>
+noremap q: <NOP>
+nnoremap q <NOP>
+nnoremap Q <NOP>
 
 " moving line up and down like in sublime
 " nnoremap <C-j> :m .+1<CR>== <- these don't work so well with my tmux setup
