@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Vim plugin to list, select and switch between buffers.
-Plug 'jeetsukumaran/vim-buffergator'
+Plug 'jeetsukumaran/vim-buffergator', {'on': ['BuffergatorOpen']}
 
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'kien/ctrlp.vim'
@@ -45,12 +45,12 @@ set laststatus=2
 Plug 'tpope/vim-fugitive'
 
 " A git mirror of gundo.vim ('super' undo tree)
-Plug 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim', {'on': ['GundoToggle']}
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 
 " :sunflower: A Vim alignment plugin
-Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align', {'on': ['EasyAlign']}
 
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
@@ -66,7 +66,7 @@ nmap <silent> <S-k> <Plug>(ale_previous_wrap)
 nmap <silent> <S-j> <Plug>(ale_next_wrap)
 
 " A modern vim plugin for editing LaTeX files.
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'for': ['tex']}
 let g:Tex_DefaultTargetFormat = 'pdf' " Change default target to pdf, if not dvi is used
 let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r -g @line @pdf @tex'
@@ -82,7 +82,7 @@ Plug 'bronson/vim-trailing-whitespace'
 nnoremap <leader>w :FixWhitespace<CR>
 
 " CoffeeScript support for vim
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
 
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
@@ -91,7 +91,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'rizzatti/dash.vim'
 
 " pandoc integration and utilities for vim
-Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc', {'for': ['markdown']}
 autocmd Filetype markdown nnoremap <buffer> <F5> :w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>
 autocmd Filetype markdown inoremap <buffer> <F5> <ESC>:w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>a
 autocmd Filetype markdown nnoremap <buffer> <F6> :w<CR>:Pandoc pdf -V geometry:margin=1.00in<CR>
@@ -99,7 +99,7 @@ autocmd Filetype markdown inoremap <buffer> <F6> <ESC>:w<CR>:Pandoc pdf -V geome
 
 
 " pandoc markdown syntax, to be installed alongside vim-pandoc
-Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc-syntax', {'for': ['markdown']}
 let g:pandoc#modules#disabled = ["folding"]
 
 " Vim motions on speed!
@@ -121,7 +121,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Preview colours in source code while editing
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color', {'for': ['css', 'html']}
 
 " VIM Table Mode for instant table creation
 Plug 'dhruvasagar/vim-table-mode'
@@ -130,11 +130,11 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'bradford-smith94/vim-autolist'
 autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
 
-" Vim syntax file & snippets for Docker's Dockerfile
-Plug 'ekalinin/dockerfile.vim'
-
 " Go development plugin for Vim
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'for': ['go'], 'do': ':GoInstallBinaries'}
 let g:go_fmt_command = "goimports"
+
+" A tree explorer plugin for vim.
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
