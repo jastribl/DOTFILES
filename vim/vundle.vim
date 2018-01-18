@@ -65,7 +65,12 @@ let g:multi_cursor_exit_from_insert_mode = 0
 
 " Asynchronous Lint Engine
 Plugin 'w0rp/ale'
-let g:ale_lint_delay = 1000
+let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_enter = 0
+" let g:ale_lint_delay = 1000
+let g:airline#extensions#ale#enabled = 1
+nmap <silent> <S-k> <Plug>(ale_previous_wrap)
+nmap <silent> <S-j> <Plug>(ale_next_wrap)
 
 " A modern vim plugin for editing LaTeX files.
 Plugin 'lervag/vimtex'
