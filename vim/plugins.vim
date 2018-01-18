@@ -58,9 +58,9 @@ let g:multi_cursor_exit_from_insert_mode = 0
 
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
-let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_on_enter = 0
-" let g:ale_lint_delay = 1000
+" let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_enter = 1
+" let g:ale_lint_delay = 700
 let g:airline#extensions#ale#enabled = 1
 nmap <silent> <S-k> <Plug>(ale_previous_wrap)
 nmap <silent> <S-j> <Plug>(ale_next_wrap)
@@ -136,5 +136,8 @@ let g:go_fmt_command = "goimports"
 
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree'
+
+" A code-completion engine for Vim
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 call plug#end()
