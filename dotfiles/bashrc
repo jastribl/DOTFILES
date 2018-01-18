@@ -11,6 +11,11 @@ alias gap='git add --patch'
 alias gbgone='git branch -vv | grep ": gone"'
 alias gdw='git diff -w'
 
+# my trusty docker hakcs
+alias docker_remove_all_containers='docker rm $(docker ps -a -q)'
+alias docker_remove_all_images='docker rmi $(docker images -q)'
+alias docker_remove_all_the_things='docker_remove_all_containers; docker_remove_all_images'
+
 # quick aliases to help set per-repo emails for git (for use with "useConfigOnly = true" in gitconfig)
 alias set_git_email_textnow='git config --local user.email "justin.stribling@textnow.com"'
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
