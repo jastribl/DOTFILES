@@ -34,6 +34,7 @@ apps=(
     php56-xdebug
     protobuf
     qt5
+    cmake
 )
 
 for app in "${apps[@]}"; do
