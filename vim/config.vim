@@ -31,6 +31,9 @@ function! ToggleMouse()
 endfunc
 nnoremap <C-M> :call ToggleMouse()<CR>
 
+" use % to select blocks
+noremap % v%
+
 
 " UI Config
 colorscheme solarized
