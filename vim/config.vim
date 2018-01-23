@@ -20,16 +20,18 @@ set pastetoggle=<F2>
 nnoremap <F3> :windo set number!<CR>:GitGutterToggle<CR>
 nnoremap <F7> :set spell!<CR>
 
-function! ToggleMouse()
-    if &mouse == 'a'
-        set mouse=
-        echo "Mouse Off"
-    else
-        set mouse=a
-        echo "Mouse On"
-    endif
-endfunc
-nnoremap <C-M> :call ToggleMouse()<CR>
+" todo: pick another shortcut for this that isn't the enter key or figure out
+" how to differentiate the enter key from the actual <C-m>
+" function! ToggleMouse()
+    " if &mouse == 'a'
+        " set mouse=
+        " echo "Mouse Off"
+    " else
+        " set mouse=a
+        " echo "Mouse On"
+    " endif
+" endfunc
+" nnoremap <C-M> :call ToggleMouse()<CR>
 
 " use % to select blocks
 noremap % v%
