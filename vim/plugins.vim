@@ -130,6 +130,12 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'bradford-smith94/vim-autolist'
 autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
 
+" A vim plugin that simplifies the transition between multiline and single-line code
+Plug 'AndrewRadev/splitjoin.vim'
+
+" UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
+Plug 'SirVer/ultisnips'
+
 " Go development plugin for Vim
 Plug 'fatih/vim-go', {'for': ['go'], 'do': ':GoInstallBinaries'}
 let g:go_fmt_command = "goimports"
@@ -169,11 +175,15 @@ function! s:build_go_files()
 endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 
-" A vim plugin that simplifies the transition between multiline and single-line code
-Plug 'AndrewRadev/splitjoin.vim'
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
-Plug 'SirVer/ultisnips'
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree'

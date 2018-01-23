@@ -52,19 +52,8 @@ set showmatch               " highlight matching [{()}]
 set scrolloff=3
 set linebreak
 set autowrite               " write buffer to file on make
-
 " set colorcolumn=100
 " set textwidth=100
-
-function! Tab_Or_Complete()
-    if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-        return "\<C-N>"
-    else
-        return "\<Tab>"
-    endif
-endfunction
-inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
-
 
 " # Searching
 set incsearch               " search as characters are entered
