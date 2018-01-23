@@ -51,12 +51,10 @@ set updatetime=1500         " update more often (this helps git gutter show fast
 set showmatch               " highlight matching [{()}]
 set scrolloff=3
 set linebreak
+set autowrite               " write buffer to file on make
+
 " set colorcolumn=100
 " set textwidth=100
-
-" augroup filetypedetect
-    " au BufRead,BufNewFile *.sqx set filetype=cpp
-" augroup END
 
 function! Tab_Or_Complete()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
@@ -140,7 +138,7 @@ function! TabEditSmart(file)
     if bufname("%") == ""
         execute "edit " . a:file
     else
-        execute "tabedit " a:file
+        execute "vsplit " a:file
     endif
 endfunction
 
