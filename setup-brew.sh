@@ -35,6 +35,7 @@ apps=(
     protobuf
     qt5
     cmake
+    ctop
 )
 
 for app in "${apps[@]}"; do
