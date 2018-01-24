@@ -136,12 +136,15 @@ Plug 'AndrewRadev/splitjoin.vim'
 " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
 Plug 'SirVer/ultisnips'
 
+" Perform all your vim insert mode completions with Tab
+Plug 'ervandew/supertab'
+
 " Go development plugin for Vim
 Plug 'fatih/vim-go', {'for': ['go'], 'do': ':GoInstallBinaries'}
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
-let g:go_auto_type_info = 1
-set updatetime=100
+" let g:go_auto_type_info = 1
+" set updatetime=100
 " let g:go_auto_sameids = 1
 " let g:go_fmt_fail_silently = 1
 " let g:go_highlight_types = 1
@@ -164,6 +167,7 @@ autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <leader>i <Plug>(go-sameids-toggle)
+autocmd Filetype go nmap <C-[> <C-T>
 function! s:build_go_files()
     " run :GoBuild or :GoTestCompile based on the go file
     let l:file = expand('%')
@@ -193,5 +197,8 @@ Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
 
 " A VIM plugin for formatting saved JSON file.A VIM plugin for formatting saved JSON file.
 Plug 'XadillaX/json-formatter.vim', {'do': 'npm install jjson -g'}
+
+" Rename the current file in the vim buffer + retain relative path.
+Plug 'danro/rename.vim'
 
 call plug#end()
