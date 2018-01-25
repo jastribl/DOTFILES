@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 echo "---------- installing brew stuff ----------"
 
@@ -36,11 +36,12 @@ apps=(
     qt5
     cmake
     ctop
+    cmatrix
 )
 
 for app in "${apps[@]}"; do
     echo "> brew install $app"
-    brew install $app
+    brew install "$app"
 done
 
 caskapps=(
@@ -77,5 +78,5 @@ caskapps=(
 
 for app in "${caskapps[@]}"; do
     echo "brew cask install $app"
-    brew cask install $app
+    brew cask install "$app"
 done
