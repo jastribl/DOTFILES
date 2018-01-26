@@ -26,6 +26,9 @@ map <leader><leader> <plug>NERDCommenterToggle
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_enabled = 0
 
+" fugitive.vim: a Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
 " precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
@@ -40,9 +43,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tabs = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
-
-" git wrapper
-Plug 'tpope/vim-fugitive'
 
 " A git mirror of gundo.vim ('super' undo tree)
 Plug 'sjl/gundo.vim', {'on': ['GundoToggle']}
@@ -135,6 +135,9 @@ Plug 'AndrewRadev/splitjoin.vim'
 
 " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
 Plug 'SirVer/ultisnips'
+
+" vim-snipmate default snippets (Previously snipmate-snippets)
+Plug 'honza/vim-snippets'
 
 " Perform all your vim insert mode completions with Tab
 Plug 'ervandew/supertab'
