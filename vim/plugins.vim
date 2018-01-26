@@ -203,4 +203,7 @@ Plug 'XadillaX/json-formatter.vim', {'do': 'npm install jjson -g'}
 " Rename the current file in the vim buffer + retain relative path.
 Plug 'danro/rename.vim'
 
+" Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
+Plug 'raimondi/delimitmate'
+
 call plug#end()
