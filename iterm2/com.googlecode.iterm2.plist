@@ -375,6 +375,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/Github/DOTFILES/iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -392,7 +394,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -416,15 +418,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>-351 1314 445 77 -860 1050 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>2290 475 700 622 1680 257 1920 1058 </string>
+	<string>490 322 700 622 0 0 1680 1050 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>1949 438 606 469 1680 312 1920 1177 </string>
+	<string>220 103 606 469 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>606 465 918 512 0 0 1680 1027 </string>
+	<string>2451 380 918 512 1680 128 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1050 0 0 1680 1027 </string>
+	<string>1680 784 570 402 1680 128 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1800 863 570 452 1680 257 1920 1058 </string>
+	<string>1800 784 570 402 1680 128 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1948 426 570 452 1680 342 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1094,7 +1096,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>~/Documents/GitHub</string>
+			<string>~/Github</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -1760,7 +1762,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/justinstribling/Documents/Github/DOTFILES/iterm2</string>
+	<string>/Users/justinstribling/Github/DOTFILES/iterm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1774,7 +1776,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-30T14:48:15Z</date>
+	<date>2018-01-31T05:25:15Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1802,7 +1804,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.4</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
