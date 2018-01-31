@@ -8,3 +8,4 @@
 ./setup-dotfiles.sh
 ./setup-powerline-fonts.sh
 ./setup-mac.sh
+./setup-sublime.sh
