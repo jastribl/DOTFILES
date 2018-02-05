@@ -2,7 +2,7 @@
 " Sets how many lines of history VIM has to remember
 set history=1000
 set directory=$HOME/.vim/swapfiles// " store swap files in their own place
-set nonumber
+set number
 set smartindent
 set spell
 set spelllang=en_ca
