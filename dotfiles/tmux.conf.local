@@ -278,6 +278,9 @@ bind a set-window-option synchronize-panes
 # disable auto renaming of windows
 set-option -g allow-rename off
 
+# Enter copy mode and start searching in one go
+bind-key / copy-mode \; send-key ?
+
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
 # unbind C-a
