@@ -59,3 +59,8 @@ PR () {
 function pandoc_latex() {
     pandoc ${1} --latex-engine=`which pdflatex` -V geometry:margin=1.00in --table-of-contents --number-sections -o ${2}
 }
+
+if command -v brew >/dev/null 2>&1; then
+    # Load rupa's z if installed
+    [ -f "$(brew --prefix)/etc/profile.d/z.sh" ] && source "$(brew --prefix)/etc/profile.d/z.sh"
+fi
