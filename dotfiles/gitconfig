@@ -19,8 +19,8 @@
 	checkoutr = checkout
 [diff]
 	tool = vimdiff
-[interactive]
-	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
+; [interactive]
+	; diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
 [rebase]
 	autoStash = true
 [remote "origin"]
