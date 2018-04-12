@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git brew rails npm per-directory-history vagrant tmux go docker)
+plugins=(git rails per-directory-history vagrant go docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bashrc
