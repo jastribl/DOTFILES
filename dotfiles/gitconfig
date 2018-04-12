@@ -19,6 +19,7 @@
 	checkoutr = checkout
 [diff]
 	tool = vimdiff
+; https://github.com/so-fancy/diff-so-fancy/issues/296
 ; [interactive]
 	; diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
 [rebase]
