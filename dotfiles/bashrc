@@ -26,7 +26,6 @@ alias brew_dep_list='brew list | while read cask; do echo -n $fg[yellow] $cask $
 alias set_git_email_textnow='git config --local user.email "justin.stribling@textnow.com"'
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
-alias set_git_email_uber='git config --local user.email "justin.stribling@uber.com"'
 
 if [[ -e ~/.bashrc.local ]]; then
     source ~/.bashrc.local
