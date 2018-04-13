@@ -23,7 +23,6 @@ alias docker_remove_all_the_things='docker_remove_all_containers; docker_remove_
 alias brew_dep_list='brew list | while read cask; do echo -n $fg[yellow] $cask $fg[red]; brew deps $cask | awk '"'"'{printf(" %s ", $0)}'"'"'; echo ""; done'
 
 # quick aliases to help set per-repo emails for git (for use with "useConfigOnly = true" in gitconfig)
-alias set_git_email_textnow='git config --local user.email "justin.stribling@textnow.com"'
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
 
