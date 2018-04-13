@@ -1,0 +1,48 @@
+alias reindex_spotlight='sudo mdutil -E -i on /'
+alias remove_ds_store_files='sudo find . -name '.DS_Store' -type f -delete'
+
+# use vim installed through brew, not the built-in vim
+alias vim='/usr/local/bin/vim'
+
+alias copy_location='pwd | pbcopy'
+alias cd_clipboard='cd `pbpaste`'
+
+# some simple aliases to get places
+alias go_desktop='cd ~/Desktop'
+alias go_documents='cd ~/Documents'
+alias go_git='cd ~/Documents/Github'
+alias go_downloads='cd ~/Downloads'
+alias go_drive='cd ~/Google\ Drive/'
+alias go_go='cd $GOPATH/src'
+
+alias cd_desktop='cd ~/Desktop'
+alias cd_documents='cd ~/Documents'
+alias cd_git='cd ~/Documents/Github'
+alias cd_downloads='cd ~/Downloads'
+alias cd_drive='cd ~/Google\ Drive/'
+alias cd_go='cd $GOPATH/src'
+
+# Golang setup
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin:$GOBIN
+
+# easy way to open a PR against develop
+PR () {
+    BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\(.*\)\.git/\1/'`
+    BASE_BRANCH='develop'
+    COMPARE_BRANCH=`git symbolic-ref --short HEAD`
+    PR_URL="$BASE_URL/compare/$BASE_BRANCH...$COMPARE_BRANCH?expand=1"
+    open ${PR_URL}
+}
+
+function pandoc_latex() {
+    pandoc ${1} --latex-engine=`which pdflatex` -V geometry:margin=1.00in --table-of-contents --number-sections -o ${2}
+}
+
+if command -v brew >/dev/null 2>&1; then
+    # Load rupa's z if installed
+    [ -f "$(brew --prefix)/etc/profile.d/z.sh" ] && source "$(brew --prefix)/etc/profile.d/z.sh"
+fi
