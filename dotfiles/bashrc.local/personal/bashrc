@@ -15,4 +15,11 @@ alias testonly='coverageoff;vendor/bin/phpunit -c tests/phpunit.xml --filter '
 alias cover='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage'
 alias coveronly='coverageon;vendor/bin/phpunit -c tests/phpunit.xml --coverage-html ./coverage --filter '
 
+# Golang setup
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin:$GOBIN
+
 source ~/.bashrc.plugables/osx/bashrc

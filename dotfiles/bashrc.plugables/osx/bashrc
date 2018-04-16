@@ -22,13 +22,6 @@ alias cd_downloads='cd ~/Downloads'
 alias cd_drive='cd ~/Google\ Drive/'
 alias cd_go='cd $GOPATH/src'
 
-# Golang setup
-export GOPATH=$HOME/golang
-export GOROOT=/usr/local/opt/go/libexec
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH
-export PATH=$PATH:$GOROOT/bin:$GOBIN
-
 # easy way to open a PR against develop
 PR () {
     BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\(.*\)\.git/\1/'`
