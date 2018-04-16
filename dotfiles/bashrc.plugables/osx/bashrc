@@ -35,6 +35,11 @@ function pandoc_latex() {
     pandoc ${1} --latex-engine=`which pdflatex` -V geometry:margin=1.00in --table-of-contents --number-sections -o ${2}
 }
 
+# Open man page as PDF
+function manpdf() {
+ man -t "${1}" | open -f -a /Applications/Preview.app/
+}
+
 if command -v brew >/dev/null 2>&1; then
     # Load rupa's z if installed
     [ -f "$(brew --prefix)/etc/profile.d/z.sh" ] && source "$(brew --prefix)/etc/profile.d/z.sh"
