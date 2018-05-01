@@ -28,13 +28,13 @@ alias cd_downloads='cd ~/Downloads'
 alias cd_drive='cd ~/Google\ Drive/'
 alias cd_go='cd $GOPATH/src'
 
-# easy way to open a PR against develop
-PR () {
-    BASE_URL=`git remote -v | grep "push" | awk '{print $2}' | sed -e 's/\(.*\)\.git/\1/'`
-    BASE_BRANCH='develop'
+# easy way to open a PR (defaults to PR against develop)
+function PR () {
+    REPO_URL=`git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//'`
+    BASE_BRANCH=${1:-develop}
     COMPARE_BRANCH=`git symbolic-ref --short HEAD`
-    PR_URL="$BASE_URL/compare/$BASE_BRANCH...$COMPARE_BRANCH?expand=1"
-    open ${PR_URL}
+    PR_URL="$REPO_URL/compare/$BASE_BRANCH...$COMPARE_BRANCH?expand=1"
+    open "$PR_URL"
 }
 
 function pandoc_latex() {
