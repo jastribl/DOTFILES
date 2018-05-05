@@ -197,7 +197,9 @@ Plug 'scrooloose/nerdtree'
 " A code-completion engine for Vim
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
 let g:ycm_filetype_blacklist = {
-            \ 'tex' : 0
+            \ 'tex' : 0,
+            \ 'pandoc' : 0,
+            \ 'markdown' : 0
             \}
 
 " A VIM plugin for formatting saved JSON file.A VIM plugin for formatting saved JSON file.
