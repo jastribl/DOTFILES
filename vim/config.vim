@@ -197,3 +197,6 @@ vnoremap <C-l> >gv
 " easier moving between tabs
 nnoremap H gT
 nnoremap L gt
+
+" correct the last spelling mistake
+nnoremap [= [sz=
