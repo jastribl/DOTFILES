@@ -134,7 +134,7 @@ autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
 Plug 'AndrewRadev/splitjoin.vim'
 
 " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips', {'do': 'pip3 install unidecode'}
 
 " vim-snipmate default snippets (Previously snipmate-snippets)
 Plug 'honza/vim-snippets'
