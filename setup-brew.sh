@@ -75,6 +75,7 @@ caskapps=(
     skype
     android-studio
     vagrant
+    discord
 )
 
 for app in "${caskapps[@]}"; do
