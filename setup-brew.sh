@@ -76,6 +76,7 @@ caskapps=(
     android-studio
     vagrant
     discord
+    soundcloud-downloader
 )
 
 for app in "${caskapps[@]}"; do
