@@ -3,4 +3,6 @@ PATH="$PATH:$HOME/diff-so-fancy"
 [ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
 
 export PATH="$PATH:~/bin"
+
+# Add db2 stuff
 alias db2c='bash -c "source ~db2inst2/sqllib/db2profile && rlwrap db2"'
