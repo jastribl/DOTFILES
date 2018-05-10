@@ -211,4 +211,7 @@ Plug 'danro/rename.vim'
 " Syntax highlighting for thrift definition files.
 Plug 'solarnz/thrift.vim'
 
+" Ctags generator for Vim
+Plug 'szw/vim-tags'
+
 call plug#end()
