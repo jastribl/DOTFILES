@@ -6,3 +6,6 @@ export PATH="$PATH:~/bin"
 
 # Add db2 stuff
 alias db2c='bash -c "source ~db2inst2/sqllib/db2profile && rlwrap db2"'
+
+# Add silver searcher
+export PATH="$PATH:/u6/jastribling/Github/the_silver_searcher/bin/"
