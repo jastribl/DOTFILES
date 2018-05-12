@@ -33,7 +33,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
 if $SSH_CONNECTION
-    let g:solarized_termtrans=1
+    let g:solarized_termtrans=1 " makes the background black
 endif
 
 " Lean & mean status/tabline for vim that's light as air.
