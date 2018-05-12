@@ -132,14 +132,10 @@ function! TabEditSmart(file)
 endfunction
 
 " edit vimrc/zshrc and load vimrc bindings
-nnoremap <leader>evb :call TabEditSmart($MYVIMRC)<CR>
-nnoremap <leader>evc :call TabEditSmart("~/.vim/config.vim")<CR>
-nnoremap <leader>evv :call TabEditSmart("~/.vim/plugins.vim")<CR>
 nnoremap <leader>ez :call TabEditSmart("~/.zshrc")<CR>
-nnoremap <leader>eb :call TabEditSmart("~/.bashrc")<CR>
-nnoremap <leader>ebl :call TabEditSmart("~/.bashrc.local")<CR>
-nnoremap <leader>et :call TabEditSmart("~/.tmux.conf")<CR>
-nnoremap <leader>etl :call TabEditSmart("~/.tmux.conf.local")<CR>
+nnoremap <leader>ev :call TabEditSmart("~/.vim/config.vim")<CR> :call TabEditSmart("~/.vim/plugins.vim")<CR>
+nnoremap <leader>eb :call TabEditSmart("~/.bashrc")<CR> :call TabEditSmart("~/.bashrc.local")<CR>
+nnoremap <leader>et :call TabEditSmart("~/.tmux.conf")<CR> :call TabEditSmart("~/.tmux.conf.local")<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 
