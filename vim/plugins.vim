@@ -48,6 +48,9 @@ set laststatus=2
 Plug 'sjl/gundo.vim', {'on': ['GundoToggle']}
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
+if has('python3')
+    let g:gundo_prefer_python3 = 1
+endif
 
 " :sunflower: A Vim alignment plugin
 Plug 'junegunn/vim-easy-align', {'on': ['EasyAlign']}
