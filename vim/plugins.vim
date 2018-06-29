@@ -54,6 +54,7 @@ endif
 
 " :sunflower: A Vim alignment plugin
 Plug 'junegunn/vim-easy-align', {'on': ['EasyAlign']}
+vnoremap A :EasyAlign
 
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
