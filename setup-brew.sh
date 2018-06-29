@@ -23,7 +23,6 @@ apps=(
     tmux
     cask
     node
-    mongodb
     reattach-to-user-namespace
     diff-so-fancy
     watch
@@ -32,11 +31,9 @@ apps=(
     composer
     php56
     php56-xdebug
-    protobuf
     qt5
     cmake
     ctop
-    cmatrix
     z
 )
 
@@ -56,7 +53,7 @@ caskapps=(
     skim
     slack
     spectacle
-    java
+    java8
     intellij-idea
     clion
     xquartz
@@ -77,6 +74,8 @@ caskapps=(
     vagrant
     discord
     soundcloud-downloader
+    psequel
+    osxfuse
 )
 
 for app in "${caskapps[@]}"; do
