@@ -1,3 +1,7 @@
+if has('python3')
+    silent! python3 1
+endif
+
 " # General
 " Sets how many lines of history VIM has to remember
 set history=1000

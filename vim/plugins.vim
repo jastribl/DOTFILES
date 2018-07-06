@@ -220,7 +220,7 @@ Plug 'solarnz/thrift.vim'
 " Ctags generator for Vim
 Plug 'szw/vim-tags'
 
-Plug 'vim-scripts/Conque-GDB'
-let g:ConqueGdb_GdbExe = 'arm-none-eabi-gdb'
+" Plug 'vim-scripts/Conque-GDB'
+" let g:ConqueGdb_GdbExe = 'arm-none-eabi-gdb'
 
 call plug#end()
