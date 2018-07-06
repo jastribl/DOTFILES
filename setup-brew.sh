@@ -16,7 +16,7 @@ apps=(
     python
     ssh-copy-id
     the_silver_searcher
-    "vim --override-system-vi"
+    "vim --with-override-system-vi"
     wget
     zsh
     zsh-completions
