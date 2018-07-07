@@ -223,4 +223,7 @@ Plug 'szw/vim-tags'
 " Plug 'vim-scripts/Conque-GDB'
 " let g:ConqueGdb_GdbExe = 'arm-none-eabi-gdb'
 
+" Alternate Files quickly (.c --> .h etc)
+Plug 'vim-scripts/a.vim'
+
 call plug#end()
