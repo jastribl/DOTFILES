@@ -203,5 +203,8 @@ nnoremap L gt
 " correct the last spelling mistake
 nnoremap [= [sz=
 
+nmap , \
+vmap , \
+
 command! Hexbin %!xxd
 command! Unhexbin %!xxd -r
