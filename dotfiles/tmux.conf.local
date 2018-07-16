@@ -281,6 +281,13 @@ set-option -g allow-rename off
 # Enter copy mode and start searching in one go
 bind-key / copy-mode \; send-key ?
 
+# smart pane switching with awareness of vim splits
+bind -n C-h run "(tmux display-message -p '#{pane_current_command} #{window_name}' | grep -iq vim && tmux send-keys C-h) || tmux select-pane -L"
+bind -n C-j run "(tmux display-message -p '#{pane_current_command} #{window_name}' | grep -iq vim && tmux send-keys C-j) || tmux select-pane -D"
+bind -n C-k run "(tmux display-message -p '#{pane_current_command} #{window_name}' | grep -iq vim && tmux send-keys C-k) || tmux select-pane -U"
+bind -n C-l run "(tmux display-message -p '#{pane_current_command} #{window_name}' | grep -iq vim && tmux send-keys C-l) || tmux select-pane -R"
+# bind -n C-\ run "(tmux display-message -p '#{pane_current_command} #{window_name}' | grep -iq vim && tmux send-keys 'C-\\') || tmux select-pane -l"
+
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
 # unbind C-a
