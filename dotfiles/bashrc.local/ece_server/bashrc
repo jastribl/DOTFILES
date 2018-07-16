@@ -1,6 +1,8 @@
 export PATH="$HOME/bin:$HOME/vim81/bin:$PATH:$HOME/diff-so-fancy"
 
-[ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
+if [ "$HOSTNAME" != ecelinux4.uwaterloo.ca ]; then
+    [ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
+fi
 
 # Add db2 stuff
 alias db2c='bash -c "source ~db2inst2/sqllib/db2profile && rlwrap db2"'
