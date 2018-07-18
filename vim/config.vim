@@ -194,7 +194,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 vnoremap <C-h> <gv
 vnoremap <C-l> >gv
 
-inoremap <C-r> <ESC>:%s/<C-r><C-w>//gc<left><left><left>
+inoremap <C-r> <ESC>:%s/<C-r><C-w>/<C-r><C-w>/gc<left><left><left>
 
 " easier moving between tabs
 nnoremap H gT
