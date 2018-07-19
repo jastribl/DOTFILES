@@ -9,7 +9,7 @@ Plug 'jeetsukumaran/vim-buffergator', {'on': ['BuffergatorOpen']}
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 'Et'
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 0 " don't cache results - turn this off if things are getting slow
 if executable('ag')
