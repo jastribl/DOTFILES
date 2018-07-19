@@ -218,9 +218,6 @@ Plug 'danro/rename.vim'
 " Syntax highlighting for thrift definition files.
 Plug 'solarnz/thrift.vim'
 
-" Ctags generator for Vim
-Plug 'szw/vim-tags'
-
 " Plug 'vim-scripts/Conque-GDB'
 " let g:ConqueGdb_GdbExe = 'arm-none-eabi-gdb'
 
