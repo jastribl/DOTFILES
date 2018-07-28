@@ -1,29 +1,29 @@
+" a fix for something I can't remember
 if has('python3')
     silent! python3 1
 endif
 
-" # General
-" Sets how many lines of history VIM has to remember
-set history=1000
+" General
+set history=1000                     " sets how many lines of history VIM has to remember
 set directory=$HOME/.vim/swapfiles// " store swap files in their own place
-set number
-set smartindent
-set spell
-set spelllang=en_ca
-if has("patch-7.4.338")
-    set breakindent
-    set breakindentopt=shift:2
-    let &showbreak = '↳ '
-endif
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set backspace=2             " make backspace work like most other apps
-set pastetoggle=<F2>
-nnoremap <F3> :windo set number!<CR>:GitGutterToggle<CR>
+set number                           " turns on line numbers
+set smartindent                      " be smart with indentation
+set spell                            " turn on spell checking
+set spelllang=en_ca                  " set dictionary to Canadian english
+" toggle spelling
 nnoremap <F7> :set spell!<CR>
 
+set tabstop=4        " smart tabs
+set softtabstop=4    " make tabs and spaces play nice together
+set shiftwidth=4     " make tabs and spaces play nice together
+set expandtab        " use the right number of spaces for tabs
+set backspace=2      " make backspace work like most other apps
+set pastetoggle=<F2> " toggle paste mode todo: make a shortcut to toggle paste mode, paste, and toggle paste mode off
+
+" toggle line numbers and git gutter together
+nnoremap <F3> :windo set number!<CR>:GitGutterToggle<CR>
+
+" toggle mouse mode
 function! ToggleMouse()
     if &mouse == 'a'
         set mouse=
@@ -35,40 +35,43 @@ function! ToggleMouse()
 endfunc
 nnoremap <F4> :call ToggleMouse()<CR>
 
-" use % to select blocks
-noremap % v%
-
-
 " UI Config
-syntax enable
-colorscheme solarized
-set background=dark
-if !has("gui_running")
-    set t_Co=256
-    set term=screen-256color
-endif
+syntax enable         " enable syntax
+colorscheme solarized " my current colorscheme of choice
+set background=dark   " use dark mode
+                      " no background for vertical splits
 hi VertSplit ctermbg=NONE guibg=NONE cterm=NONE
-set fillchars+=vert:│
-set wildmenu                " visual autocomplete for command menu
-set lazyredraw              " redraw only when we need to.
-set updatetime=100          " update more often (this helps git gutter show faster)
-set showmatch               " highlight matching [{()}]
-set scrolloff=3
-set linebreak
-set autowrite               " write buffer to file on make
-" set colorcolumn=100
-" set textwidth=100
+set fillchars+=vert:│ " use tmux vsplit character
+set wildmenu          " visual autocomplete for command menu
+set lazyredraw        " redraw only when we need to.
+set updatetime=100    " update more often (this helps git gutter show faster)
+set showmatch         " highlight matching [{()}]
+set scrolloff=3       " keep the cursor offset while scrolling
+set linebreak         " break lines at words, not at characters
+set autowrite         " write buffer to file on make
 
-" # Searching
-set incsearch               " search as characters are entered
-set hlsearch                " highlight matches
-let @/ = ""                 " don't highlight last search when sourcing vimrc
-set ignorecase
-set smartcase               " When searching try to be smart about cases
+" show fancy line breaks
+if has("patch-7.4.338")
+    set breakindent
+    set breakindentopt=shift:2
+    let &showbreak = '↳ '
+endif
 
-" turn off search highlightd
+
+" Searching
+set incsearch         " search as characters are entered
+set hlsearch          " highlight matches
+let @/ = ""           " don't highlight last search when sourcing vimrc
+set ignorecase        " ignore case while searching
+set smartcase         " When searching try to be smart about cases
+" turn off search highlighting with space
 nnoremap <space> :nohlsearch<CR>
 
+" split in a more natural direction
+set splitbelow
+set splitright
+
+" special things with ag
 if executable('ag')
     " bind <leader / to grep shortcut
     command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -76,6 +79,33 @@ if executable('ag')
 
     " Use ag over grep
     set grepprg=ag\ --nogroup\ --nocolor
+endif
+
+function! TabEditSmart(file)
+    if bufname("%") == ""
+        execute "edit " . a:file
+    else
+        execute "vsplit " a:file
+    endif
+endfunction
+
+" # file saving
+" Return to last edit position when opening files (You want this!)
+if has("autocmd")
+    autocmd BufReadPost *
+         \ if line("'\"") > 0 && line("'\"") <= line("$") |
+         \   exe "normal! g`\"" |
+         \ endif
+endif
+
+" # clipboard
+" yank to clipboard
+if has("clipboard")
+    set clipboard=unnamed " copy to the system clipboard
+
+    if has("unnamedplus") " X11 support
+        set clipboard+=unnamedplus
+    endif
 endif
 
 
@@ -121,6 +151,9 @@ inoremap kj <esc>
 vnoremap < <gv
 vnoremap > >gv
 
+" use % to select blocks
+noremap % v%
+
 " use tab and shift tab in visual mode for indentation
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
@@ -130,46 +163,12 @@ noremap <S-Tab> <<
 " get out of visual mode quicker
 vnoremap <ESC> <ESC><ESC>
 
-function! TabEditSmart(file)
-    if bufname("%") == ""
-        execute "edit " . a:file
-    else
-        execute "vsplit " a:file
-    endif
-endfunction
-
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>ez :call TabEditSmart("~/.zshrc")<CR>
 nnoremap <leader>ev :call TabEditSmart("~/.vim/config.vim")<CR> :call TabEditSmart("~/.vim/plugins.vim")<CR>
 nnoremap <leader>eb :call TabEditSmart("~/.bashrc")<CR> :call TabEditSmart("~/.bashrc.local")<CR>
 nnoremap <leader>et :call TabEditSmart("~/.tmux.conf")<CR> :call TabEditSmart("~/.tmux.conf.local")<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-
-
-" # file saving
-" Return to last edit position when opening files (You want this!)
-if has("autocmd")
-    autocmd BufReadPost *
-         \ if line("'\"") > 0 && line("'\"") <= line("$") |
-         \   exe "normal! g`\"" |
-         \ endif
-endif
-
-
-" # clipboard
-" yank to clipboard
-if has("clipboard")
-    set clipboard=unnamed " copy to the system clipboard
-
-    if has("unnamedplus") " X11 support
-        set clipboard+=unnamedplus
-    endif
-endif
-
-" # splitting
-" split in a more natural direction
-set splitbelow
-set splitright
 
 " because I can't type :)
 command! Q q
@@ -192,6 +191,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 vnoremap <C-h> <gv
 vnoremap <C-l> >gv
 
+" replace word under cursor in entire file (with confirmation)
 inoremap <C-r> <ESC>:%s/<C-r><C-w>/<C-r><C-w>/gc<left><left><left>
 
 " easier moving between tabs
@@ -201,8 +201,10 @@ nnoremap L gt
 " correct the last spelling mistake
 nnoremap [= [sz=
 
+" use commas as a second leader key
 nmap , \
 vmap , \
 
+" convert files between hex and bin
 command! Hexbin %!xxd
 command! Unhexbin %!xxd -r

@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Vim plugin to list, select and switch between buffers.
-Plug 'jeetsukumaran/vim-buffergator', {'on': ['BuffergatorOpen']}
+Plug 'jeetsukumaran/vim-buffergator'
 
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'kien/ctrlp.vim'
@@ -216,9 +216,6 @@ Plug 'danro/rename.vim'
 
 " Syntax highlighting for thrift definition files.
 Plug 'solarnz/thrift.vim'
-
-" Plug 'vim-scripts/Conque-GDB'
-" let g:ConqueGdb_GdbExe = 'arm-none-eabi-gdb'
 
 " Alternate Files quickly (.c --> .h etc)
 Plug 'vim-scripts/a.vim'
