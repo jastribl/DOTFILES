@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Vim plugin to list, select and switch between buffers.
-Plug 'jeetsukumaran/vim-buffergator'
+Plug 'jeetsukumaran/vim-buffergator', {'on': ['BuffergatorOpen']}
 
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'kien/ctrlp.vim'
@@ -197,7 +197,7 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " A tree explorer plugin for vim.
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " A code-completion engine for Vim
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
