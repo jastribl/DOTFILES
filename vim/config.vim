@@ -42,13 +42,15 @@ noremap % v%
 
 
 " UI Config
+syntax enable
 colorscheme solarized
 set background=dark
 if !has("gui_running")
     set t_Co=256
     set term=screen-256color
 endif
-syntax enable
+hi VertSplit ctermbg=NONE guibg=NONE cterm=NONE
+set fillchars+=vert:│
 set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
 set updatetime=1500         " update more often (this helps git gutter show faster)
