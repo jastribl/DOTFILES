@@ -73,6 +73,9 @@ if executable('ag')
     " bind <leader / to grep shortcut
     command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
     nnoremap <leader>/ :Ag<SPACE>
+
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
 endif
 
 
@@ -161,11 +164,6 @@ if has("clipboard")
     if has("unnamedplus") " X11 support
         set clipboard+=unnamedplus
     endif
-endif
-
-if executable('ag')
-    " Use ag over grep
-    set grepprg=ag\ --nogroup\ --nocolor
 endif
 
 " # splitting
