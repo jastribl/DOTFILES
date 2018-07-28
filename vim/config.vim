@@ -51,7 +51,7 @@ hi VertSplit ctermbg=NONE guibg=NONE cterm=NONE
 set fillchars+=vert:│
 set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
-set updatetime=1500         " update more often (this helps git gutter show faster)
+set updatetime=100          " update more often (this helps git gutter show faster)
 set showmatch               " highlight matching [{()}]
 set scrolloff=3
 set linebreak
