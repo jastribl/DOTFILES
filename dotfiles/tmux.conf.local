@@ -251,11 +251,6 @@ set -g history-limit 1000000
 # start with mouse mode enabled
 #set -g mouse on
 
-# force Vi mode
-#   really you should export VISUAL or EDITOR environment variable, see manual
-set -g status-keys vi
-set -g mode-keys vi
-
 # remove C-a as the second prefix
 set -gu prefix2
 unbind C-a
