@@ -35,6 +35,7 @@ apps=(
     cmake
     ctop
     z
+    fpp
 )
 
 for app in "${apps[@]}"; do
