@@ -134,6 +134,7 @@ Plug 'dhruvasagar/vim-table-mode'
 " autolist: Automatically continues lists
 Plug 'bradford-smith94/vim-autolist'
 autocmd Filetype markdown imap <buffer> <CR> <Esc><Plug>AutolistReturn
+autocmd Filetype text imap <buffer> <CR> <Esc><Plug>AutolistReturn
 
 " A vim plugin that simplifies the transition between multiline and single-line code
 Plug 'AndrewRadev/splitjoin.vim'
