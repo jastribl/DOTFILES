@@ -208,6 +208,7 @@ let g:ycm_filetype_blacklist = {
             \ 'markdown' : 0
             \}
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " A VIM plugin for formatting saved JSON file.A VIM plugin for formatting saved JSON file.
 Plug 'XadillaX/json-formatter.vim', {'do': 'npm install jjson -g'}
