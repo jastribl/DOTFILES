@@ -30,12 +30,10 @@ apps=(
     python3
     composer
     php56
-    php56-xdebug
-    qt5
-    cmake
     ctop
     z
     fpp
+    bash
 )
 
 for app in "${apps[@]}"; do
