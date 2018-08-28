@@ -8,6 +8,7 @@ set history=1000                     " sets how many lines of history VIM has to
 set directory=$HOME/.vim/swapfiles// " store swap files in their own place
 set number                           " turns on line numbers
 set smartindent                      " be smart with indentation
+set encoding=utf-8                   " set the encoding to UTF-8
 set spell                            " turn on spell checking
 set spelllang=en_ca                  " set dictionary to Canadian english
 " toggle spelling
