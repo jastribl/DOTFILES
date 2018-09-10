@@ -222,4 +222,7 @@ Plug 'solarnz/thrift.vim'
 " Alternate Files quickly (.c --> .h etc)
 Plug 'vim-scripts/a.vim'
 
+" Syntax highlighting and typechecker integration for Hack.
+Plug 'hhvm/vim-hack'
+
 call plug#end()
