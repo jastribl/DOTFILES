@@ -34,6 +34,7 @@ apps=(
     z
     fpp
     bash
+    bash-completion@2
     cmake
 )
 
