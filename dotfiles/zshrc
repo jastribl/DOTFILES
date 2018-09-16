@@ -7,4 +7,3 @@ plugins=(git rails per-directory-history vagrant go docker docker-compose tmux)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bashrc
-
