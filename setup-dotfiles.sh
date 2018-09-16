@@ -2,7 +2,7 @@
 
 echo "---------- installing dotfiles ----------"
 
-files="bashrc bashrc.plugables vimrc zshrc gitconfig gitignore_global tmux.conf tmux.conf.local ideavimrc"
+files="bash_profile bashrc bashrc.plugables gitconfig gitignore_global ideavimrc inputrc tmux.conf tmux.conf.local vimrc zshrc"
 
 dotfileDir="$PWD/dotfiles"
 backupDir="$PWD/dotfiles_old/backup_$(date +%Y-%m-%d:%H:%M:%S)"
