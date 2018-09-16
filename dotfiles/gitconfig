@@ -15,8 +15,6 @@
 [pull]
 	default = current
 	rebase = true
-[alias]
-	checkoutr = checkout
 [diff]
 	tool = vimdiff
 ; https://github.com/so-fancy/diff-so-fancy/issues/296
