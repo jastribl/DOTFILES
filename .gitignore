@@ -1,8 +1,12 @@
-*.DS_Store
+/* general stuff */
 dotfiles_old
+
+/* vim stuff */
 vim/.netrwhist
 vim/swapfiles/*
 vim/plugged/
+
+/* tmux stuff */
 tmux/plugins/*
 !tmux/plugins/tpm
 tmux/resurrect/*.txt
