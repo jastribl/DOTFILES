@@ -1,6 +1,2 @@
 PATH="$PATH:$HOME/diff-so-fancy"
-
-[ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
-
-# Add silver searcher
-export PATH="$PATH:/u6/jastribling/Github/the_silver_searcher/bin/"
+PATH="$PATH:$HOME/Github/the_silver_searcher/bin/"

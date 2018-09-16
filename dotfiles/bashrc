@@ -2,6 +2,16 @@ function __currently_in_bash() {
     [[ $(ps -p $$ -oargs=) = *"bash"* ]]
 }
 
+function function_exists {
+    FUNCTION_NAME=$1
+
+    [ -z "$FUNCTION_NAME" ] && return 1
+
+    declare -F "$FUNCTION_NAME" > /dev/null 2>&1
+
+    return $?
+}
+
 if __currently_in_bash; then
     # add bash completion if exists
     if [ -f /usr/local/share/bash-completion/bash_completion ]; then
@@ -80,7 +90,7 @@ alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
 alias gbgone='git branch -vv | grep ": gone"'
 # make auto complete work with aliases
-if __currently_in_bash; then
+if __currently_in_bash && function_exists __git_complete; then
     __git_complete g   _git
     __git_complete gst _git_status
     __git_complete ga  _git_add
