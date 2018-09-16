@@ -1,16 +1,95 @@
+function __currently_in_bash() {
+    [[ $(ps -p $$ -oargs=) = *"bash"* ]]
+}
+
+if __currently_in_bash; then
+    # add bash completion if exists
+    if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+        . /usr/local/share/bash-completion/bash_completion
+    fi
+
+    # bash features
+    shopt -s autocd
+    shopt -s cdable_vars
+    shopt -s checkjobs
+    shopt -s checkwinsize
+    shopt -s direxpand
+    shopt -s dirspell
+    shopt -s dotglob
+    shopt -s expand_aliases
+    shopt -s extglob
+    shopt -s globstar
+    shopt -s hostcomplete
+
+fi
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# use vim for basic editing
 export EDITOR=vim
 
-alias grepv='grep -v'
-alias grepi='grep -i'
+# Colours for ls
+export CLICOLOR=1
+export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+__prompt_command() {
+    # init
+    local EXIT_STATUS="$?"
+    PS1=""
+
+    # colours
+    local CYAN="\[\e[38;5;087m\]"
+    local RESET_COLORS="\[\e[0m\]"
+    local RED="\[\e[38;5;009m\]"
+    local BLUE="\[\e[38;5;069m\]"
+    local GREEN="\[\e[38;5;156m\]"
+    local YELLOW="\[\e[38;5;011m\]"
+
+    # exit status arrow colours
+    if [ $EXIT_STATUS -eq 0 ]; then
+        PS1+="$GREEN"
+    else
+        PS1+="$RED"
+    fi
+
+    # exit status arrow and current directory
+    PS1+="➜$RESET_COLORS  $CYAN\W $RESET_COLORS"
+
+    # git
+    local branch_name="$(git symbolic-ref HEAD 2>/dev/null)"
+    branch_name=${branch_name##refs/heads/}
+	if [ ! "$branch_name" == "" ]; then
+        PS1+="${BLUE}git:(${RED}${branch_name}${BLUE})${RESET_COLORS} "
+        if [[ $(git diff --stat) != '' ]]; then
+            PS1+="${YELLOW}✗${RESET_COLORS} "
+        fi
+	fi
+}
+PROMPT_COMMAND=__prompt_command
 
 # my trusty git hacks
+alias g='git'
+alias ga='git add'
+alias gap='git add --patch'
+alias gco='git checkout'
+alias gst='git status'
+alias gp='git push'
+alias gl='git pull'
+alias gb='git branch'
 alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
-alias gap='git add --patch'
 alias gbgone='git branch -vv | grep ": gone"'
-alias gdw='git diff -w'
-alias gds='git diff --staged'
+# make auto complete work with aliases
+if __currently_in_bash; then
+    __git_complete g   _git
+    __git_complete gst _git_status
+    __git_complete ga  _git_add
+    __git_complete gap _git_add
+    __git_complete gco _git_checkout
+    __git_complete gp  _git_push
+    __git_complete gl  _git_pull
+    __git_complete gb  _git_branch
+fi
 
 # my trusty docker hakcs
 alias docker_remove_all_containers='docker rm $(docker ps -a -q)'
@@ -21,6 +100,35 @@ alias docker_remove_all_the_things='docker_remove_all_containers; docker_remove_
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
 alias set_git_email_fb='git config --local user.email "justinstribling@fb.com"'
+
+# directories
+alias -- -='cd -'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+alias l='ls -lah'
+alias ll='ls -lh'
+
+take () {
+    mkdir -p $@ && cd ${@:$#}
+}
+
+# tmux
+function _zsh_tmux_plugin_run() {
+    # run a command if one was passed
+    if [[ -n "$@" ]]; then
+        command tmux "$@"
+        return $?
+    fi
+    # try reattaching; if not, make a new session
+    tmux has-session > /dev/null 2>&1 || tmux new-session -d -s 'main'
+
+    # attach
+    tmux attach
+}
+alias tmux=_zsh_tmux_plugin_run
 
 # easy way to open a PR (defaults to PR against develop)
 function PR () {
