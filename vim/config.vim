@@ -19,7 +19,7 @@ set softtabstop=4    " make tabs and spaces play nice together
 set shiftwidth=4     " make tabs and spaces play nice together
 set expandtab        " use the right number of spaces for tabs
 set backspace=2      " make backspace work like most other apps
-set pastetoggle=<F2> " toggle paste mode todo: make a shortcut to toggle paste mode, paste, and toggle paste mode off
+set pastetoggle=<F2> " toggle paste mode
 
 " toggle line numbers and git gutter together
 nnoremap <F3> :windo set number!<CR>:GitGutterToggle<CR>
