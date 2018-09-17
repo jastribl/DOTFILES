@@ -1,6 +1,10 @@
 PATH="$PATH:$HOME/diff-so-fancy"
 PATH="$PATH:$HOME/Github/the_silver_searcher/bin/"
 
+if [ -x /usr/bin/dircolors ]; then
+    alias ls='ls --color=auto'
+fi
+
 if ! __currently_in_bash; then
     bash
 fi
