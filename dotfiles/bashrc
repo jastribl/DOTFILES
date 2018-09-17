@@ -119,6 +119,10 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
+# enable color support of ls
+if [ -x /usr/bin/dircolors ]; then
+    alias ls='ls --color=auto'
+fi
 alias l='ls -lah'
 alias ll='ls -lh'
 
