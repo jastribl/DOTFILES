@@ -1,0 +1,2 @@
+PATH="$PATH:$HOME/diff-so-fancy"
+PATH="$PATH:$HOME/Github/the_silver_searcher/bin/"
