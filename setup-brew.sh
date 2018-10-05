@@ -36,6 +36,7 @@ apps=(
     bash
     bash-completion@2
     cmake
+    mosh
 )
 
 for app in "${apps[@]}"; do
