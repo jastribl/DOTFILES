@@ -31,6 +31,8 @@ if __currently_in_bash; then
     shopt -s globstar
     shopt -s hostcomplete
     shopt -s histappend
+    shopt -s cmdhist
+    shopt -s lithist
 
 fi
 
@@ -42,6 +44,12 @@ export EDITOR=vim
 # Colours for ls
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+# unlimited history
+export HISTFILESIZE=-1
+export HISTSIZE=-1
+# don't same some commands in history
+HISTIGNORE='l:gst:clear:fg'
 
 __prompt_command() {
     # init
