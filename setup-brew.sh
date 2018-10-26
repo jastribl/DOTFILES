@@ -31,7 +31,6 @@ apps=(
     composer
     php56
     ctop
-    z
     fpp
     bash
     bash-completion@2
@@ -75,8 +74,6 @@ caskapps=(
     android-studio
     vagrant
     discord
-    soundcloud-downloader
-    psequel
     osxfuse
 )
 
