@@ -5,6 +5,7 @@ dotfiles_old
 vim/.netrwhist
 vim/swapfiles/*
 vim/plugged/
+vim/vimrc-pre-local.vim
 
 /* tmux stuff */
 tmux/plugins/*
