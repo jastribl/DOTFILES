@@ -18,8 +18,6 @@ apps=(
     the_silver_searcher
     "vim --with-override-system-vi"
     wget
-    zsh
-    zsh-completions
     tmux
     cask
     node
@@ -31,7 +29,6 @@ apps=(
     composer
     php56
     ctop
-    fpp
     bash
     bash-completion@2
     cmake
