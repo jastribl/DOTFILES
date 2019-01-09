@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:$HOME/vim81/bin:$PATH:$HOME/diff-so-fancy"
+export PATH="$PATH:$HOME/diff-so-fancy"
 
 if [ "$HOSTNAME" != ecelinux4.uwaterloo.ca ]; then
     [ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
