@@ -1,4 +1,5 @@
 alias ssh_ece='ssh jastribl@ecelinux4.uwaterloo.ca'
+alias ssh_ece_tesla='ssh jastribl@ecetesla.uwaterloo.ca'
 alias ssh_cs='ssh jastribl@ubuntu1604-004.student.cs.uwaterloo.ca'
 alias ssh_lifeofapunter='ssh lifeofap@23.91.70.29'
 alias ssh_justin_server='ssh -i ~/.ssh/justins-server.pem ubuntu@34.234.169.130'
