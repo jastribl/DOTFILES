@@ -96,6 +96,7 @@ alias gf='git fetch'
 alias gp='git push'
 alias gl='git pull'
 alias gb='git branch'
+alias gd='git diff'
 alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
 alias gbgone='git branch -vv | grep ": gone"'
@@ -110,6 +111,7 @@ if __currently_in_bash && function_exists __git_complete; then
     __git_complete gp  _git_push
     __git_complete gl  _git_pull
     __git_complete gb  _git_branch
+    __git_complete gd  _git_diff
 fi
 
 # my trusty docker hakcs
