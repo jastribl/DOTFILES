@@ -137,6 +137,9 @@ fi
 alias l='ls -lah'
 alias ll='ls -lh'
 
+# added back which
+alias which="command -v '$1'"
+
 take () {
     mkdir -p $@ && cd ${@:$#}
 }
