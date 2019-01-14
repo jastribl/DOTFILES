@@ -1,2 +1,4 @@
 PATH="$PATH:$HOME/diff-so-fancy"
 PATH="$PATH:$HOME/Github/the_silver_searcher/bin/"
+
+alias review='git push origin HEAD:refs/for/master'
