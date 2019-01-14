@@ -145,7 +145,7 @@ take () {
 }
 
 # tmux
-function _zsh_tmux_plugin_run() {
+function __join_or_create_tmux_session() {
     # run a command if one was passed
     if [[ -n "$@" ]]; then
         command tmux "$@"
@@ -158,7 +158,7 @@ function _zsh_tmux_plugin_run() {
     # attach
     tmux attach
 }
-alias tmux=_zsh_tmux_plugin_run
+alias tmux=__join_or_create_tmux_session
 
 # easy way to open a PR (defaults to PR against develop)
 function PR () {
