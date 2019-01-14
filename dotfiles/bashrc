@@ -122,6 +122,7 @@ alias docker_remove_all_the_things='docker_remove_all_containers; docker_remove_
 # quick aliases to help set per-repo emails for git (for use with "useConfigOnly = true" in gitconfig)
 alias set_git_email_school='git config --local user.email "jastribl@edu.uwaterloo.ca"'
 alias set_git_email_personal='git config --local user.email "justinastribling@gmail.com"'
+alias set_git_email_aviya='git config --local user.email "justin.stribling@aviyatech.com"'
 
 # directories
 alias -- -='cd -'
