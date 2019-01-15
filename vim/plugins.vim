@@ -182,9 +182,6 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" A tree explorer plugin for vim.
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
 " A code-completion engine for Vim
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
 let g:ycm_filetype_blacklist = {
