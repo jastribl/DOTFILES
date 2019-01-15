@@ -2,9 +2,6 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-" Vim plugin to list, select and switch between buffers.
-Plug 'jeetsukumaran/vim-buffergator', {'on': ['BuffergatorOpen']}
-
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_match_window = 'bottom,order:ttb'
