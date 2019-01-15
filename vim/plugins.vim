@@ -14,10 +14,9 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git --ignore .hg --nocolor -g ""'
 endif
 
-" Vim plugin for intensely orgasmic commenting
-Plug 'scrooloose/nerdcommenter'
-let g:NERDSpaceDelims = 1
-map <leader><leader> <plug>NERDCommenterToggle
+" commentary.vim: comment stuff out
+Plug 'tpope/vim-commentary'
+map <leader><leader> gcc<ESC>
 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 Plug 'airblade/vim-gitgutter'
