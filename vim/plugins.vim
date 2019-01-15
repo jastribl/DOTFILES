@@ -53,15 +53,6 @@ vnoremap A :EasyAlign
 Plug 'terryma/vim-multiple-cursors'
 let g:multi_cursor_exit_from_insert_mode = 0
 
-" Asynchronous Lint Engine
-Plug 'w0rp/ale'
-" let g:ale_lint_on_text_changed = 'normal'
-let g:ale_lint_on_enter = 1
-" let g:ale_lint_delay = 700
-let g:airline#extensions#ale#enabled = 1
-nmap <silent> <S-k> <Plug>(ale_previous_wrap)
-nmap <silent> <S-j> <Plug>(ale_next_wrap)
-
 " A modern vim plugin for editing LaTeX files.
 Plug 'lervag/vimtex', {'for': ['tex']}
 let g:Tex_DefaultTargetFormat = 'pdf' " Change default target to pdf, if not dvi is used
