@@ -113,7 +113,8 @@ map <Leader>k <Plug>(easymotion-k)
 Plug 'ap/vim-css-color', {'for': ['css', 'html']}
 
 " VIM Table Mode for instant table creation
-Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode', {'on': ['TableModeToggle']}
+nnoremap <leader>tm :TableModeToggle<CR>
 
 " autolist: Automatically continues lists
 Plug 'bradford-smith94/vim-autolist'
