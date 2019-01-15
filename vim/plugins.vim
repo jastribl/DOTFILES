@@ -22,9 +22,6 @@ map <leader><leader> gcc<ESC>
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_enabled = 1
 
-" fugitive.vim: a Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-fugitive'
-
 " precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
