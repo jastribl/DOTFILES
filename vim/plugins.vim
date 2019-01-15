@@ -77,7 +77,7 @@ Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
 Plug 'christoomey/vim-tmux-navigator'
 
 " Search Dash.app from Vim
-Plug 'rizzatti/dash.vim'
+Plug 'rizzatti/dash.vim', {'on': ['Dash']}
 
 " pandoc integration and utilities for vim
 Plug 'vim-pandoc/vim-pandoc', {'for': ['markdown']}
