@@ -184,12 +184,12 @@ Plug 'XadillaX/json-formatter.vim', {'do': 'npm install jjson -g'}
 Plug 'danro/rename.vim'
 
 " Syntax highlighting for thrift definition files.
-Plug 'solarnz/thrift.vim'
+Plug 'solarnz/thrift.vim', {'for': ['thrift']}
 
 " Alternate Files quickly (.c --> .h etc)
 Plug 'vim-scripts/a.vim'
 
 " Syntax highlighting and typechecker integration for Hack.
-Plug 'hhvm/vim-hack'
+Plug 'hhvm/vim-hack', {'for': ['php']}
 
 call plug#end()
