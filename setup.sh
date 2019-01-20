@@ -10,6 +10,7 @@ installScripts=(
     setup-powerline-fonts.sh
     setup-mac.sh
     setup-sublime.sh
+    setup-diff-so-fancy.sh
 )
 
 for installScript in "${installScripts[@]}"; do
