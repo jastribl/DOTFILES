@@ -161,6 +161,16 @@ function __join_or_create_tmux_session() {
 }
 alias tmux=__join_or_create_tmux_session
 
+# easy way to open a repo in GitHub
+function REPO() {
+    REPO_URL=`git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//'`
+    if [[ `uname -s` = "Darwin" ]]; then
+        open "$REPO_URL"
+    else
+        echo "$REPO_URL"
+    fi
+}
+
 # easy way to open a PR (defaults to PR against develop)
 function PR () {
     REPO_URL=`git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//'`
