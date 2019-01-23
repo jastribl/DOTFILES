@@ -1,4 +1,4 @@
-PATH="$PATH:$HOME/diff-so-fancy"
+export PATH="$PATH:$HOME/diff-so-fancy"
 
 # Go stuff
 GOPATH=$HOME/go

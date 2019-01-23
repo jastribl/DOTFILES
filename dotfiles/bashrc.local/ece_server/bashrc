@@ -1,11 +1,2 @@
 export PATH="$PATH:$HOME/diff-so-fancy"
-
-if [ "$HOSTNAME" != ecelinux4.uwaterloo.ca ]; then
-    [ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
-fi
-
-# Add db2 stuff
-alias db2c='bash -c "source ~db2inst2/sqllib/db2profile && rlwrap db2"'
-
-# Add silver searcher
-export PATH="$PATH:/u6/jastribling/Github/the_silver_searcher/bin/"
+export PATH="$PATH:$HOME/Github/the_silver_searcher/bin/"
