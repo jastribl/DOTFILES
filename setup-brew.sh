@@ -68,7 +68,6 @@ caskapps=(
     phpstorm
     goland
     skype
-    android-studio
     vagrant
     discord
     osxfuse
