@@ -210,3 +210,5 @@ vmap , \
 " convert files between hex and bin
 command! Hexbin %!xxd
 command! Unhexbin %!xxd -r
+
+nnoremap <F8> :make<BAR>cw<CR><CR><CR>
