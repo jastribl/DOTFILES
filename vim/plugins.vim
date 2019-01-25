@@ -167,7 +167,7 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-if v:version > 704
+if v:version >= 704 && (v:version != 704 || has( 'patch1578' ))
     " A code-completion engine for Vim
     Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
     let g:ycm_filetype_blacklist = {
