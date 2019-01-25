@@ -167,15 +167,17 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" A code-completion engine for Vim
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
-let g:ycm_filetype_blacklist = {
-            \ 'tex' : 0,
-            \ 'pandoc' : 0,
-            \ 'markdown' : 0
-            \}
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion = 1
+if v:version > 704
+    " A code-completion engine for Vim
+    Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
+    let g:ycm_filetype_blacklist = {
+                \ 'tex' : 0,
+                \ 'pandoc' : 0,
+                \ 'markdown' : 0
+                \}
+    let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+    let g:ycm_autoclose_preview_window_after_completion = 1
+endif
 
 " A VIM plugin for formatting saved JSON file.A VIM plugin for formatting saved JSON file.
 Plug 'XadillaX/json-formatter.vim', {'do': 'npm install jjson -g'}
