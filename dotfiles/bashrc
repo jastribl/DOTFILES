@@ -1,13 +1,17 @@
-function __currently_in_bash() {
-    [[ $(ps -p $$ -oargs=) = *"bash"* ]]
+function __currently_in_bash () {
+    [ -n "$BASH" ]
 }
 
-function function_exists {
+function __function_exists {
     FUNCTION_NAME=$1
 
     [ -z "$FUNCTION_NAME" ] && return 1
 
-    declare -F "$FUNCTION_NAME" > /dev/null 2>&1
+    if __currently_in_bash; then
+        declare -F "$FUNCTION_NAME" > /dev/null 2>&1
+    else
+        declare -f "$FUNCTION_NAME" > /dev/null 2>&1
+    fi
 
     return $?
 }
@@ -33,7 +37,6 @@ if __currently_in_bash; then
     shopt -s histappend
     shopt -s cmdhist
     shopt -s lithist
-
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -101,7 +104,11 @@ alias wipit='git add . && git commit -nam "WIP"'
 alias unwipit='git reset --soft HEAD~ && git reset'
 alias gbgone='git branch -vv | grep ": gone"'
 # make auto complete work with aliases
-if __currently_in_bash && function_exists __git_complete; then
+
+if __currently_in_bash && ! __function_exists __git_complete; then
+    [ -f /usr/share/bash-completion/completions/git ] && . /usr/share/bash-completion/completions/git
+fi
+if __function_exists __git_complete; then
     __git_complete g   _git
     __git_complete gst _git_status
     __git_complete ga  _git_add
