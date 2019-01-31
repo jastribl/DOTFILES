@@ -79,7 +79,11 @@ __prompt_command() {
 
     # git
     local branch_name="$(git symbolic-ref HEAD 2>/dev/null)"
-    branch_name=${branch_name##refs/heads/}
+    if [ ! "$branch_name" == "" ]; then
+        branch_name=${branch_name##refs/heads/}
+    else
+        branch_name=$(git rev-parse --short HEAD)
+    fi
 	if [ ! "$branch_name" == "" ]; then
         PS1+="${BLUE}git:(${RED}${branch_name}${BLUE})${RESET_COLORS} "
         if [[ $(git diff --stat) != '' ]]; then
