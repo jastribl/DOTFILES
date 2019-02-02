@@ -39,6 +39,10 @@ if __currently_in_bash; then
     shopt -s lithist
 fi
 
+# remap ctrl-w to behave like vim
+stty werase undef
+bind '"\C-w": backward-kill-word'
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # use vim for basic editing
