@@ -13,7 +13,6 @@ apps=(
     git
     htop
     pandoc
-    python
     ssh-copy-id
     the_silver_searcher
     "vim --with-override-system-vi"
@@ -27,12 +26,12 @@ apps=(
     "go --cross-compile-common"
     python3
     composer
-    php56
     ctop
-    bash
     bash-completion@2
     cmake
     mosh
+    boost
+    astyle
 )
 
 for app in "${apps[@]}"; do
