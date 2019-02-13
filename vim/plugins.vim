@@ -195,4 +195,10 @@ Plug 'vim-scripts/a.vim'
 " Syntax highlighting and typechecker integration for Hack.
 Plug 'hhvm/vim-hack', {'for': ['php']}
 
+" Vim plugin for clang-format, a formatter for C, C++, Obj-C, Java, JavaScript, TypeScript and ProtoBuf.
+let g:clang_format#detect_style_file = 1
+let g:clang_format#auto_format = 1
+" let g:clang_format#auto_format_on_insert_leave = 1
+Plug 'rhysd/vim-clang-format'
+
 call plug#end()
