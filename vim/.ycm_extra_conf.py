@@ -13,7 +13,7 @@ BASE_FLAGS = [
         '-Wno-variadic-macros',
         '-fexceptions',
         '-ferror-limit=10000',
-        '-std=c++14',
+        '-std=c++17',
         '-xc++',
         '-I/usr/lib/',
         '-I/usr/include/'
