@@ -31,7 +31,7 @@ apps=(
     cmake
     mosh
     boost
-    astyle
+    clang-format
 )
 
 for app in "${apps[@]}"; do
