@@ -1,1 +1,1 @@
-export PATH="$PATH:/u6/jastribling/cs444bin/"
+export PATH="$PATH:~/cs444bin/"
