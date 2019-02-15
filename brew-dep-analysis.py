@@ -1,25 +1,37 @@
 #!/usr/bin/env python3
 
 import subprocess
+import sys
 from threading import Thread
 
-allDeps = {}
+all_deps = {}
 
 def process(brew):
-    allDeps[brew] = subprocess.getoutput("brew deps " + brew).split()
+    output = subprocess.getoutput("brew deps " + brew)
+    if "No available formula with the name" not in output and "Error:" not in output:
+        all_deps[brew] = output.split()
 
-brews = subprocess.getoutput("brew list").split()
-threads = [Thread(target=process, kwargs={'brew': brew}) for brew in brews]
+expected_brews = [line.rstrip('\n') for line in open('./brew/brew-list')]
+threads = [Thread(target=process, kwargs={'brew': brew}) for brew in expected_brews]
 [thread.start() for thread in threads]
 [thread.join() for thread in threads]
 
-uses = {}
-for brew, deps in allDeps.items():
-    for dep in deps:
-        if dep not in uses:
-            uses[dep] = 0
-        uses[dep] += 1
+all_brews = []
+for brew, deps in all_deps.items():
+    all_brews = all_brews + [brew] + deps
 
-for brew in allDeps:
-    if brew not in uses:
-        print(brew)
+actual_brews = subprocess.getoutput("brew list").split()
+unused = [brew for brew in actual_brews if brew not in all_brews]
+
+missing = [brew for brew in expected_brews if brew not in all_brews]
+
+if len(unused) > 0 or len(missing) > 0:
+    if len(unused) > 0:
+        print("Extra brews:", ' '.join(unused))
+
+    if len(missing) > 0:
+        print("Missing brews:", ' '.join(missing))
+
+    sys.exit(1)
+
+print("All good!")
