@@ -94,7 +94,7 @@ autocmd Filetype markdown inoremap <buffer> <F6> <ESC>:w<CR>:Pandoc pdf -V geome
 
 " pandoc markdown syntax, to be installed alongside vim-pandoc
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for': ['markdown']}
-let g:pandoc#modules#disabled = ["folding"]
+let g:pandoc#modules#disabled = ['folding']
 
 " Vim motions on speed!
 Plug 'easymotion/vim-easymotion'
@@ -140,8 +140,8 @@ Plug 'ervandew/supertab'
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go', {'for': ['go'], 'do': ':GoInstallBinaries'}
-let g:go_fmt_command = "goimports"
-let g:go_list_type = "quickfix"
+let g:go_fmt_command ='goimports'
+let g:go_list_type = 'quickfix'
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
@@ -168,9 +168,9 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 if v:version >= 704 && (v:version != 704 || has( 'patch1578' ))
     " A code-completion engine for Vim
@@ -200,10 +200,10 @@ Plug 'vim-scripts/a.vim'
 " Syntax highlighting and typechecker integration for Hack.
 Plug 'hhvm/vim-hack', {'for': ['php']}
 
-" Vim plugin for clang-format, a formatter for C, C++, Obj-C, Java, JavaScript, TypeScript and ProtoBuf.
 let g:clang_format#detect_style_file = 1
 let g:clang_format#auto_format = 1
 " let g:clang_format#auto_format_on_insert_leave = 1
+" Vim plugin for clang-format, a formatter for C, C++, Obj-C, Java, JavaScript, TypeScript and ProtoBuf.
 Plug 'rhysd/vim-clang-format'
 
 call plug#end()
