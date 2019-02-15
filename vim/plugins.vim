@@ -75,6 +75,11 @@ Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
 
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
+" move between panes even from insert mode
+inoremap <silent> <C-h> <ESC> :TmuxNavigateLeft<CR>
+inoremap <silent> <C-j> <ESC> :TmuxNavigateDown<CR>
+inoremap <silent> <C-k> <ESC> :TmuxNavigateUp<CR>
+inoremap <silent> <C-l> <ESC> :TmuxNavigateRight<CR>
 
 " Search Dash.app from Vim
 Plug 'rizzatti/dash.vim', {'on': ['Dash']}
