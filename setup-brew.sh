@@ -70,6 +70,7 @@ caskapps=(
     vagrant
     discord
     osxfuse
+    tunnelblick
 )
 
 for app in "${caskapps[@]}"; do
