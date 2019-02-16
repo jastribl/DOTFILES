@@ -22,7 +22,7 @@ for brew, deps in all_deps.items():
 
 actual_brews = subprocess.getoutput("brew list").split()
 extra_brews = [brew for brew in actual_brews if brew not in all_brews]
-missing_brews = [brew for brew in expected_brews if brew not in all_brews]
+missing_brews = [brew for brew in expected_brews if brew not in actual_brews]
 
 
 expected_casks = [line.rstrip('\n') for line in open('./brew/cask-list')]
