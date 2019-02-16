@@ -30,6 +30,9 @@ actual_casks = subprocess.getoutput("brew cask list").split()
 missing_casks = [cask for cask in expected_casks if cask not in actual_casks]
 extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
 
+print("Brew Dep Analysis:")
+
+# todo: prompt to fix these problems
 if len(extra_brews) + len(missing_brews) + len(extra_casks) + len(missing_casks) > 0:
     if len(extra_brews) > 0:
         print("Extra brews:", ' '.join(extra_brews))
