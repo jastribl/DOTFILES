@@ -8,7 +8,6 @@ wget
 tmux
 node
 reattach-to-user-namespace
-diff-so-fancy
 watch
 go
 python3
