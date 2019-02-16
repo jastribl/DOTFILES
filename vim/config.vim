@@ -165,8 +165,7 @@ noremap <S-Tab> <<
 " get out of visual mode quicker
 vnoremap <ESC> <ESC><ESC>
 
-" edit vimrc/zshrc and load vimrc bindings
-nnoremap <leader>ez :call TabEditSmart("~/.zshrc")<CR>
+" edit rc files and load vimrc bindings
 nnoremap <leader>ev :call TabEditSmart("~/.vim/config.vim")<CR> :call TabEditSmart("~/.vim/plugins.vim")<CR>
 nnoremap <leader>eb :call TabEditSmart("~/.bashrc")<CR> :call TabEditSmart("~/.bashrc.local")<CR>
 nnoremap <leader>et :call TabEditSmart("~/.tmux.conf")<CR> :call TabEditSmart("~/.tmux.conf.local")<CR>

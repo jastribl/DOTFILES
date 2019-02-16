@@ -3,7 +3,7 @@
 installScripts=(
     setup-submodules.sh
     setup-brew.sh
-    setup-zsh.sh
+    setup-bash.sh
     setup-vim.sh
     setup-tmux.sh
     setup-dotfiles.sh
