@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/usr/bin/env bash
 
 echo "---------- setting default shell to bash 4 ----------"
 if ! grep -q '/usr/local/bin/bash' /etc/shells; then

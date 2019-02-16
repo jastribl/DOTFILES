@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/usr/bin/env bash
 
 echo "---------- installing diff-so-fancy stuff ----------"
 

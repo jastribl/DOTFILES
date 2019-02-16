@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/usr/bin/env bash
 
 if [[ -e ~/.oh-my-zsh ]]; then
     echo "~/oh-my-zsh already installed!"
