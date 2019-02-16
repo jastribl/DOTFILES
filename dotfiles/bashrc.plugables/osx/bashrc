@@ -34,7 +34,7 @@ function pandoc_latex() {
 
 # Open man page as PDF
 function manpdf() {
- man -t "${1}" | open -f -a /Applications/Preview.app/
+    man -t "${1}" | open -f -a /Applications/Preview.app/
 }
 
 if command -v brew >/dev/null 2>&1; then
