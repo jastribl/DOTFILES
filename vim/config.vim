@@ -39,7 +39,9 @@ nnoremap <F4> :call ToggleMouse()<CR>
 
 " UI Config
 syntax enable         " enable syntax
-colorscheme solarized " my current colorscheme of choice
+if !empty(glob("$HOME/.vim/plugged/vim-colors-solarized/colors/solarized.vim"))
+    colorscheme solarized " my current colorscheme of choice
+endif
 set background=dark   " use dark mode
                       " no background for vertical splits
 hi VertSplit ctermbg=NONE guibg=NONE cterm=NONE
