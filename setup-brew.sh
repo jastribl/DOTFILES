@@ -2,6 +2,11 @@
 
 echo "---------- installing brew stuff ----------"
 
+if [[ `uname -s` != "Darwin" ]]; then
+    echo "Not on OSX, moving on"
+    exit 0
+fi
+
 if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
