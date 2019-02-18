@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 
 installScripts=(
-    setup-submodules.sh
     setup-brew.sh
-    setup-bash.sh
-    setup-vim.sh
-    setup-tmux.sh
     setup-dotfiles.sh
-    setup-powerline-fonts.sh
-    setup-mac.sh
-    setup-sublime.sh
-    setup-diff-so-fancy.sh
 )
 
 for installScript in "${installScripts[@]}"; do

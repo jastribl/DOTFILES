@@ -1,22 +1,24 @@
-# todo: add checks so these only run sometimes
-# todo: add some default versions of some files (latex, gitignore, clang-format, etc.)
-# todo: add script to deploy dotfiles (saving previous preferences)
+#!/usr/bin/env bash
 
-# vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall +PlugUpdate +PlugClean! +qall
 
-# directory cleaning
-rm -f ~/Desktop/.DS_Store
-NUM_FILES=$(find ~/Desktop/ -depth 1 | wc -l)
-if [ ! $NUM_FILES = 0 ]; then
-    echo "Warning: Clean up your Desktop directory!"
-fi
+# todo: add initial brew install
 
-rm -f ~/Github/.DS_Store
-NUM_FILES=$(find ~/GitHub/ -depth 1 -type f | wc -l)
-if [ ! $NUM_FILES = 0 ]; then
-    echo "Warning: Clean up your GitHub directory!"
-fi
+updateScripts=(
+    update-submodules.sh
+    update-osx.sh
+    update-vim.sh
+    update-tmux.sh
+    update-powerline-fonts.sh
+    update-diff-so-fancy.sh
+    cleanup-files.sh
+)
 
-./brew-dep-analysis.py
+for updateScript in "${updateScripts[@]}"; do
+    read -p "Would you like to run $updateScript (y/n/q)? " choice
+    case "$choice" in
+      y|Y ) echo "--- Running $updateScript ---" && ./$updateScript && echo "done" ;;
+      n|N ) echo "moving on" ;;
+      q|Q ) exit ;;
+      * ) echo "invalid option" ;;
+    esac
+done
