@@ -38,21 +38,19 @@ endfunc
 nnoremap <F4> :call ToggleMouse()<CR>
 
 " UI Config
-syntax enable         " enable syntax
-if !empty(glob("$HOME/.vim/plugged/vim-colors-solarized/colors/solarized.vim"))
-    colorscheme solarized " my current colorscheme of choice
-endif
-set background=dark   " use dark mode
-                      " no background for vertical splits
+syntax enable                 " enable syntax
+silent! colorscheme solarized " my current colorscheme of choice
+set background=dark           " use dark mode
+                              " no background for vertical splits
 hi VertSplit ctermbg=NONE guibg=NONE cterm=NONE
-set fillchars+=vert:│ " use tmux vsplit character
-set wildmenu          " visual autocomplete for command menu
-set lazyredraw        " redraw only when we need to.
-set updatetime=100    " update more often (this helps git gutter show faster)
-set showmatch         " highlight matching [{()}]
-set scrolloff=3       " keep the cursor offset while scrolling
-set linebreak         " break lines at words, not at characters
-set autowrite         " write buffer to file on make
+set fillchars+=vert:│         " use tmux vsplit character
+set wildmenu                  " visual autocomplete for command menu
+set lazyredraw                " redraw only when we need to.
+set updatetime=100            " update more often (this helps git gutter show faster)
+set showmatch                 " highlight matching [{()}]
+set scrolloff=3               " keep the cursor offset while scrolling
+set linebreak                 " break lines at words, not at characters
+set autowrite                 " write buffer to file on make
 
 " show fancy line breaks
 if has("patch-7.4.338")
