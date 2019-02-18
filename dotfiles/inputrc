@@ -1,5 +1,14 @@
-set completion-ignore-case On
+set completion-ignore-case on
+# set show-all-if-ambiguous on
 # arrow up
 "\e[A":history-search-backward
 # arrow down
 "\e[B":history-search-forward
+
+# zsh like completion:
+# https://superuser.com/questions/288714/bash-autocomplete-like-zsh
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set menu-complete-display-prefix on
+"\t": menu-complete
+"\e[Z": menu-complete-backward
