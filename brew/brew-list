@@ -17,3 +17,4 @@ bash-completion@2
 cmake
 mosh
 clang-format
+vagrant-completion
