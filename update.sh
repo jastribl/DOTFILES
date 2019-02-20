@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-
-# todo: add initial brew install
-
 updateScripts=(
     update-submodules.sh
     update-osx.sh
