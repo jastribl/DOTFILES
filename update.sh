@@ -48,3 +48,5 @@ for updateScript in "${updateScripts[@]}"; do
         echo "--- Running $updateScript ---" && ./update-scripts/$updateScript && echo "done"
     fi
 done
+
+touch ~/.hushlogin

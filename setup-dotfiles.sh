@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "---------- installing dotfiles ----------"
-
 files="bash_profile bashrc bashrc.plugables gitconfig gitignore_global ideavimrc inputrc tmux.conf tmux.conf.local vimrc"
 
 dotfileDir="$PWD/dotfiles"
@@ -33,5 +31,3 @@ for file in $files; do
         * ) echo "invalid option" ;;
     esac
 done
-
-touch ~/.hushlogin
