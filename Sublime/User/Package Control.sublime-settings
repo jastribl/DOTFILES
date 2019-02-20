@@ -6,29 +6,17 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
-		"Apache Hive",
 		"Babel",
 		"Better CoffeeScript",
 		"Calculate",
 		"ColorPicker",
-		"DashDoc",
 		"Diffy",
-		"Dockerfile Syntax Highlighting",
-		"Generic Config",
 		"Git",
 		"GitGutter",
-		"JSX",
 		"LaTeXTools",
 		"MarkdownEditing",
-		"Nodejs",
 		"Package Control",
 		"PackageResourceViewer",
-		"Pandoc",
-		"Pretty JSON",
-		"Puppet",
-		"Sass",
-		"SCSS",
-		"SublimeAStyleFormatter",
-		"TypeScript"
+		"Pretty JSON"
 	]
 }
