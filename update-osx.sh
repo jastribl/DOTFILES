@@ -15,4 +15,5 @@ defaults write -g KeyRepeat -int 1         # normal minimum is 2 (30 ms)
 
 ./brew-dep-analysis.py
 
-ln -f -s "$PWD/Sublime/User" "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/User"
+rm -rf "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/User"
+ln -f -s $PWD/Sublime/User "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/User"
