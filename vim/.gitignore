@@ -1,0 +1,4 @@
+.netrwhist
+swapfiles/*
+plugged/
+vimrc-pre-local.vim
