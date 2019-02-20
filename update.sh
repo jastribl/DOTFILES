@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$PWD" != "$HOME/Github/DOTFILES" ]; then
+    echo "Update script must be ran from root DOTFILES repo"
+    exit 1
+fi
+
 usage() { echo "Usage: $0 [-f (force-run-all)]" 1>&2; exit 1; }
 
 force=0
@@ -40,6 +45,6 @@ for updateScript in "${updateScripts[@]}"; do
     fi
 
     if [ $run = 1 ]; then
-        echo "--- Running $updateScript ---" && ./$updateScript && echo "done"
+        echo "--- Running $updateScript ---" && ./update-scripts/$updateScript && echo "done"
     fi
 done

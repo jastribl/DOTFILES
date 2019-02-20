@@ -5,8 +5,6 @@ if [[ `uname -s` != "Darwin" ]]; then
     exit 0
 fi
 
-./update-bash.sh
-
 # allow key presses to releat on hold in sublime
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -19,7 +17,17 @@ else
     brew update
 fi
 
-./brew-dep-analysis.py
+./update-scripts/brew-dep-analysis.py
+
+# set bash to the correct version
+if ! grep -q '/usr/local/bin/bash' /etc/shells; then
+    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells';
+fi
+
+if [[ "$SHELL" != /usr/local/bin/bash ]]; then
+    echo "---------- setting default shell to bash 4 ----------"
+    chsh -s /usr/local/bin/bash
+fi
 
 rm -rf "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/User"
 ln -f -s $PWD/Sublime/User "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/User"
