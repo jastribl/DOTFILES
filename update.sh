@@ -1,5 +1,20 @@
 #!/usr/bin/env bash
 
+usage() { echo "Usage: $0 [-f (force-run-all)]" 1>&2; exit 1; }
+
+force=0
+
+while getopts ":f" o; do
+    case "${o}" in
+        f)
+            force=1
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
 updateScripts=(
     update-submodules.sh
     update-osx.sh
@@ -11,11 +26,20 @@ updateScripts=(
 )
 
 for updateScript in "${updateScripts[@]}"; do
-    read -p "Would you like to run $updateScript (y/n/q)? " choice
-    case "$choice" in
-      y|Y ) echo "--- Running $updateScript ---" && ./$updateScript && echo "done" ;;
-      n|N ) echo "moving on" ;;
-      q|Q ) exit ;;
-      * ) echo "invalid option" ;;
-    esac
+    run=0
+    if [ $force = 1 ]; then
+        run=1
+    else
+        read -p "Would you like to run $updateScript (y/n/q)? " choice
+        case "$choice" in
+            y|Y ) run=1 ;;
+            n|N ) echo "moving on" ;;
+            q|Q ) exit ;;
+            * ) echo "invalid option" ;;
+        esac
+    fi
+
+    if [ $run = 1 ]; then
+        echo "--- Running $updateScript ---" && ./$updateScript && echo "done"
+    fi
 done
