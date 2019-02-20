@@ -13,18 +13,16 @@ else
     brew update
 fi
 
-IFS=$'\n' # split on newline
-apps=($(cat brew/brew-list))
+apps=($(IFS=$'\n' cat brew/brew-list))
 
 for app in "${apps[@]}"; do
     echo "> brew install $app"
     brew install "$app"
 done
 
-IFS=$'\n' # split on newline
-caskapps=($(cat brew/cask-list))
+caskapps=($(IFS=$'\n' cat brew/cask-list))
 
 for app in "${caskapps[@]}"; do
-    echo "brew cask install $app"
+    echo "> brew cask install $app"
     brew cask install "$app"
 done
