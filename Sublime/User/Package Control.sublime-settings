@@ -6,15 +6,9 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
-		"Babel",
-		"Better CoffeeScript",
 		"Calculate",
-		"ColorPicker",
 		"Diffy",
-		"Git",
 		"GitGutter",
-		"LaTeXTools",
-		"MarkdownEditing",
 		"Package Control",
 		"PackageResourceViewer",
 		"Pretty JSON"
