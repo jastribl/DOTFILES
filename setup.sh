@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 installScripts=(
-    setup-brew.sh
     setup-dotfiles.sh
 )
 
