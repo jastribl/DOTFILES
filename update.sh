@@ -22,6 +22,7 @@ done
 
 updateScripts=(
     update-submodules.sh
+    update-dotfiles.sh
     update-osx.sh
     update-vim.sh
     update-tmux.sh
