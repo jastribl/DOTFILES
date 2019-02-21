@@ -1,33 +1,32 @@
 #!/usr/bin/env bash
 
-files="bash_profile bashrc bashrc.plugables gitconfig gitignore_global ideavimrc inputrc tmux.conf tmux.conf.local vimrc"
+DOTFILES_DIR="$PWD/dotfiles"
+BACKUP_DIR="$PWD/backup_dotfiles/backup_$(date +%Y-%m-%d:%H:%M:%S)"
 
-dotfileDir="$PWD/dotfiles"
-backupDir="$PWD/backup_dotfiles/backup_$(date +%Y-%m-%d:%H:%M:%S)"
+function backup_dotfile() {
+    existing_dotfile=~/.$1
+    if [ -L $existing_dotfile ]; then
+        rm $existing_dotfile
+    elif [ -f $existing_dotfile ]; then
+        mkdir -p $BACKUP_DIR
+        mv $existing_dotfile $BACKUP_DIR/
+    fi
+}
 
-mkdir -p $backupDir
+all_dotfiles=$(find $DOTFILES_DIR -mindepth 1 -maxdepth 1 -not -name "*.local" -exec basename {} \;)
+for file in $all_dotfiles; do
+    backup_dotfile $file
 
-cd $dotfileDir
+    ln -s $DOTFILES_DIR/$file ~/.$file
 
-for file in $files; do
-    read -p "Would you like to install $file (y/n/q)? " choice
-    case "$choice" in
-        y|Y )
-            mv ~/.$file $backupDir/
-            ln -s $dotfileDir/$file ~/.$file
-            if [ -d "$file.local" ]; then
-                echo "enter the name of the local dotfile you would like to use"
-                select localFolderName in `ls $file.local/`; do
-                    if [[ -e "$file.local/$localFolderName/$file" ]]; then
-                        mv ~/.$file.local $backupDir/
-                        ln -s $dotfileDir/$file.local/$localFolderName/$file ~/.$file.local
-                        break;
-                    fi
-                done
+    if [ -d "$DOTFILES_DIR/$file.local" ]; then
+        echo "enter the name of the local dotfile you would like to use"
+        select localFolderName in $(find $DOTFILES_DIR/$file.local -mindepth 1 -maxdepth 1 -exec basename {} \;); do
+            if [[ -e "$DOTFILES_DIR/$file.local/$localFolderName/$file" ]]; then
+                backup_dotfile $file.local
+                ln -s $DOTFILES_DIR/$file.local/$localFolderName/$file ~/.$file.local
+                break;
             fi
-            ;;
-        n|N ) echo "moving on" ;;
-        q|Q ) exit ;;
-        * ) echo "invalid option" ;;
-    esac
+        done
+    fi
 done
