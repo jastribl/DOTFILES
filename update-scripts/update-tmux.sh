@@ -5,7 +5,7 @@ if [[ ! -e ~/.tmux ]]; then
 fi
 
 # Installs plugins
-./tmux/tmux/plugins/tpm/scripts/install_plugins.sh
+./tmux/plugins/tpm/scripts/install_plugins.sh
 
 # Updates plugins
 ./tmux/plugins/tpm/scripts/update_plugin.sh
