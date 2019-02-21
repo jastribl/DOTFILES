@@ -205,7 +205,7 @@ let g:clang_format#auto_format = 1
 let g:clang_format#enable_fallback_style = 0
 " let g:clang_format#auto_format_on_insert_leave = 1
 " Vim plugin for clang-format, a formatter for C, C++, Obj-C, Java, JavaScript, TypeScript and ProtoBuf.
-Plug 'rhysd/vim-clang-format'
+Plug 'rhysd/vim-clang-format', {'for': ['h','hpp','c','cpp','cc']}
 
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
