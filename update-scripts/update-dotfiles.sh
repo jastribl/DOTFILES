@@ -28,5 +28,15 @@ for file in $all_dotfiles; do
                 break;
             fi
         done
+    elif [ -d "$DOTFILES_DIR/$file.os.local" ]; then
+        if [[ $(uname -s) == "Darwin" ]]; then
+            os_suffix="osx"
+        elif [[ $(uname -s) == "Linux" ]]; then
+            os_suffix="linux"
+        else
+            continue;
+        fi
+        backup_dotfile $file.local
+        ln -s $DOTFILES_DIR/$file.os.local/$os_suffix/$file ~/.$file.local
     fi
 done
