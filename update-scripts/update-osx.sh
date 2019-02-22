@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ `uname -s` != "Darwin" ]]; then
+if [[ $(uname -s) != "Darwin" ]]; then
     echo "Not on OSX, moving on"
     exit 0
 fi

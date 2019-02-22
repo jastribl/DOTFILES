@@ -178,8 +178,8 @@ alias tmux=__join_or_create_tmux_session
 
 # easy way to open a repo in GitHub
 function REPO() {
-    REPO_URL=`git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//'`
-    if [[ `uname -s` = "Darwin" ]]; then
+    REPO_URL=$(git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//')
+    if [[ $(uname -s) = "Darwin" ]]; then
         open "$REPO_URL"
     else
         echo "$REPO_URL"
@@ -188,11 +188,11 @@ function REPO() {
 
 # easy way to open a PR (defaults to PR against develop)
 function PR () {
-    REPO_URL=`git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//'`
+    REPO_URL=$(git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//')
     BASE_BRANCH=${1:-develop}
-    COMPARE_BRANCH=`git symbolic-ref --short HEAD`
+    COMPARE_BRANCH=$(git symbolic-ref --short HEAD)
     PR_URL="$REPO_URL/compare/$BASE_BRANCH...$COMPARE_BRANCH?expand=1"
-    if [[ `uname -s` = "Darwin" ]]; then
+    if [[ $(uname -s) = "Darwin" ]]; then
         open "$PR_URL"
     else
         echo "$PR_URL"
