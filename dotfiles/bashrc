@@ -48,6 +48,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # use vim for basic editing
 export EDITOR=vim
 
+# show raw control chars for less (makes better mouse mode work for tmux)
+export LESS='-R --tabs=4 --quit-if-one-screen --no-init'
+
 # Colours for ls
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
