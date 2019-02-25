@@ -134,7 +134,7 @@ if __function_exists __git_complete; then
     __git_complete gds _git_diff
 fi
 
-# my trusty docker hakcs
+# my trusty docker hacks
 alias docker_remove_all_containers='docker rm $(docker ps -a -q)'
 alias docker_remove_all_images='docker rmi $(docker images -q)'
 alias docker_remove_all_the_things='docker_remove_all_containers; docker_remove_all_images'
