@@ -37,6 +37,10 @@ actual_casks = subprocess.getoutput('brew cask list').split()
 missing_casks = [cask for cask in expected_casks if cask not in actual_casks]
 extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
 
+def run_brew_command(command):
+    output = subprocess.getoutput(command)
+    print(output)
+
 if len(extra_brews) + len(missing_brews) + len(extra_casks) + len(missing_casks) > 0:
     print("Brew Dep Analysis:\n")
 
@@ -46,7 +50,7 @@ for extra_brew in extra_brews:
         if choice is 'a':
             subprocess.getoutput("echo '{}' >> {}".format(extra_brew, BREW_LIST_FILE))
         elif choice is 'u':
-            subprocess.getoutput('brew uninstall {}'.format(extra_brew))
+            run_brew_command('brew uninstall {}'.format(extra_brew))
         elif choice is 'q':
             sys.exit(0)
         elif choice is '':
@@ -59,7 +63,7 @@ for missing_brew in missing_brews:
     while True:
         choice = input('Missing brew: {}\nInstall (i), Remove from list (r) or Quit (q):\n> '.format(missing_brew))
         if choice is 'i':
-            subprocess.getoutput('brew install {}'.format(missing_brew))
+            run_brew_command('brew install {}'.format(missing_brew))
         elif choice is 'r':
             subprocess.getoutput("sed -i '' '/{}/d' {}".format(missing_brew, BREW_LIST_FILE))
         elif choice is 'q':
@@ -76,7 +80,7 @@ for extra_cask in extra_casks:
         if choice is 'a':
             subprocess.getoutput("echo '{}' >> {}".format(extra_cask, CASK_LIST_FILE))
         elif choice is 'u':
-            subprocess.getoutput('brew cask uninstall {}'.format(extra_cask))
+            run_brew_command('brew cask uninstall {}'.format(extra_cask))
         elif choice is 'q':
             sys.exit(0)
         elif choice is '':
@@ -89,7 +93,7 @@ for missing_cask in missing_casks:
     while True:
         choice = input('Missing cask: {}\nInstall (i), Remove from list (r) or Quit (q):\n> '.format(missing_cask))
         if choice is 'i':
-            subprocess.getoutput('brew cask install {}'.format(missing_cask))
+            run_brew_command('brew cask install {}'.format(missing_cask))
         elif choice is 'r':
             subprocess.getoutput("sed -i '' '/{}/d' {}".format(missing_cask, CASK_LIST_FILE))
         elif choice is 'q':
@@ -100,4 +104,18 @@ for missing_cask in missing_casks:
             continue
         break
 
-subprocess.getoutput('brew cleanup')
+outdated_brews=subprocess.getoutput('brew outdated  -q').split()
+for outdated_brew in outdated_brews:
+    while True:
+        choice = input("Outdated brew '{}'. Would you like to upgrade (u), Skip (s) or Quit (q):\n> ".format(outdated_brew))
+        if choice is 'u':
+            run_brew_command('brew upgrade {}'.format(outdated_brew))
+        elif choice is 's':
+            break;
+        elif choice is 'q':
+            sys.exit()
+        else:
+            continue
+        break;
+
+run_brew_command('brew cleanup')
