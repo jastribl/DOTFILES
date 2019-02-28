@@ -194,7 +194,7 @@ Plug 'danro/rename.vim'
 Plug 'solarnz/thrift.vim', {'for': ['thrift']}
 
 " Alternate Files quickly (.c --> .h etc)
-let g:alternateSearchPath = 'reg:#\<src\>$#include#,reg:#\<include\>$#src#'
+let g:alternateSearchPath = 'reg:/include/src/g/'
 Plug 'vim-scripts/a.vim'
 
 " Syntax highlighting and typechecker integration for Hack.
