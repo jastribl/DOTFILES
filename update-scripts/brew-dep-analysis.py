@@ -44,6 +44,11 @@ def run_brew_command(command):
 if len(extra_brews) + len(missing_brews) + len(extra_casks) + len(missing_casks) > 0:
     print("Brew Dep Analysis:\n")
 
+def print_pre(message, things):
+    if len(things) > 0:
+        print("{}: {}".format(message, ' '.join(things)))
+
+print_pre("Extra brews", extra_brews)
 for extra_brew in extra_brews:
     while True:
         choice = input('Extra brew: {}\nAdd to list (a), Uninstall (u) or Quit (q):\n> '.format(extra_brew))
@@ -59,6 +64,7 @@ for extra_brew in extra_brews:
             continue
         break
 
+print_pre("Missing brews", missing_brews)
 for missing_brew in missing_brews:
     while True:
         choice = input('Missing brew: {}\nInstall (i), Remove from list (r) or Quit (q):\n> '.format(missing_brew))
@@ -74,6 +80,7 @@ for missing_brew in missing_brews:
             continue
         break
 
+print_pre("Extra casks", extra_casks)
 for extra_cask in extra_casks:
     while True:
         choice = input('Extra cask: {}\nAdd to list (a), Uninstall (u) or Quit (q):\n> '.format(extra_cask))
@@ -89,6 +96,7 @@ for extra_cask in extra_casks:
             continue
         break
 
+print_pre("Missing casks", missing_casks)
 for missing_cask in missing_casks:
     while True:
         choice = input('Missing cask: {}\nInstall (i), Remove from list (r) or Quit (q):\n> '.format(missing_cask))
