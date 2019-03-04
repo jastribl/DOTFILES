@@ -21,3 +21,5 @@ vagrant-completion
 w3m
 boost
 less
+gcc@7
+gdb
