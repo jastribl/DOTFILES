@@ -40,8 +40,10 @@ if __currently_in_bash; then
 fi
 
 # remap ctrl-w to behave like vim
-stty werase undef
-bind '"\C-w": backward-kill-word'
+if [[ $- == *i* ]]; then
+    stty werase undef
+    bind '"\C-w": backward-kill-word'
+fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
