@@ -10,6 +10,7 @@ BASE_FLAGS = [
         '-Wextra',
         '-Werror',
         '-Wno-long-long',
+        '-Wno-unused-parameter'
         '-Wno-variadic-macros',
         '-fexceptions',
         '-ferror-limit=10000',
