@@ -22,4 +22,6 @@ w3m
 boost
 less
 gcc@7
-gdb
+clang-format@7
+travis
+fpp
