@@ -50,7 +50,7 @@ set updatetime=100            " update more often (this helps git gutter show fa
 set showmatch                 " highlight matching [{()}]
 set scrolloff=3               " keep the cursor offset while scrolling
 set linebreak                 " break lines at words, not at characters
-set autowrite                 " write buffer to file on make
+" set autowrite                 " write buffer to file on make
 set autoread                  " reload files that are externally changed
 
 " show fancy line breaks
