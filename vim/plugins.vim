@@ -210,4 +210,7 @@ Plug 'rhysd/vim-clang-format', {'for': ['h','hpp','c','cpp','cc']}
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
 
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
