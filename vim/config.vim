@@ -211,4 +211,4 @@ vmap , \
 command! Hexbin %!xxd
 command! Unhexbin %!xxd -r
 
-nnoremap <F8> :make<BAR>cw<CR><CR><CR>
+nnoremap <F8> :wa<CR> :make<BAR>cw<CR><CR><CR>
