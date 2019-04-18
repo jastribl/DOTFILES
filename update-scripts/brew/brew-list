@@ -25,3 +25,4 @@ gcc@7
 clang-format@7
 travis
 fpp
+diff-so-fancy
