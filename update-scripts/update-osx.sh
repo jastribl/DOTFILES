@@ -28,5 +28,6 @@ if [[ "$SHELL" != /usr/local/bin/bash ]]; then
     chsh -s /usr/local/bin/bash
 fi
 
-rm -rf "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/User"
-ln -f -s $PWD/Sublime/User "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/User"
+sublime_dest_dir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+rm -rf "$sublime_dest_dir"
+ln -f -s $PWD/Sublime/User "$sublime_dest_dir"
