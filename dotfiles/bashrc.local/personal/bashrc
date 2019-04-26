@@ -15,6 +15,3 @@ export PATH=$PATH:$GOPATH
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 
 source ~/.bashrc.plugables/osx/bashrc
-
-# added by travis gem
-[ -f /Users/justinstribling/.travis/travis.sh ] && source /Users/justinstribling/.travis/travis.sh
