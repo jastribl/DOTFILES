@@ -5,6 +5,14 @@ if [ "$PWD" != "$HOME/Github/DOTFILES" ]; then
     exit 1
 fi
 
+case "$PWD" in
+    *\ * )
+        echo "DOTFILES repo path must not contain spaces"
+        ;;
+    *)
+        ;;
+esac
+
 function usage() {
     echo "Usage: $0 [-f (force)]" 1>&2; exit 1;
 }
