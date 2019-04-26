@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
 
-if [[ ! -e ~/.vim ]]; then
-    ln -s "$PWD/vim" ~/.vim
-fi
-
 # update vim plugin manager
-curl -fLo vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install missing plugins
 vim +PlugInstall +qall
