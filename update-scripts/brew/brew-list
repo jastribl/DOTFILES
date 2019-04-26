@@ -18,7 +18,6 @@ cmake
 mosh
 clang-format
 vagrant-completion
-w3m
 less
 gcc@7
 fpp
