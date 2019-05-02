@@ -1,4 +1,5 @@
 alias reindex_spotlight='sudo mdutil -E -i on /'
+alias find_ds_store_files="find . -name '.DS_Store' -type f"
 alias remove_ds_store_files="sudo find . -name '.DS_Store' -type f -delete"
 
 # my trusty brew hacks
