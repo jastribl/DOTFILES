@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import re
 import subprocess
 import sys
 
@@ -18,7 +19,7 @@ def process(brew):
     if 'No available formula with the name' not in output and 'Error:' not in output:
         all_deps[brew] = output.split()
 
-expected_brews = [line.rstrip('\n') for line in open(BREW_LIST_FILE)]
+expected_brews = [re.sub(r' *#.*', '', line.rstrip('\n'))for line in open(BREW_LIST_FILE)]
 threads = [Thread(target=process, kwargs={'brew': brew}) for brew in expected_brews]
 [thread.start() for thread in threads]
 [thread.join() for thread in threads]
