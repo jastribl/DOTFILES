@@ -67,11 +67,13 @@ print_pre('Extra brews', extra_brews)
 brews_to_uninstall = set()
 for extra_brew in extra_brews:
     while True:
-        choice = input('Extra brew: {}\nAdd to list (a), Uninstall (u) or Quit (q):\n> '.format(extra_brew))
+        choice = input('Extra brew: {}\nAdd to list (a), Uninstall (u), Skip (s) or Quit (q):\n> '.format(extra_brew))
         if choice is 'a':
             subprocess.getoutput("echo '{}' >> {}".format(extra_brew, BREW_LIST_FILE))
         elif choice is 'u':
             brews_to_uninstall.add(extra_brew)
+        elif choice is 's':
+            break
         elif choice is 'q':
             sys.exit(0)
         elif choice is '':
@@ -84,11 +86,13 @@ run_brew_command_set('brew uninstall {}', brews_to_uninstall)
 brews_to_install = set()
 for missing_brew in missing_brews:
     while True:
-        choice = input('Missing brew: {}\nInstall (i), Remove from list (r) or Quit (q):\n> '.format(missing_brew))
+        choice = input('Missing brew: {}\nInstall (i), Remove from list (r), Skip (s) or Quit (q):\n> '.format(missing_brew))
         if choice is 'i':
             brews_to_install.add(missing_brew)
         elif choice is 'r':
             subprocess.getoutput("sed -i '' '/{}/d' {}".format(missing_brew, BREW_LIST_FILE))
+        elif choice is 's':
+            break
         elif choice is 'q':
             sys.exit(0)
         elif choice is '':
@@ -101,11 +105,13 @@ run_brew_command_set('brew install {}', brews_to_install)
 casks_to_uninstall = set()
 for extra_cask in extra_casks:
     while True:
-        choice = input('Extra cask: {}\nAdd to list (a), Uninstall (u) or Quit (q):\n> '.format(extra_cask))
+        choice = input('Extra cask: {}\nAdd to list (a), Uninstall (u), Skip (s) or Quit (q):\n> '.format(extra_cask))
         if choice is 'a':
             subprocess.getoutput("echo '{}' >> {}".format(extra_cask, CASK_LIST_FILE))
         elif choice is 'u':
             casks_to_uninstall.add(extra_cask)
+        elif choice is 's':
+            break
         elif choice is 'q':
             sys.exit(0)
         elif choice is '':
@@ -118,11 +124,13 @@ run_brew_command_set('brew cask uninstall {}', casks_to_uninstall)
 casks_to_install = set()
 for missing_cask in missing_casks:
     while True:
-        choice = input('Missing cask: {}\nInstall (i), Remove from list (r) or Quit (q):\n> '.format(missing_cask))
+        choice = input('Missing cask: {}\nInstall (i), Remove from list (r), Skip (s) or Quit (q):\n> '.format(missing_cask))
         if choice is 'i':
             casks_to_install.add(missing_cask)
         elif choice is 'r':
             subprocess.getoutput("sed -i '' '/{}/d' {}".format(missing_cask, CASK_LIST_FILE))
+        elif choice is 's':
+            break
         elif choice is 'q':
             sys.exit(0)
         elif choice is '':
