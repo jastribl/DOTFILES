@@ -4,6 +4,7 @@ declare -A dirs_to_clean
 
 dirs_to_clean["$HOME/Desktop"]=""
 dirs_to_clean["$HOME/Github"]="-not -type d"
+dirs_to_clean["$HOME"]="-not -name '.*'-not -name '\..*'"
 
 for dir_to_clean in "${!dirs_to_clean[@]}"; do
     rm -f $dir_to_clean/.DS_Store
@@ -12,7 +13,7 @@ for dir_to_clean in "${!dirs_to_clean[@]}"; do
         echo "Clean up your $dir_to_clean directory:"
         echo "$extra_files"
     fi
-    broken_links=$(find "$dir_to_clean" -mindepth 1 -maxdepth 1 -type l ! -exec test -e {} \; -print)
+    broken_links=$(find -L "$dir_to_clean" -mindepth 1 -maxdepth 1 -type l)
     if [ ! -z "$broken_links" ]; then
         echo "Broken Links:"
         echo "$broken_links"
