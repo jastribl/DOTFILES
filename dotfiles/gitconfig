@@ -3,7 +3,7 @@
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less
 [include]
-    path = .gitconfig.local
+    path = .gitconfig.os
 [user]
 	name = Justin Stribling
 	useConfigOnly = true
