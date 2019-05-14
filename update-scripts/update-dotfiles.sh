@@ -41,8 +41,6 @@ function register_os_specific_file() {
     os_specific_files[$1]=${2:-~/.$1}
 }
 
-# todo: try putting this stuff into a config file
-
 # deployed on all machines
 register_global_file bash_profile
 register_global_file bashrc
