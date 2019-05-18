@@ -1,9 +1,3 @@
-alias ssh_ece='ssh jastribl@ecelinux4.uwaterloo.ca'
-alias ssh_ece_tesla='ssh jastribl@ecetesla.uwaterloo.ca'
-alias ssh_cs='ssh jastribl@ubuntu1604-000.student.cs.uwaterloo.ca'
-alias ssh_lifeofapunter='ssh lifeofap@23.91.70.29'
-alias ssh_fydp='ssh e0001337@192.168.11.12'
-
 # Golang setup
 export GOPATH=$HOME/golang
 export GOROOT=/usr/local/opt/go/libexec
