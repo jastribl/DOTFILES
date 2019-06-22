@@ -5,11 +5,20 @@ if [[ $(uname -s) != "Darwin" ]]; then
     exit 0
 fi
 
-# allow key presses to repeat on hold in sublime
-defaults write -g ApplePressAndHoldEnabled -bool false
+# Keyboard customization
+defaults write -g ApplePressAndHoldEnabled -bool false # Allow key presses to repeat on hold in sublime
+defaults write -g InitialKeyRepeat -int 20             # Normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1                     # Normal minimum is 2 (30 ms)
 
-defaults write -g InitialKeyRepeat -int 20 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1         # normal minimum is 2 (30 ms)
+# Dock customization
+defaults write com.apple.dock autohide -bool true                 # Autohide dock
+defaults write com.apple.dock tilesize -int 30                    # Adjust dock icon size
+defaults write com.apple.dock show-recents -bool false            # Disable recent apps showing
+defaults write com.apple.dock minimize-to-application -bool false # Don't minimize to application
+defaults write com.apple.dock persistent-apps -array              # Remove persistent apps
+defaults write com.apple.dock persistent-others -array            # Remove persistent others
+defaults write com.apple.dock recent-apps -array                  # Remove recent apps
+killall Dock
 
 if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
