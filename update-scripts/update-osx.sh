@@ -5,7 +5,7 @@ if [[ $(uname -s) != "Darwin" ]]; then
     exit 0
 fi
 
-# allow key presses to releat on hold in sublime
+# allow key presses to repeat on hold in sublime
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 defaults write -g InitialKeyRepeat -int 20 # normal minimum is 15 (225 ms)
