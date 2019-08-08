@@ -19,7 +19,8 @@ def process(brew):
     if 'No available formula with the name' not in output and 'Error:' not in output:
         all_deps[brew] = output.split()
 
-expected_brews = [re.sub(r' *#.*', '', line.rstrip('\n'))for line in open(BREW_LIST_FILE)]
+expected_brews = [re.sub(r' *#.*', '', line.rstrip('\n')) for line in open(BREW_LIST_FILE)]
+expected_brews = list(filter(None, expected_brews)) # remove empty lines (commented out brews)
 threads = [Thread(target=process, kwargs={'brew': brew}) for brew in expected_brews]
 [thread.start() for thread in threads]
 [thread.join() for thread in threads]
@@ -32,7 +33,8 @@ actual_brews = subprocess.getoutput('brew list').split()
 extra_brews = [brew for brew in actual_brews if brew not in all_brews]
 missing_brews = [brew for brew in expected_brews if brew not in actual_brews]
 
-expected_casks = [line.rstrip('\n') for line in open(CASK_LIST_FILE)]
+expected_casks = [re.sub(r' *#.*', '', line.rstrip('\n')) for line in open(CASK_LIST_FILE)]
+expected_casks = list(filter(None, expected_casks)) # remove empty lines (commented out casks)
 actual_casks = subprocess.getoutput('brew cask list').split()
 missing_casks = [cask for cask in expected_casks if cask not in actual_casks]
 extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
