@@ -84,7 +84,7 @@ for file in "${!local_files[@]}"; do
     backup_and_link $file/$local_file_name ${local_files[$file]}
 done
 
-# process all global files
+# process all os-specific files
 OS="$(uname -s)"
 if [[ "$OS" == "Darwin" ]]; then
     os_suffix="osx"
