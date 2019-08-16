@@ -18,7 +18,6 @@ defaults write com.apple.dock minimize-to-application -bool false # Don't minimi
 defaults write com.apple.dock persistent-apps -array              # Remove persistent apps
 defaults write com.apple.dock persistent-others -array            # Remove persistent others
 defaults write com.apple.dock recent-apps -array                  # Remove recent apps
-killall Dock
 
 if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
