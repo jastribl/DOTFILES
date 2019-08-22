@@ -25,7 +25,6 @@ disk-inventory-x
 # phpstorm
 # goland
 vagrant
-tunnelblick
 mysqlworkbench
 # sequel-pro
 docker
