@@ -5,8 +5,6 @@ alias remove_ds_store_files="sudo find . -name '.DS_Store' -type f -delete"
 # my trusty brew hacks
 alias brew_dep_list='brew list | while read cask; do echo -en "\e[33m $cask \e[31m"; brew deps $cask | awk '"'"'{printf(" %s ", $0)}'"'"'; echo ""; done'
 alias brew_outdated='brew update; brew outdated; brew cask outdated;'
-alias brew_upgrade_all='brew upgrade; brew cask upgrade;'
-alias brew_cleanup_all='brew cleanup;'
 
 alias copy_location='pwd | pbcopy'
 alias cd_clipboard='cd `pbpaste`'
