@@ -12,4 +12,3 @@ vim +PlugUpdate +qall
 
 # Clean old plugins
 vim +PlugClean! +qall
-
