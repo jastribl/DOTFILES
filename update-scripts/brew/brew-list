@@ -10,7 +10,7 @@ node
 reattach-to-user-namespace
 watch
 go
-python3
+python
 composer
 ctop
 bash-completion@2
