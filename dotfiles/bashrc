@@ -18,9 +18,8 @@ function __function_exists {
 
 if __currently_in_bash; then
     # add bash completion if exists
-    if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-        . /usr/local/share/bash-completion/bash_completion
-    fi
+    export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+    [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
     # bash features
     shopt -s autocd
