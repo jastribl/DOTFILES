@@ -25,6 +25,10 @@ else
     brew update
 fi
 
+if ! command -v python3 &>/dev/null; then
+    brew install python3
+fi
+
 ./update-scripts/brew-dep-analysis.py
 
 # set bash to the correct version
