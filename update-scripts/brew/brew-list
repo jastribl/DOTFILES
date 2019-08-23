@@ -16,7 +16,7 @@ ctop
 bash-completion@2
 cmake
 mosh
-clang-format
+# clang-format
 vagrant-completion
 less
 gcc@7

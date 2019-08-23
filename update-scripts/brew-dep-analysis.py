@@ -86,6 +86,7 @@ for extra_brew in extra_brews:
         break
 run_brew_command_set('brew uninstall {}', brews_to_uninstall)
 
+print_pre('Missing brews', missing_brews)
 brews_to_install = set()
 for missing_brew in missing_brews:
     while True:
@@ -105,6 +106,7 @@ for missing_brew in missing_brews:
         break
 run_brew_command_set('brew install {}', brews_to_install)
 
+print_pre('Extra casks', extra_casks)
 casks_to_uninstall = set()
 for extra_cask in extra_casks:
     while True:
@@ -124,6 +126,7 @@ for extra_cask in extra_casks:
         break
 run_brew_command_set('brew cask uninstall {}', casks_to_uninstall)
 
+print_pre('Missing casks', missing_casks)
 casks_to_install = set()
 for missing_cask in missing_casks:
     while True:
