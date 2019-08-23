@@ -10,6 +10,7 @@ node
 reattach-to-user-namespace
 watch
 go
+python@2
 python
 composer
 ctop
