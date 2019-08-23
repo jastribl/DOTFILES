@@ -20,7 +20,7 @@ mosh
 vagrant-completion
 less
 gcc@7
-fpp
+# fpp
 diff-so-fancy
 ghostscript # for mactex
 jpeg # for mactex
