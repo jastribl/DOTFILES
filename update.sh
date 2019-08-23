@@ -5,6 +5,16 @@ if [ "$PWD" != "$HOME/Github/DOTFILES" ]; then
     exit 1
 fi
 
+if [ ! -f ~/.ssh/id_rsa.pub ]; then
+    echo "Update script requires that an ssh key as been generated and added to Github"
+    exit 1
+fi
+
+if [[ "$SHELL" != /usr/local/bin/bash ]]; then
+    echo "Update script requires that bash be updated to version 4+"
+    exit 1
+fi
+
 case "$PWD" in
     *\ * )
         echo "DOTFILES repo path must not contain spaces"
