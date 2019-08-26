@@ -57,6 +57,8 @@ register_global_file ssh/config ~/.ssh/config
 
 # machine-specific deployment
 register_local_file bashrc.local
+register_local_file brew-list $UPDATE_SCRIPTS_DIR/brew/brew-list
+register_local_file cask-list $UPDATE_SCRIPTS_DIR/brew/cask-list
 
 # os-specific deployment
 register_os_specific_file gitconfig.os
@@ -72,7 +74,7 @@ for file in "${!local_files[@]}"; do
     if [ -f $local_pref_cache_file ]; then
         local_file_name=$(cat $local_pref_cache_file)
     else
-        echo "Select the machine-specific dotfile you would like to use"
+        echo "Select the machine-specific dotfile you would like to use for '$file'"
         select local_file_name in $(find $DOTFILES_DIR/$file -mindepth 1 -maxdepth 1 -exec basename {} \;); do
             if [[ -e "$DOTFILES_DIR/$file/$local_file_name" ]]; then
                 printf "$local_file_name" > $local_pref_cache_file
