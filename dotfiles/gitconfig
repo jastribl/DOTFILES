@@ -35,4 +35,3 @@
 	first-run = false
 [alias]
 	amend = commit --amend --no-edit
-	cldry = clean -fX --dry-run
