@@ -1,0 +1,9 @@
+(
+    "~justinstribling/DaVinci Resolve/Cache",
+    "~justinstribling/golang",
+    "~justinstribling/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+    "~justinstribling/Downloads",
+    "~justinstribling/Google Drive",
+    "~justinstribling/Pictures/GoPro Footage For Editing",
+    "~justinstribling/VirtualBox VMs"
+)

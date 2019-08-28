@@ -19,6 +19,9 @@ defaults write com.apple.dock persistent-apps -array              # Remove persi
 defaults write com.apple.dock persistent-others -array            # Remove persistent others
 defaults write com.apple.dock recent-apps -array                  # Remove recent apps
 
+# Save Time Machine Prefs
+defaults read /Library/Preferences/com.apple.TimeMachine.plist SkipPaths > random-settings/Time\ Machine\ Excludes.txt
+
 if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
