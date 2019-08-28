@@ -1,0 +1,14 @@
+(
+    "accounts.google.com",
+    "accounts.spotify.com",
+    "chrome-extension_hdokiejnpimakedhajhdlcegeplioahd_0",
+    "facebook.com",
+    "github.com",
+    "google.com",
+    "lastpass.com",
+    "loglogin.lastpass.com",
+    "messenger.com",
+    "slack.com",
+    "www.netflix.com",
+    "linkedin.com"
+)

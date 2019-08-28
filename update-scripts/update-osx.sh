@@ -19,8 +19,9 @@ defaults write com.apple.dock persistent-apps -array              # Remove persi
 defaults write com.apple.dock persistent-others -array            # Remove persistent others
 defaults write com.apple.dock recent-apps -array                  # Remove recent apps
 
-# Save Time Machine Prefs
-defaults read /Library/Preferences/com.apple.TimeMachine.plist SkipPaths > random-settings/Time\ Machine\ Excludes.txt
+# Save come preferences
+defaults read /Library/Preferences/com.apple.TimeMachine.plist SkipPaths > random-settings/time-machine-excludes.txt
+defaults read com.piriform.ccleaner CookiesToKeep > random-settings/cookies-to-keep.txt
 
 if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -43,6 +44,12 @@ if [[ "$SHELL" != /usr/local/bin/bash ]]; then
     chsh -s /usr/local/bin/bash
 fi
 
+# Link Sublime settings
 sublime_dest_dir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 rm -rf "$sublime_dest_dir"
 ln -f -s $PWD/Sublime/User "$sublime_dest_dir"
+
+# Link Spectacle settings
+spectable_dest_file="$HOME/Library/Application Support/Spectacle/Shortcuts.json"
+rm "$spectable_dest_file"
+ln -f -s $PWD/random-settings/spectacle-shortcuts.json "$spectable_dest_file"
