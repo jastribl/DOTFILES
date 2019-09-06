@@ -33,5 +33,3 @@
 	whitespace = red reverse
 [diff-so-fancy]
 	first-run = false
-[alias]
-	amend = commit --amend --no-edit
