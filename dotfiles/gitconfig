@@ -4,6 +4,7 @@
 	pager = diff-so-fancy | less
 [include]
     path = .gitconfig.os
+    path = .gitconfig.local
 [user]
 	name = Justin Stribling
 	useConfigOnly = true
