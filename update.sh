@@ -10,7 +10,7 @@ if [ ! -f ~/.ssh/id_rsa.pub ]; then
     exit 1
 fi
 
-if [[ "$SHELL" != /usr/local/bin/bash ]]; then
+if [ ${BASH_VERSINFO[0]} -lt 4 ]; then
     echo "Update script requires that bash be updated to version 4+"
     exit 1
 fi
