@@ -1,2 +1,5 @@
-Host devserver
+Host devserver1
     HostName devvm775.ftw2.facebook.com
+
+Host devserver2
+    HostName devvm2178.ftw3.facebook.com
