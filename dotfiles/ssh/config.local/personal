@@ -1,0 +1,19 @@
+Host cs_server
+    HostName ubuntu1604-000.student.cs.uwaterloo.ca
+    User jastribl
+
+Host ece_server
+    HostName ecelinux4.uwaterloo.ca
+    User jastribl
+
+Host ece_tesla_server
+    HostName ecetesla.uwaterloo.ca
+    User jastribl
+
+Host lifeofapunter
+    HostName 23.91.70.29
+    User lifeofap
+
+Host fydp_server
+    HostName 192.168.11.12
+    User e0001337
