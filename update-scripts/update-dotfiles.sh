@@ -53,15 +53,19 @@ register_global_file tmux.conf
 register_global_file tmux.conf.local
 register_global_file vim
 register_global_file vimrc
-register_global_file ssh/config ~/.ssh/config
 
 # machine-specific deployment
 register_local_file bashrc.local
-register_local_file brew-list $UPDATE_SCRIPTS_DIR/brew/brew-list
-register_local_file cask-list $UPDATE_SCRIPTS_DIR/brew/cask-list
+register_local_file gitconfig.local
+register_local_file ssh/config.local ~/.ssh/configs/config.local
+if [[ "$OS" == "Darwin" ]]; then
+    register_local_file brew-list $UPDATE_SCRIPTS_DIR/brew/brew-list
+    register_local_file cask-list $UPDATE_SCRIPTS_DIR/brew/cask-list
+fi
 
 # os-specific deployment
 register_os_specific_file gitconfig.os
+register_os_specific_file ssh/config.os ~/.ssh/configs/config.os
 
 # process all global files
 for file in "${!global_files[@]}"; do
@@ -77,6 +81,7 @@ for file in "${!local_files[@]}"; do
         echo "Select the machine-specific dotfile you would like to use for '$file'"
         select local_file_name in $(find $DOTFILES_DIR/$file -mindepth 1 -maxdepth 1 -exec basename {} \;); do
             if [[ -e "$DOTFILES_DIR/$file/$local_file_name" ]]; then
+                mkdir -p $(dirname $local_pref_cache_file)
                 printf "$local_file_name" > $local_pref_cache_file
                 break;
             fi
@@ -98,10 +103,16 @@ else
 fi
 
 for file in "${!os_specific_files[@]}"; do
-    local_file_name=$file/$os_suffix
     if [[ -e "$DOTFILES_DIR/$file/$os_suffix" ]]; then
         backup_and_link $file/$os_suffix ${os_specific_files[$file]}
     else
         echo "**No os-specific version of '$file'**"
     fi
 done
+
+# Specific post-linking tasks
+
+# Combine ssh configs into master config for use
+rm ~/.ssh/config
+echo "# AUTO-GENERATED - DO NOT EDIT" > ~/.ssh/config
+cat ~/.ssh/configs/* >> ~/.ssh/config
