@@ -61,6 +61,8 @@ register_local_file ssh/config.local ~/.ssh/configs/config.local
 if [[ "$(uname -s)" == "Darwin" ]]; then
     register_local_file brew-list $UPDATE_SCRIPTS_DIR/brew/brew-list
     register_local_file cask-list $UPDATE_SCRIPTS_DIR/brew/cask-list
+    register_local_file cookies-to-keep.local random-settings/cookies-to-keep.txt
+    register_local_file time-machine-excludes.local random-settings/time-machine-excludes.txt
 fi
 
 # os-specific deployment
