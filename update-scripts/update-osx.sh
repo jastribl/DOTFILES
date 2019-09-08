@@ -29,6 +29,9 @@ else
     brew update
 fi
 
+chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/sbin
+chmod u+w /usr/local/bin /usr/local/lib /usr/local/sbin
+
 if ! command -v python3 &>/dev/null; then
     brew install python3
 fi
