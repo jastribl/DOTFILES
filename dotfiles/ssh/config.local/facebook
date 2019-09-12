@@ -1,2 +1,4 @@
 Host devserver1
     HostName devvm2178.ftw3.facebook.com
+Host devserver2
+    HostName devvm1518.ftw3.facebook.com
