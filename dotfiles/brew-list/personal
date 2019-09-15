@@ -26,3 +26,4 @@ diff-so-fancy
 ghostscript # for mactex
 jpeg # for mactex
 libtiff # for mactex
+openssl
