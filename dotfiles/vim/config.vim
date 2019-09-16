@@ -10,8 +10,8 @@ set number                           " turns on line numbers
 set smartindent                      " be smart with indentation
 set encoding=utf-8                   " set the encoding to UTF-8
 set spell                            " turn on spell checking
-set spelllang=en_ca                  " set dictionary to Canadian English
-" set spelllang=en_us                  " set dictionary to USA English
+" set spelllang=en_ca                  " set dictionary to Canadian English
+set spelllang=en_us                  " set dictionary to USA English
 " toggle spelling
 nnoremap <F7> :set spell!<CR>
 
