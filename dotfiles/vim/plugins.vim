@@ -199,6 +199,8 @@ Plug 'vim-scripts/a.vim'
 
 " Syntax highlighting and typechecker integration for Hack.
 Plug 'hhvm/vim-hack', {'for': ['php']}
+nnoremap <C-]> :HackGotoDef<CR>
+inoremap <C-]> <ESC> :HackGotoDef<CR>
 
 let g:clang_format#detect_style_file = 1
 let g:clang_format#auto_format = 1
