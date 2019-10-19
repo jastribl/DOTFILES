@@ -2,6 +2,9 @@
 if filereadable(expand('~/.vim/vimrc-pre-local.vim'))
     source ~/.vim/vimrc-pre-local.vim
 end
+if filereadable(expand('$LOCAL_ADMIN_SCRIPTS/master.vimrc'))
+    source $LOCAL_ADMIN_SCRIPTS/master.vimrc
+end
 
 " load plugin settings
 if filereadable(expand('~/.vim/plugins.vim'))
