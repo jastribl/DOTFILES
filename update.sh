@@ -44,6 +44,7 @@ ONE_SECOND=$(( 1 ))
 ONE_MUNUTE=$(( $ONE_SECOND * 60 ))
 ONE_HOUR=$(( $ONE_MUNUTE * 60 ))
 ONE_DAY=$(( $ONE_HOUR * 24 ))
+ONE_WEEK=$(( $ONE_DAY * 7 ))
 NOW=$(date +%s)
 UPDATE_SCRIPTS_DIR="update-scripts"
 UPDATE_CACHE_DIR="$UPDATE_SCRIPTS_DIR/cache"
@@ -60,6 +61,7 @@ function add_update_script() {
 
 add_update_script update-submodules.sh $ONE_DAY
 add_update_script update-dotfiles.sh $ONE_DAY
+add_update_script update-devserver.sh $ONE_WEEK
 add_update_script update-osx.sh $ONE_DAY
 add_update_script update-vim.sh $ONE_DAY
 add_update_script update-tmux.sh $ONE_DAY
