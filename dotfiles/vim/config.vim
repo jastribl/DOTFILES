@@ -101,7 +101,7 @@ if has("autocmd")
          \ endif
 endif
 
-" # clipboard
+" Clipboard
 " yank to clipboard
 if has("clipboard")
     set clipboard=unnamed " copy to the system clipboard
@@ -136,8 +136,8 @@ vnoremap <RIGHT> <NOP>
 " map ctrl-e and ctrl-a to beginning and end of line like in terminal
 inoremap <C-e> <ESC>A
 inoremap <C-a> <ESC>I
-nnoremap <C-E> A
-nnoremap <C-A> I
+nnoremap <C-e> A
+nnoremap <C-a> I
 vnoremap <C-e> $
 vnoremap <C-a> ^
 
@@ -147,7 +147,7 @@ set whichwrap+=<,>,h,l,[,]
 " map shift tab to tab backward in insert mode
 inoremap <S-Tab> <C-d>
 
-" jk is escape
+" kj is escape
 inoremap kj <esc>
 
 " indent multiple times while in visual mode
@@ -206,9 +206,3 @@ nnoremap [= [sz=
 " use commas as a second leader key
 nmap , \
 vmap , \
-
-" convert files between hex and bin
-command! Hexbin %!xxd
-command! Unhexbin %!xxd -r
-
-nnoremap <F8> :wa<CR> :make<BAR>cw<CR><CR><CR>

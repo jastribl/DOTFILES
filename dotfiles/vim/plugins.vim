@@ -20,14 +20,13 @@ map <leader><leader> gcc<ESC>
 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 Plug 'airblade/vim-gitgutter'
-let g:gitgutter_enabled = 1
 
 " precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
-if $SSH_CONNECTION
-    let g:solarized_termtrans=1 " makes the background black
-endif
+" if $SSH_CONNECTION
+"     let g:solarized_termtrans=1 " makes the background black
+" endif
 
 " Lean & mean status/tabline for vim that's light as air.
 Plug 'vim-airline/vim-airline'
@@ -69,9 +68,6 @@ autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR>:VimtexView<CR>a
 Plug 'bronson/vim-trailing-whitespace'
 " trim extra whitespaces at ends of lines
 nnoremap <leader>w :FixWhitespace<CR>
-
-" CoffeeScript support for vim
-Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
 
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
