@@ -21,3 +21,5 @@ alias l='ls -lah'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias hst='hg status'
+
+alias ssh-auth='eval "$(ssh-agent)" && ssh-add ~/.ssh/id_rsa'
