@@ -180,6 +180,9 @@ function __join_or_create_tmux_session() {
     tmux attach
 }
 alias tmux=__join_or_create_tmux_session
+if [ ! -z "$TMUX" ]; then
+    alias ttop='tmux new-window "htop"'
+fi
 
 # easy way to open a repo in GitHub
 function REPO() {
