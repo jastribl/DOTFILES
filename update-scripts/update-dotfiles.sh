@@ -58,6 +58,7 @@ register_global_file vimrc
 register_local_file bashrc.local
 register_local_file gitconfig.local
 register_local_file ssh/config.local ~/.ssh/configs/config.local
+register_local_file hgrc.local ~/.hgrc
 if [[ "$(uname -s)" == "Darwin" ]]; then
     register_local_file brew-list $UPDATE_SCRIPTS_DIR/brew/brew-list
     register_local_file cask-list $UPDATE_SCRIPTS_DIR/brew/cask-list
