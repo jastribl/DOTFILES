@@ -7,8 +7,10 @@ Plug 'kien/ctrlp.vim'
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 'Et'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_follow_symlinks=1
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 0 " don't cache results - turn this off if things are getting slow
+let g:ctrlp_clear_cache_on_exit=0
 if executable('ag')
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
     let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git --ignore .hg --nocolor -g ""'
