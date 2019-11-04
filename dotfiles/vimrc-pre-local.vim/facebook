@@ -1,0 +1,9 @@
+" Pull in generic Facebook vimrc
+if filereadable(expand('$LOCAL_ADMIN_SCRIPTS/master.vimrc'))
+    source $LOCAL_ADMIN_SCRIPTS/master.vimrc
+end
+
+" Pull in biggrep
+if filereadable(expand('$ADMIN_SCRIPTS/vim/biggrep.vim'))
+    source $ADMIN_SCRIPTS/vim/biggrep.vim
+end
