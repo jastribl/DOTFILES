@@ -1,3 +1,6 @@
 # example user config (see 'hg help config' for more info)
 [ui]
 username = Justin Stribling <justinstribling@fb.com>
+
+[hint]
+ack = sl-short-headers
