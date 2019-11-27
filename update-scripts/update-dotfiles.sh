@@ -84,10 +84,12 @@ for file in "${!local_files[@]}"; do
     else
         echo "Select the machine-specific dotfile you would like to use for '$file'"
         select local_file_name in $(find $DOTFILES_DIR/$file -mindepth 1 -maxdepth 1 -exec basename {} \;); do
-            if [[ -e "$DOTFILES_DIR/$file/$local_file_name" ]]; then
+            if [[ -f "$DOTFILES_DIR/$file/$local_file_name" ]]; then
                 mkdir -p $(dirname $local_pref_cache_file)
                 printf "$local_file_name" > $local_pref_cache_file
                 break;
+            else
+                echo "Please try again..."
             fi
         done
     fi
