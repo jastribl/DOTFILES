@@ -24,6 +24,8 @@ alias cddownloads='cd_downloads'
 alias cddrive='cd_drive'
 alias cdgo='cd_go'
 
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
 # Open man page as PDF
 function manpdf() {
     man -t "${1}" | open -f -a /Applications/Preview.app/

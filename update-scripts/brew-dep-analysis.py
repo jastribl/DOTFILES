@@ -94,7 +94,7 @@ for missing_brew in missing_brews:
         if choice is 'i':
             brews_to_install.add(missing_brew)
         elif choice is 'r':
-            subprocess.getoutput("sed -i '' '/{}/d' {}".format(missing_brew, BREW_LIST_FILE))
+            subprocess.getoutput("sed --follow-symlinks -i '/{}/d' {}".format(missing_brew, BREW_LIST_FILE))
         elif choice is 's':
             break
         elif choice is 'q':
@@ -134,7 +134,7 @@ for missing_cask in missing_casks:
         if choice is 'i':
             casks_to_install.add(missing_cask)
         elif choice is 'r':
-            subprocess.getoutput("sed -i '' '/{}/d' {}".format(missing_cask, CASK_LIST_FILE))
+            subprocess.getoutput("sed --follow-symlinks -i '/{}/d' {}".format(missing_cask, CASK_LIST_FILE))
         elif choice is 's':
             break
         elif choice is 'q':
