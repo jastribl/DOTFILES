@@ -16,6 +16,7 @@ alias cd_git='cd ~/Github'
 alias cd_downloads='cd ~/Downloads'
 alias cd_drive='cd ~/Google\ Drive/'
 alias cd_go='cd $GOPATH/src'
+alias cd_pictures='cd ~/Pictures'
 
 alias cddesktop='cd_desktop'
 alias cddocuments='cd_documents'
@@ -23,6 +24,7 @@ alias cdgit='cd_git'
 alias cddownloads='cd_downloads'
 alias cddrive='cd_drive'
 alias cdgo='cd_go'
+alias cdpictures='cd_pictures'
 
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
