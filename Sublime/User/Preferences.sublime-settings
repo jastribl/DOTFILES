@@ -7,7 +7,8 @@
 		"Facebook",
 		"online",
 		"backend",
-		"frontend"
+		"frontend",
+		"validator"
 	],
 	"always_show_minimap_viewport": true,
 	"default_line_ending": "unix",
