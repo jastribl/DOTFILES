@@ -13,6 +13,7 @@
 		"MarkdownEditing",
 		"Package Control",
 		"PackageResourceViewer",
-		"Pretty JSON"
+		"Pretty JSON",
+		"WordCount"
 	]
 }
