@@ -146,6 +146,7 @@ for missing_cask in missing_casks:
         break
 run_brew_command_set('brew cask install {}', casks_to_install)
 
+print_pre('Outdated brews', outdated_brews)
 brews_to_update = set()
 for outdated_brew in outdated_brews:
     while True:
@@ -161,6 +162,7 @@ for outdated_brew in outdated_brews:
         break
 run_brew_command_set('brew upgrade {}', brews_to_update)
 
+print_pre('Outdated casks', outdated_casks)
 casks_to_update = set()
 for outdated_cask in outdated_casks:
     while True:
