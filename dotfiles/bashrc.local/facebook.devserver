@@ -28,6 +28,6 @@ HISTIGNORE="$HISTIGNORE:hst:hh"
 function tMeerkat() {
     tbgf $1_ | grep -o "$1_[a-zA-Z]*" | uniq | xargs t
 }
-function draft() {
+function dupdate() {
     jf submit --draft
 }
