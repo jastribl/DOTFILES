@@ -31,3 +31,6 @@ function tMeerkat() {
 function dupdate() {
     jf submit --draft
 }
+function wipm() {
+    hg commit -m "[WIP] $1"
+}
