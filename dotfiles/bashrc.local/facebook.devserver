@@ -34,3 +34,16 @@ function dupdate() {
 function wipm() {
     hg commit -m "[WIP] $1"
 }
+function rebase_diffs() {
+    d="$1"
+    for s in "${@:2}"; do
+        hg rebase -s "$s" -d "$d";
+    done
+}
+function rebase_all_diffs() {
+    hg co remote/master
+    arc pull
+    current_diff=$(hg ssl | grep -o "^@\s*[a-zA-Z0-9]*" | grep -o "[a-zA-Z0-9]*")
+    diffs_to_rebase=$(hg ssl | grep -B 1 "^|/" | grep -o "| o  [a-zA-Z0-9]* " | grep -o "  [a-zA-Z0-9]*")
+    rebase_diffs $current_diff $diffs_to_rebase
+}
