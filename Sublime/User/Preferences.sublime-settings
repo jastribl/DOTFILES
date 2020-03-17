@@ -9,7 +9,8 @@
 		"backend",
 		"frontend",
 		"validator",
-		"validators"
+		"validators",
+		"Instagram"
 	],
 	"always_show_minimap_viewport": true,
 	"default_line_ending": "unix",
