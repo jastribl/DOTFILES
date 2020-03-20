@@ -6,4 +6,4 @@ username = Justin Stribling <justinstribling@fb.com>
 ack = sl-short-headers
 
 [alias]
-wip = commit -m "WIP"
+wip = commit -m "[WIP]"
