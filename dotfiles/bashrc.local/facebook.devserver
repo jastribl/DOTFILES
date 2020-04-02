@@ -25,17 +25,14 @@ alias hst='hg status'
 alias ssh-auth='eval "$(ssh-agent)" && ssh-add ~/.ssh/id_rsa'
 
 HISTIGNORE="$HISTIGNORE:hst:hh"
-function tMeerkatSingle() {
-    tbgf $1_ | grep -o "$1_[a-zA-Z]*" | uniq | xargs t
-}
 function tMeerkat() {
     if [ -p meerkatTestList ]; then
         rm meerkatTestList
     fi
     mkfifo meerkatTestList
     for tt in "$@"; do
-        echo "$tt" >> meerkatTestList &
-        tbgf "${tt}_" | grep -o "${tt}_[a-zA-Z]*" | uniq >> meerkatTestList &
+        (echo "$tt" >> meerkatTestList &)
+        (find flib/__generated__/ -type f -regextype posix-extended -regex ".*${tt}_.*" -exec basename \{} .php \; >> meerkatTestList &)
     done
     cat meerkatTestList | uniq | xargs t
     if [ -p meerkatTestList ]; then
