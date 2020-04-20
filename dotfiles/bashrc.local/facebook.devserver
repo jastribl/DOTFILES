@@ -58,3 +58,8 @@ function rebase_all_diffs() {
     diffs_to_rebase=$(hg sl | grep -B 1 "^├─╯\|╭─╯" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*")
     rebase_diffs $current_diff $diffs_to_rebase
 }
+function format_committed() {
+    for f in $(hg show --stat | grep -o " flib\/.*\.php"); do
+        hackfmt --in-place $f;
+    done
+}
