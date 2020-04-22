@@ -39,27 +39,68 @@ function tMeerkat() {
         rm meerkatTestList
     fi
 }
+
 function dupdate() {
     jf submit --draft
 }
-function wipm() {
-    hg commit -m "[WIP] $1"
+
+function wipcom() {
+    hg commit -m "[WIP] $*"
 }
+
 function rebase_diffs() {
     d="$1"
     for s in "${@:2}"; do
         hg rebase -s "$s" -d "$d";
     done
 }
+
 function rebase_all_diffs() {
     hg co remote/master
     arc pull
     current_diff=$(hg sl | grep -o "@\s*[a-zA-Z0-9]*" | grep -o "[a-zA-Z0-9]*")
     diffs_to_rebase=$(hg sl | grep -B 1 "^├─╯\|╭─╯" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*")
     rebase_diffs $current_diff $diffs_to_rebase
+
 }
+
+function format_file() {
+    hackfmt --in-place "$1"
+}
+
 function format_committed() {
-    for f in $(hg show --stat | grep -o " flib\/.*\.php"); do
-        hackfmt --in-place $f;
+    hg show -X "re:.*codegen" -X "re:.*__generated__" | hackfmt --diff
+    clean_dir=`is_clean_dir`
+    if [ $clean_dir -ne 1 ]; then
+        hg amend
+    fi
+}
+
+function update_stack() {
+    hh && dupdate
+    while hg next && sleep 2 && hh && dupdate; do
+        echo "Updated diff"
     done
+}
+
+function is_clean_dir() {
+    hg identify --id | grep --quiet +;
+    echo $?;
+}
+
+function commit() {
+    hg commit -m "$*"
+    format_committed
+}
+
+function amend() {
+    clean_dir=`is_clean_dir`
+    if [ $clean_dir -ne 1 ]; then
+        hg amend
+        format_committed
+    fi
+}
+
+function tttt() {
+    hg identify --id | grep --quiet + ; echo $?
 }
