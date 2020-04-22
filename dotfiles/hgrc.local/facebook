@@ -7,3 +7,6 @@ ack = sl-short-headers
 
 [alias]
 wip = commit -m "[WIP]"
+
+[hint]
+ack = sl-short-headers graph-renderer
