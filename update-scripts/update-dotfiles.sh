@@ -7,6 +7,8 @@ UPDATE_SCRIPTS_DIR="update-scripts"
 UPDATE_CACHE_DIR="$UPDATE_SCRIPTS_DIR/cache"
 SAVED_PREFS_DIR="$UPDATE_CACHE_DIR/prefs"
 
+OS="$(uname -s)"
+
 mkdir -p $SAVED_PREFS_DIR
 
 function backup_and_link() {
@@ -14,16 +16,16 @@ function backup_and_link() {
     local destination_path=$2
 
     # backup
-    if [ -L $destination_path ]; then
-        rm $destination_path
-    elif [ -f $destination_path ]; then
-        mkdir -p $BACKUP_DIR
-        mv $destination_path $BACKUP_DIR/
+    if [ -L "$destination_path" ]; then
+        rm "$destination_path"
+    elif [ -f "$destination_path" ]; then
+        mkdir -p "$BACKUP_DIR"
+        mv "$destination_path" "$BACKUP_DIR/"
     fi
 
     # link
-    mkdir -p $(dirname $destination_path)
-    ln -s $source_file $destination_path
+    mkdir -p $(dirname "$destination_path")
+    ln -s "$source_file" "$destination_path"
 }
 
 # mappings from file in ./dotfiles/ to path to be placed
@@ -60,11 +62,16 @@ register_local_file gitconfig.local
 register_local_file ssh/config.local ~/.ssh/configs/config.local
 register_local_file hgrc.local ~/.hgrc
 register_local_file vimrc-pre-local.vim ~/.vim/vimrc-pre-local.vim
-if [[ "$(uname -s)" == "Darwin" ]]; then
+if [[ "$OS" == "Darwin" ]]; then
     register_local_file brew-list $UPDATE_SCRIPTS_DIR/brew/brew-list
     register_local_file cask-list $UPDATE_SCRIPTS_DIR/brew/cask-list
     register_local_file cookies-to-keep.local random-settings/cookies-to-keep.txt
     register_local_file time-machine-excludes.local random-settings/time-machine-excludes.txt
+
+    if which fbclone > /dev/null; then
+        register_global_file vs-code/settings.json "/Users/justinstribling/Library/Application Support/VS Code @ FB/User/settings.json"
+        register_global_file vs-code/keybindings.json "/Users/justinstribling/Library/Application Support/VS Code @ FB/User/keybindings.json"
+    fi
 fi
 
 # os-specific deployment
@@ -73,7 +80,7 @@ register_os_specific_file ssh/config.os ~/.ssh/configs/config.os
 
 # process all global files
 for file in "${!global_files[@]}"; do
-    backup_and_link $file ${global_files[$file]}
+    backup_and_link "$file" "${global_files[$file]}"
 done
 
 # process all machine-specific files
@@ -98,7 +105,6 @@ for file in "${!local_files[@]}"; do
 done
 
 # process all os-specific files
-OS="$(uname -s)"
 if [[ "$OS" == "Darwin" ]]; then
     os_suffix="osx"
 elif [[ "$OS" == "Linux" ]]; then
