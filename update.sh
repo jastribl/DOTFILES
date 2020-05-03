@@ -45,6 +45,8 @@ ONE_MUNUTE=$(( $ONE_SECOND * 60 ))
 ONE_HOUR=$(( $ONE_MUNUTE * 60 ))
 ONE_DAY=$(( $ONE_HOUR * 24 ))
 ONE_WEEK=$(( $ONE_DAY * 7 ))
+ONE_MONTH=$(( $ONE_DAY * 30 ))
+
 NOW=$(date +%s)
 UPDATE_SCRIPTS_DIR="update-scripts"
 UPDATE_CACHE_DIR="$UPDATE_SCRIPTS_DIR/cache"
@@ -65,8 +67,9 @@ add_update_script update-devserver.sh $ONE_WEEK
 add_update_script update-osx.sh $ONE_DAY
 add_update_script update-vim.sh $ONE_DAY
 add_update_script update-tmux.sh $ONE_DAY
-add_update_script update-powerline-fonts.sh $(( $ONE_DAY * 30 ))
-add_update_script update-diff-so-fancy.sh $(( $ONE_DAY * 7 ))
+add_update_script update-powerline-fonts.sh $ONE_MONTH
+add_update_script update-diff-so-fancy.sh $ONE_WEEK
+add_update_script update-work-laptop.sh $ONE_DAY
 add_update_script cleanup-files.sh $ONE_DAY
 
 
