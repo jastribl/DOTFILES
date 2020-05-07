@@ -4,11 +4,11 @@ nuclide.arclint@0.4.5
 nuclide.ast@0.0.2
 nuclide.biggrep@0.5.11
 nuclide.blame@0.3.0
-nuclide.buck@0.10.1
+nuclide.buck@0.12.0
 nuclide.component-explorer@0.0.2
 nuclide.configerator@0.0.1
-nuclide.core@0.24.0
-nuclide.cpp@0.7.0
+nuclide.core@0.24.1
+nuclide.cpp@0.8.0
 nuclide.cquery@1.2.3
 nuclide.css@0.0.2
 nuclide.data-explorer@0.3.0
@@ -18,8 +18,8 @@ nuclide.eslint@0.1.3
 nuclide.fb-hackast-refactorizer@0.0.6
 nuclide.fb-lldb@1.0.60
 nuclide.file-history@0.1.3
-nuclide.flow@0.4.0
-nuclide.getafix@0.0.13
+nuclide.flow@0.4.1
+nuclide.getafix@0.0.16
 nuclide.go@0.1.0
 nuclide.graphql@0.0.2
 nuclide.hack@0.2.0
@@ -29,10 +29,10 @@ nuclide.hhvm@0.1.2
 nuclide.ig-import-fixer@0.0.1
 nuclide.ig-test@0.0.1
 nuclide.ig-toolbox@0.0.1
-nuclide.interactive-smartlog@0.17.0
+nuclide.interactive-smartlog@0.17.2
 nuclide.intern-language-features@0.12.1
 nuclide.intern-tools@1.1.2
-nuclide.java@0.4.1
+nuclide.java@0.4.2
 nuclide.jest-e2e-ui@0.0.1
 nuclide.jest-e2e-workspace@0.0.1
 nuclide.js-imports@0.1.4
@@ -48,7 +48,7 @@ nuclide.phabricator@1.5.0
 nuclide.phabricator-comments@0.6.0
 nuclide.playgrounds@0.0.2
 nuclide.prettier@0.1.1
-nuclide.pyls@0.8.4
+nuclide.pyls@0.8.5
 nuclide.pyre@0.0.3
 nuclide.rust@0.1.1
 nuclide.slog@0.0.1
