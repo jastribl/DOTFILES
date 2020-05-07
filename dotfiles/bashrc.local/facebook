@@ -20,12 +20,14 @@ export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/tools/bin:${ANDROID_SDK}
 alias hst='hg status'
 
 function work() {
+    open /Applications/Cisco/Cisco\ AnyConnect\ Secure\ Mobility\ Client.app/
+    sleep 10
     open /Applications/Google\ Chrome.app/
     open /Applications/Messenger.app/
     open /Applications/Workplace\ Chat.app/
     open /Applications/VS\ Code\ \@\ FB.app/
     open /Applications/Sublime\ Text.app/
     open /Applications/Microsoft\ Outlook.app/
-    open /Applications/Cisco/Cisco\ AnyConnect\ Secure\ Mobility\ Client.app/
     open /Applications/iTerm.app/
+    mosh devbig
 }
