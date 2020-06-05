@@ -7,8 +7,8 @@ nuclide.blame@0.3.0
 nuclide.buck@0.12.0
 nuclide.component-explorer@0.0.2
 nuclide.configerator@0.0.1
-nuclide.core@0.24.1
-nuclide.cpp@0.8.0
+nuclide.core@0.25.0
+nuclide.cpp@0.9.0
 nuclide.cquery@1.2.3
 nuclide.css@0.0.2
 nuclide.data-explorer@0.3.0
@@ -16,10 +16,10 @@ nuclide.dataswarm@0.6.1
 nuclide.ent-editor@0.0.1
 nuclide.eslint@0.1.3
 nuclide.fb-hackast-refactorizer@0.0.6
-nuclide.fb-lldb@1.0.85
+nuclide.fb-lldb@1.0.97
 nuclide.file-history@0.1.3
 nuclide.flow@0.4.1
-nuclide.getafix@0.0.16
+nuclide.getafix@0.0.18
 nuclide.go@0.1.0
 nuclide.graphql@0.0.2
 nuclide.hack@0.2.0
@@ -29,7 +29,7 @@ nuclide.hhvm@0.1.2
 nuclide.ig-import-fixer@0.0.1
 nuclide.ig-test@0.0.1
 nuclide.ig-toolbox@0.0.1
-nuclide.interactive-smartlog@0.17.2
+nuclide.interactive-smartlog@0.17.4
 nuclide.intern-language-features@0.12.1
 nuclide.intern-tools@1.1.2
 nuclide.java@0.4.2
@@ -38,12 +38,11 @@ nuclide.jest-e2e-workspace@0.0.1
 nuclide.js-imports@0.1.4
 nuclide.local-utils@1.0.4
 nuclide.login-modal@0.0.0
-nuclide.ml-workbench@1.0.76
+nuclide.ml-workbench@1.0.94
 nuclide.new-file-template@0.1.2
 nuclide.ocaml@0.2.0
 nuclide.omni-search@0.6.0
 nuclide.on-demand@0.7.1
-nuclide.open-project@0.0.2
 nuclide.phabricator@1.5.0
 nuclide.phabricator-comments@0.6.0
 nuclide.playgrounds@0.0.2
