@@ -45,7 +45,7 @@ function dupdate() {
 }
 
 function wipcom() {
-    hg commit -m "[WIP] $*"
+    hg commit -m "[WIP] $* [WIP]"
 }
 
 function rebase_diffs() {
