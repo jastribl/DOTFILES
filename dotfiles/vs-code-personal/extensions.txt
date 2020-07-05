@@ -1,0 +1,4 @@
+emily-curry.base16-tomorrow-dark-vscode@0.0.18
+ryuta46.multi-command@1.4.0
+vscodevim.vim@1.14.1
+zhuangtongfa.material-theme@3.4.0

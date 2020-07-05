@@ -1,0 +1,63 @@
+{
+    "fb.remote-connections.hosts": [
+        {
+            "hostname": "our.justinstribling.sb.facebook.com",
+            "folders": [
+                "/data/users/justinstribling/www/",
+                "/data/users/justinstribling/fbsource/fbcode/"
+            ]
+        }
+    ],
+    "window.zoomLevel": 0,
+    "editor.fontSize": 15,
+    "editor.renderWhitespace": "selection",
+    "workbench.colorTheme": "Base16 Tomorrow Dark",
+    "oneDarkPro.editorTheme": "Onedark Pro",
+    "sync.gist": "8af48716cd5729a68000fe8836d75a09",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "zenMode.hideLineNumbers": false,
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.endLineInsertFromNormal",
+            "sequence": [
+                "cursorLineEnd",
+                "extension.vim_insert",
+            ]
+        },
+        {
+            "command": "multiCommand.startLineInsertFromNormal",
+            "sequence": [
+                "cursorHome",
+                "extension.vim_insert",
+            ]
+        },
+        {
+            "command": "multiCommand.endLineInsertFromVisual",
+            "sequence": [
+                "extension.vim_end"
+            ]
+        },
+        {
+            "command": "multiCommand.startLineInsertFromVisual",
+            "sequence": [
+                "extension.vim_home"
+            ]
+        }
+    ],
+    "zenMode.hideTabs": false,
+    "editor.minimap.enabled": false,
+    "vim.useSystemClipboard": true,
+    "vim.whichwrap": "<,>,h,l,[,]",
+    "intern-tools.showReminderBeforeMeetings": true,
+    "workbench.editor.enablePreview": false,
+    "interactive-smartlog.pull": "hg pull",
+    "interactive-smartlog.fetch": "jf get",
+    "workbench.activityBar.visible": true,
+    "workbench.editor.tabSizing": "shrink",
+    "new-file-template.oncall_name": "ads_api",
+    "interactive-smartlog.right-drawer-width": 300,
+    "interactive-smartlog.bottom-drawer-height": 500,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always"
+}
