@@ -3,7 +3,7 @@ nuclide.arcanist-task-runner@0.0.4
 nuclide.arclint@0.4.5
 nuclide.ast@0.0.2
 nuclide.biggrep@0.5.11
-nuclide.blame@0.3.0
+nuclide.blame@0.3.1
 nuclide.buck@0.12.0
 nuclide.component-explorer@0.0.2
 nuclide.configerator@0.0.1
@@ -14,14 +14,14 @@ nuclide.css@0.0.2
 nuclide.data-explorer@0.3.0
 nuclide.dataswarm@0.6.1
 nuclide.ent-editor@0.0.1
-nuclide.eslint@0.1.3
+nuclide.eslint@0.2.0
 nuclide.fb-doctor-ui@0.1.1
 nuclide.fb-doctor-workspace@0.1.1
-nuclide.fb-hackast-refactorizer@0.0.6
+nuclide.fb-hackast-refactorizer@0.0.7
 nuclide.fb-lldb@1.0.116
 nuclide.file-history@0.1.3
 nuclide.flow@0.4.2
-nuclide.getafix@0.0.21
+nuclide.getafix@0.0.22
 nuclide.go@0.1.0
 nuclide.graphql@0.0.2
 nuclide.hack@0.2.0
@@ -40,7 +40,7 @@ nuclide.jest-e2e-workspace@0.0.1
 nuclide.js-imports@0.1.4
 nuclide.local-utils@1.0.4
 nuclide.login-modal@0.0.1
-nuclide.ml-workbench@1.0.113
+nuclide.ml-workbench@1.0.122
 nuclide.new-file-template@0.1.2
 nuclide.ocaml@0.2.0
 nuclide.omni-search@0.6.0
