@@ -235,5 +235,15 @@
         "key": "shift+cmd+\\",
         "command": "-editor.action.jumpToBracket",
         "when": "editorTextFocus"
-    }
+    },
+    {
+        "key": "] e",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "[ e",
+        "command": "editor.action.marker.prev",
+        "when": "editorFocus"
+    },
 ]
