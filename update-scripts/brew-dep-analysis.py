@@ -56,7 +56,7 @@ def run_brew_command(command):
             pass
 
 def run_brew_command_set(command, s):
-    if len(s) is 0: return
+    if len(s) == 0: return
     run_brew_command(command.format(' '.join(s)))
 
 if len(extra_brews) + len(missing_brews) + len(extra_casks) + len(missing_casks) > 0:
@@ -71,15 +71,15 @@ brews_to_uninstall = set()
 for extra_brew in extra_brews:
     while True:
         choice = input('Extra brew: {}\nAdd to list (a), Uninstall (u), Skip (s) or Quit (q):\n> '.format(extra_brew))
-        if choice is 'a':
+        if choice == 'a':
             subprocess.getoutput("echo '{}' >> {}".format(extra_brew, BREW_LIST_FILE))
-        elif choice is 'u':
+        elif choice == 'u':
             brews_to_uninstall.add(extra_brew)
-        elif choice is 's':
+        elif choice == 's':
             break
-        elif choice is 'q':
+        elif choice == 'q':
             sys.exit(0)
-        elif choice is '':
+        elif choice == '':
             break
         else:
             continue
@@ -91,15 +91,15 @@ brews_to_install = set()
 for missing_brew in missing_brews:
     while True:
         choice = input('Missing brew: {}\nInstall (i), Remove from list (r), Skip (s) or Quit (q):\n> '.format(missing_brew))
-        if choice is 'i':
+        if choice == 'i':
             brews_to_install.add(missing_brew)
-        elif choice is 'r':
+        elif choice == 'r':
             subprocess.getoutput("sed --follow-symlinks -i '/{}/d' {}".format(missing_brew, BREW_LIST_FILE))
-        elif choice is 's':
+        elif choice == 's':
             break
-        elif choice is 'q':
+        elif choice == 'q':
             sys.exit(0)
-        elif choice is '':
+        elif choice == '':
             break
         else:
             continue
@@ -111,15 +111,15 @@ casks_to_uninstall = set()
 for extra_cask in extra_casks:
     while True:
         choice = input('Extra cask: {}\nAdd to list (a), Uninstall (u), Skip (s) or Quit (q):\n> '.format(extra_cask))
-        if choice is 'a':
+        if choice == 'a':
             subprocess.getoutput("echo '{}' >> {}".format(extra_cask, CASK_LIST_FILE))
-        elif choice is 'u':
+        elif choice == 'u':
             casks_to_uninstall.add(extra_cask)
-        elif choice is 's':
+        elif choice == 's':
             break
-        elif choice is 'q':
+        elif choice == 'q':
             sys.exit(0)
-        elif choice is '':
+        elif choice == '':
             break
         else:
             continue
@@ -131,15 +131,15 @@ casks_to_install = set()
 for missing_cask in missing_casks:
     while True:
         choice = input('Missing cask: {}\nInstall (i), Remove from list (r), Skip (s) or Quit (q):\n> '.format(missing_cask))
-        if choice is 'i':
+        if choice == 'i':
             casks_to_install.add(missing_cask)
-        elif choice is 'r':
+        elif choice == 'r':
             subprocess.getoutput("sed --follow-symlinks -i '/{}/d' {}".format(missing_cask, CASK_LIST_FILE))
-        elif choice is 's':
+        elif choice == 's':
             break
-        elif choice is 'q':
+        elif choice == 'q':
             sys.exit(0)
-        elif choice is '':
+        elif choice == '':
             break
         else:
             continue
@@ -151,11 +151,11 @@ brews_to_update = set()
 for outdated_brew in outdated_brews:
     while True:
         choice = input("Outdated brew '{}'. Would you like to upgrade (u), Skip (s) or Quit (q):\n> ".format(outdated_brew))
-        if choice is 'u':
+        if choice == 'u':
             brews_to_update.add(outdated_brew)
-        elif choice is 's':
+        elif choice == 's':
             break
-        elif choice is 'q':
+        elif choice == 'q':
             sys.exit()
         else:
             continue
@@ -167,11 +167,11 @@ casks_to_update = set()
 for outdated_cask in outdated_casks:
     while True:
         choice = input("Outdated cask '{}'. Would you like to upgrade (u), Skip (s) or Quit (q):\n> ".format(outdated_cask))
-        if choice is 'u':
+        if choice == 'u':
             casks_to_update.add(outdated_cask)
-        elif choice is 's':
+        elif choice == 's':
             break
-        elif choice is 'q':
+        elif choice == 'q':
             sys.exit()
         else:
             continue
