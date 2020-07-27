@@ -9,13 +9,9 @@ node
 reattach-to-user-namespace
 watch
 python@2
-python
 bash-completion@2
 cmake
 mosh
 less
-# fpp
 diff-so-fancy
-openssl
-yarn
 cmatrix
