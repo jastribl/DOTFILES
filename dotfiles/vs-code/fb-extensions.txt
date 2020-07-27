@@ -18,7 +18,7 @@ nuclide.eslint@0.2.0
 nuclide.fb-doctor-ui@0.1.1
 nuclide.fb-doctor-workspace@0.1.1
 nuclide.fb-hackast-refactorizer@0.0.7
-nuclide.fb-lldb@1.0.134
+nuclide.fb-lldb@1.0.149
 nuclide.file-history@0.1.3
 nuclide.flow@0.4.2
 nuclide.getafix@0.0.22
@@ -40,9 +40,9 @@ nuclide.jest-e2e-workspace@0.0.1
 nuclide.js-imports@0.1.4
 nuclide.local-utils@1.0.4
 nuclide.login-modal@0.0.1
-nuclide.ml-workbench@1.0.139
+nuclide.ml-workbench@1.0.149
 nuclide.new-file-template@0.1.2
-nuclide.nucleator@0.4.0
+nuclide.nucleator@1.2.0
 nuclide.ocaml@0.2.0
 nuclide.omni-search@0.6.0
 nuclide.on-demand@0.7.1
