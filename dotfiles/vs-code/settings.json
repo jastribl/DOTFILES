@@ -57,5 +57,6 @@
     "workbench.editor.tabSizing": "shrink",
     "new-file-template.oncall_name": "ads_api",
     "interactive-smartlog.right-drawer-width": 300,
-    "interactive-smartlog.bottom-drawer-height": 500
+    "interactive-smartlog.bottom-drawer-height": 500,
+    "fb.vscode-feedback.lastsurveydate": 1595367852456
 }
