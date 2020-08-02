@@ -11,18 +11,15 @@ reattach-to-user-namespace
 watch
 go
 python@2
-python
+python@3.8
 composer
 ctop
 bash-completion@2
 cmake
 mosh
-# clang-format
 vagrant-completion
 less
 gcc@7
-# fpp
 diff-so-fancy
-openssl
 gnu-sed
 yarn
