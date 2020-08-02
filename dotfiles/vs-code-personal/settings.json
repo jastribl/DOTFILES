@@ -59,5 +59,6 @@
     "interactive-smartlog.right-drawer-width": 300,
     "interactive-smartlog.bottom-drawer-height": 500,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "go.formatTool": "goimports"
 }
