@@ -33,6 +33,7 @@ function tMeerkat() {
     for tt in "$@"; do
         (echo "$tt" >> meerkatTestList &)
         (find flib/__generated__/ -type f -regextype posix-extended -regex ".*${tt}_.*" -exec basename \{} .php \; >> meerkatTestList &)
+        (find flib/intern/__generated__/ -type f -regextype posix-extended -regex ".*${tt}_.*" -exec basename \{} .php \; >> meerkatTestList &)
     done
     cat meerkatTestList | uniq | xargs t
     if [ -p meerkatTestList ]; then
