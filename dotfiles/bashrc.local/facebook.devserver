@@ -105,3 +105,5 @@ function amend() {
 function tttt() {
     hg identify --id | grep --quiet + ; echo $?
 }
+
+alias tbgs='tbgs -s'
