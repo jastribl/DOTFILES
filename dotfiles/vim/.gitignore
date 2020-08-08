@@ -2,3 +2,4 @@
 swapfiles/*
 plugged/
 vimrc-pre-local.vim
+plugins.vim

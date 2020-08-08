@@ -1,0 +1,7 @@
+set nocompatible
+
+call plug#begin('~/.vim/plugged')
+
+source ~/.vim/plugables/general.vim
+
+call plug#end()
