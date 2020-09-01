@@ -38,13 +38,14 @@ nuclide.jest-e2e-workspace@0.0.1
 nuclide.js-imports@0.1.4
 nuclide.local-utils@1.0.4
 nuclide.login-modal@0.0.1
-nuclide.ml-workbench@1.0.161
+nuclide.ml-workbench@1.0.187
 nuclide.new-file-template@0.1.2
 nuclide.nucleator@1.2.0
 nuclide.ocaml@0.2.0
 nuclide.omni-search@0.6.0
 nuclide.on-demand@0.7.1
 nuclide.phabricator@1.5.1
+nuclide.phabricator-comments@0.6.0
 nuclide.playgrounds@0.0.2
 nuclide.prettier@0.1.1
 nuclide.pyls@0.9.0
