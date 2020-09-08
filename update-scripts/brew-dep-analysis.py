@@ -39,7 +39,7 @@ actual_casks = subprocess.getoutput('brew list --cask').split()
 missing_casks = [cask for cask in expected_casks if cask not in actual_casks]
 extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
 outdated_brews = subprocess.getoutput('brew outdated  -q').split()
-outdated_casks = subprocess.getoutput('brew cask outdated --quiet').split()
+outdated_casks = subprocess.getoutput('brew outdated --cask --quiet').split()
 
 def run_brew_command(command):
     print('\n>', command)
