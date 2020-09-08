@@ -35,7 +35,7 @@ missing_brews = [brew for brew in expected_brews if brew not in actual_brews]
 
 expected_casks = [re.sub(r' *#.*', '', line.rstrip('\n')) for line in open(CASK_LIST_FILE)]
 expected_casks = list(filter(None, expected_casks)) # remove empty lines (commented out casks)
-actual_casks = subprocess.getoutput('brew cask list').split()
+actual_casks = subprocess.getoutput('brew list --cask').split()
 missing_casks = [cask for cask in expected_casks if cask not in actual_casks]
 extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
 outdated_brews = subprocess.getoutput('brew outdated  -q').split()
