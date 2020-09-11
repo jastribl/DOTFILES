@@ -20,8 +20,8 @@ export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/tools/bin:${ANDROID_SDK}
 alias hst='hg status'
 
 function work() {
-    open /Applications/Cisco/Cisco\ AnyConnect\ Secure\ Mobility\ Client.app/
-    sleep 10
+    read -p "Press your YUBIKEY: " yubikey
+    printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas West";
     open /Applications/Google\ Chrome.app/
     open /Applications/Messenger.app/
     open /Applications/Workplace\ Chat.app/
@@ -31,3 +31,4 @@ function work() {
     open /Applications/iTerm.app/
     mosh devbig
 }
+alias vpn_disconnect='/opt/cisco/anyconnect/bin/vpn disconnect'
