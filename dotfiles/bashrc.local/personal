@@ -6,3 +6,30 @@ export PATH=$PATH:$GOPATH
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 
 source ~/.bashrc.plugables/osx/bashrc
+
+function sort_pictures() {
+    input_dir="wef"
+    search_dir="wef"
+    while [ ! -d "`eval echo ${input_dir//>}`" ]; do
+        read -e -p 'Input Directory: ' input_dir
+    done
+    while [ ! -d "`eval echo ${search_dir//>}`" ]; do
+        read -e -p 'Search Directory: ' search_dir
+    done
+
+    input_dir="`eval echo ${input_dir//>}`"
+    search_dir="`eval echo ${search_dir//>}`"
+
+    find "$input_dir" -type f | grep -v "\.DS_Store" | while read file_path; do
+        base_name=$(basename "$file_path")
+        dir_name=$(dirname "$file_path")
+        find "$search_dir" -name "$base_name" -type f | grep -q .
+        if [ $? -eq 0 ]; then
+            output_dir_name="./found/$dir_name"
+        else
+            output_dir_name="./not_found/$dir_name"
+        fi
+        mkdir -p "$output_dir_name"
+        cp "$file_path" "$output_dir_name"
+    done
+}
