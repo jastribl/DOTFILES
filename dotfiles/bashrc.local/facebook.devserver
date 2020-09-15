@@ -106,4 +106,4 @@ function tttt() {
     hg identify --id | grep --quiet + ; echo $?
 }
 
-alias tbgs='tbgs -s'
+alias tbgs='tbgs -s --color=on'
