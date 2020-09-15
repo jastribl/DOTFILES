@@ -8,7 +8,7 @@ nuclide.buck@0.14.0
 nuclide.component-explorer@0.0.2
 nuclide.configerator@0.0.1
 nuclide.core@0.25.1
-nuclide.cpp@1.0.172
+nuclide.cpp@1.0.186
 nuclide.cquery@1.2.3
 nuclide.css@0.0.2
 nuclide.data-explorer@0.3.0
@@ -18,7 +18,7 @@ nuclide.eslint@0.6.0
 nuclide.fb-doctor-ui@0.1.4
 nuclide.fb-doctor-workspace@0.1.2
 nuclide.fb-hackast-refactorizer@0.0.7
-nuclide.fb-lldb@1.0.195
+nuclide.fb-lldb@1.0.204
 nuclide.file-history@0.1.3
 nuclide.flow@0.4.2
 nuclide.getafix@0.2.0
