@@ -18,11 +18,18 @@ apps=(
     cmake
 )
 
+if which yum > /dev/null; then
+    pk_man='yum'
+else
+    pk_man='dnf'
+fi
 
+echo "a is"
+echo $a
 for app in "${apps[@]}"; do
-    if yum list installed "$app" >/dev/null 2>&1; then
-        sudo yum upgrade $app
+    if $pk_man list installed "$app" >/dev/null 2>&1; then
+        sudo $pk_man upgrade $app
     else
-        sudo yum install $app
+        sudo $pk_man install -y $app
     fi
 done
