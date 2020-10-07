@@ -29,6 +29,6 @@ function work() {
     open /Applications/Sublime\ Text.app/
     open /Applications/Microsoft\ Outlook.app/
     open /Applications/iTerm.app/
-    mosh devbig
+    mosh devsmall
 }
 alias vpn_disconnect='/opt/cisco/anyconnect/bin/vpn disconnect'
