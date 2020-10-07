@@ -4,7 +4,7 @@ source ~/.bashrc.plugables/osx/bashrc
 # Please see https://fburl.com/AndroidProvisioning if you do not use #!/usr/bin/env bash
 
 # or if you would rater this bit of code 'live' somewhere else
-. ~/.fbchef/environment
+# . ~/.fbchef/environment
 # END: Block added by chefh
 
 export FBANDROID_DIR=/Users/justinstribling/fbsource/fbandroid

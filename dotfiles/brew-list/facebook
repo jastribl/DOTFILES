@@ -8,7 +8,6 @@ tmux
 node
 reattach-to-user-namespace
 watch
-python@2
 bash-completion@2
 cmake
 mosh
