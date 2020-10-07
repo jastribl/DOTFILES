@@ -19,6 +19,15 @@ defaults write com.apple.dock persistent-apps -array              # Remove persi
 defaults write com.apple.dock persistent-others -array            # Remove persistent others
 defaults write com.apple.dock recent-apps -array                  # Remove recent apps
 
+# General customization
+defaults write -g  AppleInterfaceStyle -string 'Dark' # Dark theme
+
+# Trackpad Customization
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true        # Tap to click
+defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0 # Light click
+defaults write -g com.apple.trackpad.scaling 1.5                            # Trackpad speed
+defaults write -g com.apple.swipescrolldirection -bool false                # Real scrolling :)
+
 # Save come preferences
 defaults read /Library/Preferences/com.apple.TimeMachine.plist SkipPaths > random-settings/time-machine-excludes.txt
 defaults read com.piriform.ccleaner CookiesToKeep > random-settings/cookies-to-keep.txt
