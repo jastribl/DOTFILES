@@ -400,7 +400,7 @@
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Github/DOTFILES/iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -442,16 +442,10 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>2984 1447 400 129 1680 275 3008 1692 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>2874 1250 620 392 1680 275 3008 1692 </string>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>496 506 799 448 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1680 341 1920 1200 1680 341 1920 1200 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>212 101 570 402 0 0 1680 1027 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>233 78 570 402 0 0 1680 1027 </string>
+	<string>1792 713 2048 1152 1792 713 2048 1152 </string>
 	<key>NeverWarnAboutShortLivedSessions_F378F856-B266-46EF-8E21-37815A16D937</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_F378F856-B266-46EF-8E21-37815A16D937_selection</key>
@@ -1106,7 +1100,18 @@
 			<key>Transparency</key>
 			<real>0.12398298816568047</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermUserNotificationTrigger</string>
+					<key>parameter</key>
+					<string>2FA Requested</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>Duo two-factor login for</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -1726,42 +1731,27 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.6</string>
-		<string>3.3.8</string>
-		<string>3.3.3</string>
-		<string>3.3.5</string>
-		<string>3.3.7</string>
-		<string>3.3.9</string>
-		<string>3.3.4</string>
+		<string>3.3.12</string>
 	</array>
-	<key>NoSyncFrame_SessionsPreferences</key>
-	<dict>
-		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
-		<key>topLeft</key>
-		<string>{537, 916}</string>
-	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{1680, 341}, {1920, 1200}}</string>
+		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{1949, 937}</string>
+		<string>{926, 1245}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
-	<string>03683421-D8A5-486A-91A1-A6B9A1BBA93B</string>
+	<string>23E7A9FF-1ECD-4FD5-8543-4A94AC604D34</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>112</integer>
+	<integer>18</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>589580923.05758798</real>
+	<real>623897738.88652003</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -2112,7 +2102,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.terminalWindowName</string>
+				<string>currentTab.currentSession.terminalIconName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2120,7 +2110,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.terminalIconName</string>
+				<string>currentTab.currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2184,7 +2174,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.path</string>
+				<string>currentTab.currentSession.commandLine</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2192,7 +2182,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.commandLine</string>
+				<string>currentTab.currentSession.path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2469,7 +2459,7 @@
 		</array>
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
-	<real>589314959.34262002</real>
+	<real>623724938.88636899</real>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
@@ -2524,16 +2514,12 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=82</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=87</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-16T08:01:51Z</date>
+	<date>2020-10-09T08:40:07Z</date>
 	<key>SUSendProfileInfo</key>
-	<false/>
-	<key>SUUpdateGroupIdentifier</key>
-	<integer>548505168</integer>
-	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
@@ -2564,7 +2550,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.9</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
