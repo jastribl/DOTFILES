@@ -13,14 +13,12 @@
     "editor.renderWhitespace": "selection",
     "workbench.colorTheme": "Base16 Tomorrow Dark",
     "oneDarkPro.editorTheme": "Onedark Pro",
-    "sync.gist": "8af48716cd5729a68000fe8836d75a09",
-    "sync.autoDownload": false,
-    "sync.autoUpload": false,
     "zenMode.hideLineNumbers": false,
     "multiCommand.commands": [
         {
             "command": "multiCommand.endLineInsertFromNormal",
             "sequence": [
+                "cursorHome",
                 "cursorLineEnd",
                 "extension.vim_insert",
             ]

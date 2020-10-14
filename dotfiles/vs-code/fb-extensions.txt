@@ -8,7 +8,7 @@ nuclide.buck@0.14.0
 nuclide.component-explorer@0.0.2
 nuclide.configerator@0.0.1
 nuclide.core@0.25.1
-nuclide.cpp@1.0.219
+nuclide.cpp@1.0.227
 nuclide.cquery@1.2.3
 nuclide.css@0.0.2
 nuclide.data-explorer@0.3.0
@@ -37,7 +37,7 @@ nuclide.jest-e2e-workspace@0.0.1
 nuclide.js-imports@0.1.4
 nuclide.local-utils@0.0.0
 nuclide.login-modal@0.0.1
-nuclide.ml-workbench@1.0.234
+nuclide.ml-workbench@1.0.242
 nuclide.new-file-template@0.1.2
 nuclide.nucleator@1.2.0
 nuclide.ocaml@0.2.0

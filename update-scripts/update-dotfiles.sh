@@ -55,6 +55,11 @@ register_global_file tmux.conf
 register_global_file tmux.conf.local
 register_global_file vim
 register_global_file vimrc
+if [[ "$OS" == "Darwin" ]]; then
+    if which fbclone > /dev/null; then
+        register_global_file work-mosh.sh
+    fi
+fi
 
 # machine-specific deployment
 register_local_file bashrc.local
