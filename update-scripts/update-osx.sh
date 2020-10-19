@@ -6,9 +6,10 @@ if [[ $(uname -s) != "Darwin" ]]; then
 fi
 
 # Keyboard customization
-defaults write -g ApplePressAndHoldEnabled -bool false # Allow key presses to repeat on hold in sublime
-defaults write -g InitialKeyRepeat -int 20             # Normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1                     # Normal minimum is 2 (30 ms)
+defaults write -g ApplePressAndHoldEnabled -bool false             # Allow key presses to repeat on hold in sublime
+defaults write -g InitialKeyRepeat -int 20                         # Normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1                                 # Normal minimum is 2 (30 ms)
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false # Turn off double space period
 
 # Dock customization
 defaults write com.apple.dock autohide -bool true                 # Autohide dock

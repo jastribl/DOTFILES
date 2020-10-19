@@ -20,8 +20,8 @@ export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/tools/bin:${ANDROID_SDK}
 alias hst='hg status'
 
 function work() {
-    read -p "Press your YUBIKEY: " yubikey
-    printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas West";
+    # read -p "Press your YUBIKEY: " yubikey
+    # printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas West";
     open /Applications/Google\ Chrome.app/
     open /Applications/Messenger.app/
     open /Applications/Workplace\ Chat.app/
@@ -30,6 +30,6 @@ function work() {
     open /Applications/Microsoft\ Outlook.app/
     open /Applications/iTerm.app/
     # ~/.work-mosh.sh devsmall $yubikey
-    mosh devsmall
+    mosh -6 devsmall
 }
 alias vpn_disconnect='/opt/cisco/anyconnect/bin/vpn disconnect'
