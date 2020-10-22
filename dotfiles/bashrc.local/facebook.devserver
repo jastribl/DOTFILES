@@ -56,13 +56,16 @@ function rebase_diffs() {
     done
 }
 
+function get_current_diff() {
+    hg sl | grep -o "@\s*[a-zA-Z0-9]*" | grep -o "[a-zA-Z0-9]*"
+}
+
 function rebase_all_diffs() {
     hg co remote/master
     arc pull
-    current_diff=$(hg sl | grep -o "@\s*[a-zA-Z0-9]*" | grep -o "[a-zA-Z0-9]*")
+    current_diff=$(get_current_diff)
     diffs_to_rebase=$(hg sl | grep -B 1 "^├─╯\|╭─╯" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*")
     rebase_diffs $current_diff $diffs_to_rebase
-
 }
 
 function format_file() {
@@ -102,8 +105,12 @@ function amend() {
     fi
 }
 
-function tttt() {
-    hg identify --id | grep --quiet + ; echo $?
+function get_phab_diff() {
+    diff="$1"
+    current_diff=$(get_current_diff)
+    jf get $diff
+    hg rebase -s $diff -d $current_diff
+    hg co $diff
 }
 
 alias tbgs='tbgs -s --color=on'
