@@ -29,7 +29,7 @@ all_brews = []
 for brew, deps in all_deps.items():
     all_brews = all_brews + [brew] + deps
 
-actual_brews = subprocess.getoutput('brew list').split()
+actual_brews = subprocess.getoutput('brew list --formula').split()
 extra_brews = [brew for brew in actual_brews if brew not in all_brews]
 missing_brews = [brew for brew in expected_brews if brew not in actual_brews]
 
