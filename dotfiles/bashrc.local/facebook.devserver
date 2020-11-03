@@ -35,7 +35,7 @@ function tMeerkat() {
         (find flib/__generated__/ -type f -regextype posix-extended -regex ".*${tt}_.*" -exec basename \{} .php \; >> meerkatTestList &)
         (find flib/intern/__generated__/ -type f -regextype posix-extended -regex ".*${tt}_.*" -exec basename \{} .php \; >> meerkatTestList &)
     done
-    cat meerkatTestList | uniq | xargs t
+    cat meerkatTestList | uniq | xargs t --timeout 500
     if [ -p meerkatTestList ]; then
         rm meerkatTestList
     fi
@@ -113,4 +113,5 @@ function get_phab_diff() {
     hg co $diff
 }
 
+alias tbgs_original='/usr/local/bin/tbgs'
 alias tbgs='tbgs -s --color=on'
