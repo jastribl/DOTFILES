@@ -59,5 +59,19 @@
     "fb.vscode-feedback.lastsurveydate": 1596003608274,
     "[cpp]": {
         "editor.defaultFormatter": "nuclide.cpp"
+    },
+    "fb.ms-remote-connections.hosts": [
+        {
+            "hostname": "our.justinstribling.sb.facebook.com",
+            "folders": [
+                "/data/users/justinstribling/www/",
+                "/data/users/justinstribling/fbsource/fbcode/"
+            ]
+        }
+    ],
+    "remote.extensionKind": {
+        "ryuta46.multi-command": [
+            "ui"
+        ],
     }
 }
