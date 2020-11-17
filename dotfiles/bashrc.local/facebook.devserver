@@ -107,10 +107,7 @@ function amend() {
 
 function get_phab_diff() {
     diff="$1"
-    current_diff=$(get_current_diff)
-    jf get $diff
-    hg rebase -s $diff -d $current_diff
-    hg co $diff
+    jf get --rebase $diff
 }
 
 alias tbgs_original='/usr/local/bin/tbgs'
