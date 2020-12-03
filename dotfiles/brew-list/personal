@@ -11,7 +11,7 @@ reattach-to-user-namespace
 watch
 go
 python@2
-python@3.8
+python@3.9
 composer
 ctop
 bash-completion@2
