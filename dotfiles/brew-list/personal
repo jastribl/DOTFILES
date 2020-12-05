@@ -1,6 +1,6 @@
 git
 htop
-pandoc
+# pandoc
 ssh-copy-id
 the_silver_searcher
 vim
@@ -12,8 +12,8 @@ watch
 go
 python@2
 python@3.9
-composer
-ctop
+# composer
+# ctop
 bash-completion@2
 cmake
 mosh
@@ -22,6 +22,4 @@ less
 gcc@7
 diff-so-fancy
 gnu-sed
-yarn
-heroku
-heroku-node
+# yarn
