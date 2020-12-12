@@ -9,8 +9,9 @@
         {
             "command": "multiCommand.endLineInsertFromNormal",
             "sequence": [
-                "cursorLineEnd",
-                "extension.vim_insert",
+                "cursorHome",
+                "cursorEnd",
+                "extension.vim_insert"
             ]
         },
         {
