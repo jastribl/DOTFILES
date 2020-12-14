@@ -20,8 +20,8 @@ export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/tools/bin:${ANDROID_SDK}
 alias hst='hg status'
 
 function work() {
-    read -p "Press your YUBIKEY: " yubikey
-    printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas East";
+    # read -p "Press your YUBIKEY: " yubikey
+    # printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas East";
     open /Applications/Google\ Chrome.app/
     open /Applications/Messenger.app/
     open /Applications/Workplace\ Chat.app/
