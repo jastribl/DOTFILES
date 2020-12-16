@@ -24,7 +24,7 @@ function backup_and_link() {
     fi
 
     # link
-    mkdir -p $(dirname "$destination_path")
+    mkdir -p "$(dirname "$destination_path")"
     ln -s "$source_file" "$destination_path"
 }
 
