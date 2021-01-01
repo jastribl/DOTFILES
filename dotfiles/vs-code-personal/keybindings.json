@@ -235,5 +235,30 @@
         "key": "shift+cmd+\\",
         "command": "-editor.action.jumpToBracket",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "] e",
+        "command": "editor.action.marker.next",
+        "when": "textInputFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "[ e",
+        "command": "editor.action.marker.prev",
+        "when": "textInputFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "shift+alt+f8",
+        "command": "-editor.action.marker.prev",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
     }
 ]

@@ -43,5 +43,12 @@
     "workbench.editor.tabSizing": "shrink",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "go.formatTool": "goimports"
+    "go.formatTool": "goimports",
+    "editor.rulers": [
+        100
+    ],
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.formatOnSave": true
 }
