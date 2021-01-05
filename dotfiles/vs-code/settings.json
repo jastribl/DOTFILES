@@ -4,7 +4,14 @@
             "hostname": "our.justinstribling.sb.facebook.com",
             "folders": [
                 "/data/users/justinstribling/www/",
-                "/data/users/justinstribling/fbsource/fbcode/"
+                "/data/users/justinstribling/fbsource/fbcode/",
+                "/data/users/justinstribling/instagram-server/"
+            ]
+        },
+        {
+            "hostname": "49743.od.fbinfra.net",
+            "folders": [
+                "/home/justinstribling/www/"
             ]
         }
     ],
@@ -66,7 +73,14 @@
             "folders": [
                 "/data/users/justinstribling/www/",
                 "/data/users/justinstribling/fbsource/fbcode/",
-                "/data/users/justinstribling/configerator/"
+                "/data/users/justinstribling/configerator/",
+                "/data/users/justinstribling/instagram-server/"
+            ]
+        },
+        {
+            "hostname": "49743.od.fbinfra.net",
+            "folders": [
+                "/home/justinstribling/www/"
             ]
         }
     ],
