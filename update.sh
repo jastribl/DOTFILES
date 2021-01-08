@@ -110,4 +110,5 @@ for update_script in "${update_scripts[@]}"; do
     run_update_script $update_script
 done
 
-touch ~/.hushlogin
+
+touch -a ~/.hushlogin
