@@ -7,12 +7,6 @@
                 "/data/users/justinstribling/fbsource/fbcode/",
                 "/data/users/justinstribling/instagram-server/"
             ]
-        },
-        {
-            "hostname": "49743.od.fbinfra.net",
-            "folders": [
-                "/home/justinstribling/www/"
-            ]
         }
     ],
     "window.zoomLevel": 0,
