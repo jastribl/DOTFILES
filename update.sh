@@ -23,6 +23,18 @@ case "$PWD" in
         ;;
 esac
 
+if which fbclone > /dev/null; then
+    if [[ $(uname -s) != "Darwin" ]]; then
+        if ! ps -p $SSH_AGENT_PID > /dev/null; then
+            eval `ssh-agent -s`
+            trap "ssh-agent -k" exit
+        fi
+        if ssh-add -l | grep -q "The agent has no identities."; then
+            ssh-add ~/.ssh/id_rsa
+        fi
+    fi
+fi
+
 function usage() {
     echo "Usage: $0 [-f (force)]" 1>&2; exit 1;
 }
