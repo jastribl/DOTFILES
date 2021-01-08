@@ -29,9 +29,11 @@ defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0 # Li
 defaults write -g com.apple.trackpad.scaling 1.5                            # Trackpad speed
 defaults write -g com.apple.swipescrolldirection -bool false                # Real scrolling :)
 
-# Save come preferences
-defaults read /Library/Preferences/com.apple.TimeMachine.plist SkipPaths > random-settings/time-machine-excludes.txt
-defaults read com.piriform.ccleaner CookiesToKeep > random-settings/cookies-to-keep.txt
+# Save come preferences for personal machine
+if ! which fbclone > /dev/null; then
+    defaults read /Library/Preferences/com.apple.TimeMachine.plist SkipPaths > random-settings/time-machine-excludes.txt
+    defaults read com.piriform.ccleaner CookiesToKeep > random-settings/cookies-to-keep.txt
+fi
 
 if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -72,3 +74,11 @@ ln -f -s $PWD/Sublime/User "$sublime_dest_dir"
 spectable_dest_file="$HOME/Library/Application Support/Spectacle/Shortcuts.json"
 rm "$spectable_dest_file"
 ln -f -s $PWD/random-settings/spectacle-shortcuts.json "$spectable_dest_file"
+
+# Backup list of VS Code extensions
+if which fbclone > /dev/null; then
+    code-fb --list-extensions --show-versions > dotfiles/vs-code/fb-extensions.txt
+else
+    code --list-extensions --show-versions > dotfiles/vs-code-personal/fb-extensions.txt
+fi
+
