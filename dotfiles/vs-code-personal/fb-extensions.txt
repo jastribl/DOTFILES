@@ -1,0 +1,15 @@
+amatiasq.sort-imports@6.2.2
+bbenoist.vagrant@0.5.0
+cbrevik.toggle-format-on-save@0.2.0
+drewbarrett.vscode-coffeescript-preview@1.0.1
+emily-curry.base16-tomorrow-dark-vscode@0.0.18
+felixfbecker.php-intellisense@2.3.14
+golang.go@0.20.1
+mikestead.dotenv@1.0.1
+mrmlnc.vscode-apache@1.2.0
+ms-azuretools.vscode-docker@1.9.0
+ms-vscode-remote.remote-containers@0.154.1
+ryuta46.multi-command@1.4.0
+vscodevim.vim@1.18.5
+waderyan.gitblame@6.0.2
+zhuangtongfa.material-theme@3.9.12
