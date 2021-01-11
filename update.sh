@@ -73,13 +73,13 @@ function add_update_script() {
     update_script_delays[$1]=$2
 }
 
-add_update_script update-submodules.sh $ONE_DAY
-add_update_script update-dotfiles.sh $ONE_DAY
+add_update_script update-submodules.sh $ONE_SECOND
+add_update_script update-dotfiles.sh $ONE_SECOND
 add_update_script update-devserver.sh $ONE_WEEK
 add_update_script update-osx.sh $ONE_DAY
 add_update_script update-vim.sh $ONE_DAY
 add_update_script update-tmux.sh $ONE_DAY
-add_update_script update-powerline-fonts.sh $ONE_MONTH
+add_update_script update-powerline-fonts.sh $ONE_SECOND
 add_update_script update-diff-so-fancy.sh $ONE_WEEK
 add_update_script cleanup-files.sh $ONE_DAY
 
