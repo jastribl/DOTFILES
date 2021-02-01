@@ -124,7 +124,7 @@ for extra_cask in extra_casks:
         else:
             continue
         break
-run_brew_command_set('brew cask uninstall {}', casks_to_uninstall)
+run_brew_command_set('brew uninstall --cask {}', casks_to_uninstall)
 
 print_pre('Missing casks', missing_casks)
 casks_to_install = set()
@@ -144,7 +144,7 @@ for missing_cask in missing_casks:
         else:
             continue
         break
-run_brew_command_set('brew cask install {}', casks_to_install)
+run_brew_command_set('brew install --cask {}', casks_to_install)
 
 print_pre('Outdated brews', outdated_brews)
 brews_to_update = set()
@@ -176,7 +176,7 @@ for outdated_cask in outdated_casks:
         else:
             continue
         break
-run_brew_command_set('brew cask upgrade {}', casks_to_update)
+run_brew_command_set('brew upgrade --cask {}', casks_to_update)
 
 
 run_brew_command('brew cleanup')
