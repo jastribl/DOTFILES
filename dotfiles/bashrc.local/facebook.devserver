@@ -60,12 +60,16 @@ function get_current_diff() {
     hg sl | grep -o "@\s*[a-zA-Z0-9]*" | grep -o "[a-zA-Z0-9]*"
 }
 
-function rebase_all_diffs() {
-    hg co remote/master
-    arc pull
+function rebase_all_diffs_to_here() {
     current_diff=$(get_current_diff)
     diffs_to_rebase=$(hg sl | grep -B 1 "^├─╯\|╭─╯" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*")
     rebase_diffs $current_diff $diffs_to_rebase
+}
+
+function rebase_all_diffs() {
+    hg co remote/master
+    arc pull
+    rebase_all_diffs_to_here
 }
 
 function format_file() {
