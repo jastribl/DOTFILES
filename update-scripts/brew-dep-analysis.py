@@ -41,7 +41,14 @@ extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
 outdated_brews = subprocess.getoutput('brew outdated  -q').split()
 outdated_casks = subprocess.getoutput('brew outdated --cask --quiet').split()
 
+has_checked_dirs = False
+
 def run_brew_command(command):
+    global has_checked_dirs
+    if not has_checked_dirs:
+        has_checked_dirs = True
+        subprocess.getoutput('./update-scripts/fix-brew-dirs-on-devserver.sh')
+
     print('\n>', command)
     p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     while True:

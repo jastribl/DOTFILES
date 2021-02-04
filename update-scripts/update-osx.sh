@@ -45,15 +45,6 @@ if ! command -v python3 &>/dev/null; then
     brew install python3
 fi
 
-# Check write permissions for dirs required by brew
-for dir in '/usr/local/bin' '/usr/local/lib' '/usr/local/sbin'; do
-    if [ ! -w "$dir" ]; then
-        echo "Incorrect ownership of $dir.... Fixing...."
-        sudo chown -R $(whoami) "$dir"
-        chmod u+w "$dir"
-    fi
-done
-
 ./update-scripts/brew-dep-analysis.py
 
 # set bash to the correct version
