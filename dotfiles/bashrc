@@ -211,6 +211,10 @@ function PR () {
 [ -d "$HOME/diff-so-fancy/" ] && export PATH="$PATH:$HOME/diff-so-fancy"
 [ -d "$HOME/Github/the_silver_searcher/bin/" ] && export PATH="$PATH:$HOME/Github/the_silver_searcher/bin/"
 
+function weather() {
+    curl 'http://wttr.in/seattle_wa'
+}
+
 if [[ -e ~/.bashrc.local ]]; then
     source ~/.bashrc.local
 fi
