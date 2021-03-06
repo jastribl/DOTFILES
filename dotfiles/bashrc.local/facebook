@@ -24,7 +24,7 @@ function work() {
     # printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas East";
     open /Applications/Google\ Chrome.app/
     open /Applications/Messenger.app/
-    open /Applications/Workplace\ Chat.app/
+    open /Applications/Workplace\ Chat\ Classic.app/
     open /Applications/VS\ Code\ \@\ FB.app/
     open /Applications/Sublime\ Text.app/
     open /Applications/Microsoft\ Outlook.app/
