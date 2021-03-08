@@ -82,5 +82,6 @@
         "ryuta46.multi-command": [
             "ui"
         ],
-    }
+    },
+    "editor.suggestSelection": "first"
 }
