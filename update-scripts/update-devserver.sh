@@ -12,6 +12,12 @@ if [[ $(uname -s) == "Darwin" ]]; then
     exit 0
 fi
 
+sudo --list | grep '(ALL) NOPASSWD: ALL' &> /dev/null
+if [ $? != 0 ]; then
+    echo "Unable to install/update things on devserver; moving on"
+    exit 0
+fi
+
 apps=(
     the_silver_searcher
     fb-vim
