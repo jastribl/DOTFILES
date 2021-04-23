@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
 
 source ~/.vim/plugables/general.vim
 
+source ~/.vim/plugables/completion.vim
+
 source ~/.vim/plugables/go.vim
 
 call plug#end()
