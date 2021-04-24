@@ -11,9 +11,17 @@ OS="$(uname -s)"
 
 mkdir -p $SAVED_PREFS_DIR
 
+# mappings from file in ./dotfiles/ to path to be placed
+declare -A global_files
+declare -A local_files
+declare -A os_specific_files
+declare -A should_copy_not_link
+
 function backup_and_link() {
     local source_file=$DOTFILES_DIR/$1
     local destination_path=$2
+    echo "backing up $source_file"
+    should_copy=${should_copy_not_link[$file]}
 
     # backup
     if [ -L "$destination_path" ]; then
@@ -23,21 +31,24 @@ function backup_and_link() {
         mv "$destination_path" "$BACKUP_DIR/"
     fi
 
-    # link
     mkdir -p "$(dirname "$destination_path")"
-    ln -s "$source_file" "$destination_path"
+    if [ $should_copy ] ; then
+        # copy
+        ln -s "$source_file" "$destination_path"
+    else
+        # link
+        ln -s "$source_file" "$destination_path"
+    fi
 }
-
-# mappings from file in ./dotfiles/ to path to be placed
-declare -A global_files
-declare -A local_files
-declare -A os_specific_files
 
 function register_global_file() {
     global_files[$1]=${2:-~/.$1}
 }
 function register_local_file() {
     local_files[$1]=${2:-~/.$1}
+    if [ ! -z "$3" ]; then
+        should_copy_not_link[$1]=1
+    fi
 }
 function register_os_specific_file() {
     os_specific_files[$1]=${2:-~/.$1}
@@ -65,7 +76,7 @@ fi
 register_local_file bashrc.local
 register_local_file gitconfig.local
 register_local_file ssh/config.local ~/.ssh/configs/config.local
-register_local_file hgrc.local ~/.hgrc
+register_local_file hgrc.local ~/.hgrc 1
 register_local_file vimrc-pre-local.vim ~/.vim/vimrc-pre-local.vim
 register_local_file vimrc-plugins.vim ~/.vim/plugins.vim
 if [[ "$OS" == "Darwin" ]]; then
