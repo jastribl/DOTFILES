@@ -34,7 +34,7 @@ function backup_and_link() {
     mkdir -p "$(dirname "$destination_path")"
     if [ $should_copy ] ; then
         # copy
-        ln -s "$source_file" "$destination_path"
+        cp "$source_file" "$destination_path"
     else
         # link
         ln -s "$source_file" "$destination_path"
