@@ -30,6 +30,7 @@ function work() {
     open /Applications/Microsoft\ Outlook.app/
     open /Applications/iTerm.app/
     # ~/.work-mosh.sh devsmall $yubikey
-    mosh -6 devsmall
+    # mosh -6 devsmall
+    ondemand connect --mosh
 }
 alias vpn_disconnect='/opt/cisco/anyconnect/bin/vpn disconnect'
