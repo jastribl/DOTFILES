@@ -71,12 +71,6 @@
                 "/data/users/justinstribling/instagram-server/"
             ]
         },
-        {
-            "hostname": "49743.od.fbinfra.net",
-            "folders": [
-                "/home/justinstribling/www/"
-            ]
-        }
     ],
     "remote.extensionKind": {
         "ryuta46.multi-command": [
