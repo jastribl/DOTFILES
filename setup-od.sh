@@ -13,3 +13,9 @@ printf 'facebook' > update-scripts/cache/prefs/vimrc-pre-local.vim.pref
 
 # Run Update
 ./update.sh
+
+# Change to work dir
+cd ~/www
+
+# Launch Tmux
+tmux
