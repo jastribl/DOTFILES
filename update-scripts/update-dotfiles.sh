@@ -20,15 +20,27 @@ declare -A should_copy_not_link
 function backup_and_link() {
     local source_file=$DOTFILES_DIR/$1
     local destination_path=$2
-    echo "backing up $source_file"
     should_copy=${should_copy_not_link[$file]}
 
     # backup
     if [ -L "$destination_path" ]; then
+        # If link, just remove it
         rm "$destination_path"
     elif [ -f "$destination_path" ]; then
-        mkdir -p "$BACKUP_DIR"
-        mv "$destination_path" "$BACKUP_DIR/"
+        # If file
+        if [ $should_copy ]; then
+            # If copy, only backup if different than new file
+            if ! cmp -s "$source_file" "$destination_path"; then
+                echo "backing up $source_file"
+                mkdir -p "$BACKUP_DIR"
+                mv "$destination_path" "$BACKUP_DIR/"
+            fi
+        else
+            # If link, backup exisitng file
+            echo "backing up $source_file"
+            mkdir -p "$BACKUP_DIR"
+            mv "$destination_path" "$BACKUP_DIR/"
+        fi
     fi
 
     mkdir -p "$(dirname "$destination_path")"
