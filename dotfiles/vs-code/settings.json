@@ -77,5 +77,6 @@
             "ui"
         ],
     },
-    "editor.suggestSelection": "first"
+    "editor.suggestSelection": "first",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
 }
