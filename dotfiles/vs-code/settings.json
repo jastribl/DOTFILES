@@ -9,7 +9,6 @@
             ]
         }
     ],
-    "window.zoomLevel": 0,
     "editor.fontSize": 15,
     "editor.renderWhitespace": "selection",
     "workbench.colorTheme": "Base16 Tomorrow Dark",
