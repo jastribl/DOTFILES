@@ -82,7 +82,9 @@
         {
             "type": "ondemand_www",
             "flavor": "default",
-            "folders": []
+            "folders": [
+                "/data/sandcastle/boxes/www/"
+            ]
         }
     ]
 }
