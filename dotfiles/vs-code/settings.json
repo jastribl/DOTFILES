@@ -1,19 +1,10 @@
 {
-    "fb.remote-connections.hosts": [
-        {
-            "hostname": "our.justinstribling.sb.facebook.com",
-            "folders": [
-                "/data/users/justinstribling/www/",
-                "/data/users/justinstribling/fbsource/fbcode/",
-                "/data/users/justinstribling/instagram-server/"
-            ]
-        }
-    ],
     "editor.fontSize": 15,
     "editor.renderWhitespace": "selection",
     "workbench.colorTheme": "Base16 Tomorrow Dark",
     "oneDarkPro.editorTheme": "Onedark Pro",
     "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
     "multiCommand.commands": [
         {
             "command": "multiCommand.endLineInsertFromNormal",
@@ -43,7 +34,6 @@
             ]
         }
     ],
-    "zenMode.hideTabs": false,
     "editor.minimap.enabled": false,
     "vim.useSystemClipboard": true,
     "vim.whichwrap": "<,>,h,l,[,]",
@@ -60,17 +50,6 @@
     "[cpp]": {
         "editor.defaultFormatter": "nuclide.cpp"
     },
-    "fb.ms-remote-connections.hosts": [
-        {
-            "hostname": "our.justinstribling.sb.facebook.com",
-            "folders": [
-                "/data/users/justinstribling/www/",
-                "/data/users/justinstribling/fbsource/fbcode/",
-                "/data/users/justinstribling/configerator/",
-                "/data/users/justinstribling/instagram-server/"
-            ]
-        }
-    ],
     "remote.extensionKind": {
         "ryuta46.multi-command": [
             "ui"
@@ -86,5 +65,6 @@
                 "/data/sandcastle/boxes/www/"
             ]
         }
-    ]
+    ],
+    "fb.ms-remote-connections.hosts": []
 }
