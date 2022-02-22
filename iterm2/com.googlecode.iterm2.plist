@@ -264,6 +264,17 @@
 			<key>Text</key>
 			<string>\n clear; tmux clear-history; \n</string>
 		</dict>
+		<key>0x4f-0x120000-0x1f</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>cd ~ &amp;&amp; mkdir -p Github &amp;&amp; cd Github &amp;&amp; env $(fwdproxy-config --format=sh curl) wget -O dotfiles.zip "https://github.com/jastribl/DOTFILES/archive/refs/heads/master.zip" &amp;&amp; unzip dotfiles.zip &amp;&amp; mv DOTFILES-master DOTFILES &amp;&amp; rm dotfiles.zip &amp;&amp; cd DOTFILES &amp;&amp; ./setup-od.sh</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0x72-0x100000</key>
 		<dict>
 			<key>Action</key>
