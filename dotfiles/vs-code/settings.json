@@ -64,6 +64,11 @@
             "folders": [
                 "/data/sandcastle/boxes/www/"
             ]
+        },
+        {
+            "type": "ondemand_bento",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": []
