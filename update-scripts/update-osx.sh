@@ -48,16 +48,28 @@ fi
 ./update-scripts/brew-dep-analysis.py
 
 # set bash to the correct version
-if ! grep -q '/usr/local/bin/bash' /etc/shells; then
+if [[ $(uname -m) == 'arm64' ]]; then
+    if ! grep -q '/opt/homebrew/bin/bash' /etc/shells; then
+        sudo bash -c 'echo /opt/homebrew/bin/bash >> /etc/shells';
+    fi
+elif ! grep -q '/usr/local/bin/bash' /etc/shells; then
     sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells';
 fi
 
-if [[ "$SHELL" != /usr/local/bin/bash ]]; then
+
+if [[ $(uname -m) == 'arm64' ]]; then
+    if [[ "$SHELL" != /opt/homebrew/bin/bash ]]; then
+        chsh -s /opt/homebrew/bin/bash
+    fi
+elif [[ "$SHELL" != /usr/local/bin/bash ]]; then
     chsh -s /usr/local/bin/bash
 fi
 
 # Link Sublime settings
 sublime_dest_dir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+if [[ $(uname -m) == 'arm64' ]]; then
+    sublime_dest_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
+fi
 rm -rf "$sublime_dest_dir"
 ln -f -s $PWD/Sublime/User "$sublime_dest_dir"
 

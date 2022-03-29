@@ -2,7 +2,6 @@
     "editor.fontSize": 15,
     "editor.renderWhitespace": "selection",
     "workbench.colorTheme": "Base16 Tomorrow Dark",
-    "oneDarkPro.editorTheme": "Onedark Pro",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
     "multiCommand.commands": [
