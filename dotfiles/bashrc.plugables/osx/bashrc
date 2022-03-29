@@ -26,6 +26,7 @@ alias cddrive='cd_drive'
 alias cdgo='cd_go'
 alias cdpictures='cd_pictures'
 
+# unsure what this does...
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Open man page as PDF

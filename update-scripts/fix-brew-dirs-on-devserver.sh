@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+brew_prefix="$(brew --prefix)"
+
 # Check write permissions for dirs required by brew
-for dir in '/usr/local/bin' '/usr/local/lib' '/usr/local/sbin'; do
+for dir in "$brew_prefix/bin" "$brew_prefix/lib" "$brew_prefix/sbin"; do
     if [ ! -w "$dir" ]; then
         echo "Incorrect ownership of $dir.... Fixing...."
         sudo chown -R $(whoami) "$dir"

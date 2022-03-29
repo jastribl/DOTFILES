@@ -48,21 +48,12 @@ fi
 ./update-scripts/brew-dep-analysis.py
 
 # set bash to the correct version
-if [[ $(uname -m) == 'arm64' ]]; then
-    if ! grep -q '/opt/homebrew/bin/bash' /etc/shells; then
-        sudo bash -c 'echo /opt/homebrew/bin/bash >> /etc/shells';
-    fi
-elif ! grep -q '/usr/local/bin/bash' /etc/shells; then
-    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells';
+if ! grep -q "$(brew --prefix)/bin/bash" /etc/shells; then
+    sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells";
 fi
 
-
-if [[ $(uname -m) == 'arm64' ]]; then
-    if [[ "$SHELL" != /opt/homebrew/bin/bash ]]; then
-        chsh -s /opt/homebrew/bin/bash
-    fi
-elif [[ "$SHELL" != /usr/local/bin/bash ]]; then
-    chsh -s /usr/local/bin/bash
+if [[ "$SHELL" != $(brew --prefix)/bin/bash ]]; then
+    chsh -s $(brew --prefix)/bin/bash
 fi
 
 # Link Sublime settings
