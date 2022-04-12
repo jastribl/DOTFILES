@@ -67,8 +67,8 @@ function rebase_all_diffs_to_here() {
 }
 
 function rebase_all_diffs() {
+    hg pull
     hg co remote/stable
-    arc pull
     rebase_all_diffs_to_here
 }
 
