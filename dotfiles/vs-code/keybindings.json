@@ -246,4 +246,8 @@
         "command": "editor.action.marker.prev",
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
     },
+    {
+        "key": "cmd+'",
+        "command": "-fb-hg.show-uncommitted-changes"
+    },
 ]
