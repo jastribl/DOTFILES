@@ -1,12 +1,12 @@
 emily-curry.base16-tomorrow-dark-vscode@0.0.18
 nuclide.arclint@1.0.552
 nuclide.biggrep@1.0.638
-nuclide.blame@1.0.541
+nuclide.blame@1.0.546
 nuclide.codehub-projects@1.0.101
 nuclide.core@1.0.1428
 nuclide.fb-doctor-ui@1.0.545
-nuclide.fb-doctor-workspace@1.0.537
-nuclide.fb-essential@1.0.94
+nuclide.fb-doctor-workspace@1.0.543
+nuclide.fb-essential@1.0.95
 nuclide.fb-essential-ui@1.0.93
 nuclide.fb-mobile-app-runner@1.0.613
 nuclide.fb-mobile-app-runner-workspace@1.0.504
@@ -17,7 +17,7 @@ nuclide.ide-signals@1.0.566
 nuclide.interactive-smartlog@1.0.656
 nuclide.intern-language-features@1.0.613
 nuclide.intern-tools@1.1.561
-nuclide.jest-e2e-ui@1.0.628
+nuclide.jest-e2e-ui@1.0.637
 nuclide.local-utils@1.0.479
 nuclide.login-modal@1.0.577
 nuclide.new-file-template@1.0.567
