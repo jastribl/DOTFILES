@@ -76,3 +76,4 @@ else
     code --list-extensions --show-versions > dotfiles/vs-code-personal/extensions.txt
 fi
 
+defaults read com.google.Chrome NSUserKeyEquivalents > ./random-settings/chrome-keyboard-shortcuts.json
