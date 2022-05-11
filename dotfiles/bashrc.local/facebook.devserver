@@ -42,6 +42,12 @@ function tMeerkat() {
 }
 
 function dupdate() {
+    if [[ "$1" == "nowip" ]]; then
+        if [[ $(hg sl | grep -A1 "@\s*" | tail -1) == *"[WIP]"* ]]; then
+            echo "Not updating diff since it contains [WIP]"
+            return
+        fi
+    fi
     jf submit --draft
 }
 
@@ -85,8 +91,7 @@ function format_committed() {
 }
 
 function update_stack() {
-    hh && dupdate
-    while hg next && sleep 2 && hh && dupdate; do
+    while hh && dupdate "nowip" && hg next && sleep 2; do
         echo "Updated diff"
     done
 }
