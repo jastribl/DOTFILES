@@ -68,7 +68,20 @@
             "type": "ondemand_bento",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_dataswarm",
+            "flavor": "default",
+            "folders": [
+                "/data/sandcastle/boxes/fbsource/"
+            ]
+        },
+        {
+            "type": "ondemand_instagram",
+            "flavor": "default",
+            "folders": []
         }
     ],
-    "fb.ms-remote-connections.hosts": []
+    "fb.ms-remote-connections.hosts": [],
+    "blame.disableInlineBlame": true
 }
