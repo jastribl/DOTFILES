@@ -80,6 +80,11 @@
             "type": "ondemand_instagram",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_configerator",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": [],
