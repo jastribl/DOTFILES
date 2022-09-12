@@ -127,5 +127,5 @@ function logger_stage() {
 }
 
 function logger_sync() {
-    phps LoggerSync actualize-stage $1 && meerkat
+    phps LoggerSync actualize $1 && meerkat
 }
