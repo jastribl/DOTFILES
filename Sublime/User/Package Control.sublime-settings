@@ -7,14 +7,11 @@
 	[
 		"All Autocomplete",
 		"Calculate",
-		"CSV",
 		"Diffy",
-		"GitGutter",
-		"MarkdownEditing",
 		"Package Control",
 		"PackageResourceViewer",
 		"Pretty JSON",
 		"SortBy",
-		"WordCount"
+		"WordCount",
 	],
 }

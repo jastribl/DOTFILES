@@ -1,7 +1,7 @@
 emily-curry.base16-tomorrow-dark-vscode@0.0.18
 nuclide.arclint@1.0.624
 nuclide.biggrep@1.0.719
-nuclide.blame@1.0.613
+nuclide.blame@1.0.624
 nuclide.codehub-projects@1.0.170
 nuclide.core@1.0.1530
 nuclide.fb-doctor-ui@1.0.628
@@ -9,7 +9,7 @@ nuclide.fb-doctor-workspace@1.0.619
 nuclide.fb-essential@1.0.96
 nuclide.fb-essential-ui@1.0.94
 nuclide.fb-mobile-app-runner@1.0.690
-nuclide.fb-mobile-app-runner-workspace@1.0.572
+nuclide.fb-mobile-app-runner-workspace@1.0.574
 nuclide.file-history@1.0.597
 nuclide.hermes-debugger@1.0.675
 nuclide.hg@1.0.736
@@ -17,8 +17,8 @@ nuclide.ide-signals@1.0.643
 nuclide.interactive-smartlog@1.0.756
 nuclide.intern-language-features@1.0.694
 nuclide.intern-tools@1.1.628
-nuclide.jest-e2e-screenshot-view@1.0.68
-nuclide.jest-e2e-ui@1.0.695
+nuclide.jest-e2e-screenshot-view@1.0.73
+nuclide.jest-e2e-ui@1.0.700
 nuclide.local-utils@1.0.547
 nuclide.login-modal@1.0.653
 nuclide.new-file-template@1.0.640
@@ -26,7 +26,7 @@ nuclide.omni-search@1.0.703
 nuclide.omni-search-ui@1.0.332
 nuclide.phabricator@1.5.590
 nuclide.phabricator-comments@1.0.595
-nuclide.remote-connections@1.0.848
+nuclide.remote-connections@1.0.859
 nuclide.sev-notifier@1.0.417
 nuclide.test-runner@1.0.710
 nuclide.working-sets@1.2.688

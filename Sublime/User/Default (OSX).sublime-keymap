@@ -4,5 +4,6 @@
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
-    }
+    },
+    { "keys": [ "ctrl+command+j" ], "command": "pretty_json" }
 ]
