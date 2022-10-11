@@ -96,6 +96,12 @@ function update_stack() {
     done
 }
 
+function hh_stack() {
+    while hh && hg next && sleep 2; do
+        echo "Performing HH on stack!"
+    done
+}
+
 function is_clean_dir() {
     hg identify --id | grep --quiet +;
     echo $?;
