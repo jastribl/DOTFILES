@@ -71,9 +71,9 @@ ln -f -s $PWD/random-settings/spectacle-shortcuts.json "$spectable_dest_file"
 
 # Backup list of VS Code extensions
 if which fbclone > /dev/null; then
-    code-fb --list-extensions --show-versions --extensions-dir ~/.vscode-fb-mkt/extensions/ > dotfiles/vs-code/fb-extensions.txt
+    code-fb --list-extensions --extensions-dir ~/.vscode-fb-mkt/extensions/ > dotfiles/vs-code/fb-extensions.txt
 else
-    code --list-extensions --show-versions > dotfiles/vs-code-personal/extensions.txt
+    code --list-extensions > dotfiles/vs-code-personal/extensions.txt
 fi
 
 defaults read com.google.Chrome NSUserKeyEquivalents > ./random-settings/chrome-keyboard-shortcuts.json
