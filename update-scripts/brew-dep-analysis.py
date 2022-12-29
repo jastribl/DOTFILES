@@ -154,20 +154,34 @@ for missing_cask in missing_casks:
 run_brew_command_set('brew install --cask {}', casks_to_install)
 
 print_pre('Outdated brews', outdated_brews)
+upgrade_all_brews = True
 brews_to_update = set()
+should_loop = True
+# TODO: refactor this file to move these various loops into a helper function with params, can make more complex looping logic possible taht way without the need for so many flags
 for outdated_brew in outdated_brews:
-    while True:
-        choice = input("Outdated brew '{}'. Would you like to upgrade (u), Skip (s) or Quit (q):\n> ".format(outdated_brew))
+    while should_loop:
+        choice = input("Outdated brew '{}'. Would you like to Upgrade (u), Upgrade All (a), Skip (s) or Quit (q):\n> ".format(outdated_brew))
         if choice == 'u':
             brews_to_update.add(outdated_brew)
         elif choice == 's':
+            # Only mark false if we find a brew that doesn't want updating.
+            # If all are upgraded, we use the `brew upgrade` command which seems to succeed more often.
+            upgrade_all_brews = False
             break
         elif choice == 'q':
             sys.exit()
+        elif choice == 'a':
+            # This means we want to upgrade everything, so override the variable and break
+            upgrade_all_brews = True
+            should_loop = False
+            break
         else:
             continue
         break
-run_brew_command_set('brew upgrade {}', brews_to_update)
+if upgrade_all_brews:
+    run_brew_command('brew upgrade')
+else:
+    run_brew_command_set('brew upgrade {}', brews_to_update)
 
 print_pre('Outdated casks', outdated_casks)
 casks_to_update = set()
