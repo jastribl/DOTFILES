@@ -37,15 +37,13 @@ fi
 
 if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-    brew update
 fi
+
+./update-scripts/brew-dep-analysis.py
 
 if ! command -v python3 &>/dev/null; then
     brew install python3
 fi
-
-./update-scripts/brew-dep-analysis.py
 
 # set bash to the correct version
 if ! grep -q "$(brew --prefix)/bin/bash" /etc/shells; then

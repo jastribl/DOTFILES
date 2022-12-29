@@ -73,6 +73,9 @@ def print_pre(message, things):
     if len(things) == 0: return
     print('{}: {}'.format(message, ' '.join(things)))
 
+
+run_brew_command('brew update')
+
 print_pre('Extra brews', extra_brews)
 brews_to_uninstall = set()
 for extra_brew in extra_brews:
