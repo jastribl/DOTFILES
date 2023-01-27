@@ -157,7 +157,7 @@ for missing_cask in missing_casks:
 run_brew_command_set('brew install --cask {}', casks_to_install)
 
 print_pre('Outdated brews', outdated_brews)
-upgrade_all_brews = True
+upgrade_all_brews = (len(outdated_brews) > 0)
 brews_to_update = set()
 should_loop = True
 # TODO: refactor this file to move these various loops into a helper function with params, can make more complex looping logic possible taht way without the need for so many flags
@@ -183,8 +183,10 @@ for outdated_brew in outdated_brews:
         break
 if upgrade_all_brews:
     run_brew_command('brew upgrade')
-else:
+elif len(brews_to_update) > 0:
     run_brew_command_set('brew upgrade {}', brews_to_update)
+else:
+    echo('Nothing to upgrade, moving on')
 
 print_pre('Outdated casks', outdated_casks)
 casks_to_update = set()

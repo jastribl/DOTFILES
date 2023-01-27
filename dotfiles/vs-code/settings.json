@@ -88,5 +88,6 @@
         }
     ],
     "fb.ms-remote-connections.hosts": [],
-    "blame.disableInlineBlame": true
+    "blame.disableInlineBlame": true,
+    "workbench.startupEditor": "none"
 }
