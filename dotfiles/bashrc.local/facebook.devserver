@@ -135,3 +135,7 @@ function logger_stage() {
 function logger_sync() {
     phps LoggerSync actualize $1 && meerkat
 }
+
+function logger_gen() {
+    phps CreateTypedLogger $1 && meerkat
+}
