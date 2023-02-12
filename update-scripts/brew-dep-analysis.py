@@ -38,7 +38,7 @@ expected_casks = list(filter(None, expected_casks)) # remove empty lines (commen
 actual_casks = subprocess.getoutput('brew list --cask').split()
 missing_casks = [cask for cask in expected_casks if cask not in actual_casks]
 extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
-outdated_brews = subprocess.getoutput('brew outdated  -q').split()
+outdated_brews = subprocess.getoutput('brew outdated --formula --quiet').split()
 outdated_casks = subprocess.getoutput('brew outdated --cask --quiet').split()
 
 has_checked_dirs = False
@@ -182,11 +182,11 @@ for outdated_brew in outdated_brews:
             continue
         break
 if upgrade_all_brews:
-    run_brew_command('brew upgrade')
+    run_brew_command('brew upgrade --formula')
 elif len(brews_to_update) > 0:
     run_brew_command_set('brew upgrade {}', brews_to_update)
 else:
-    echo('Nothing to upgrade, moving on')
+    print('Nothing to upgrade, moving on')
 
 print_pre('Outdated casks', outdated_casks)
 casks_to_update = set()
