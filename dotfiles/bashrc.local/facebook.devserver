@@ -128,14 +128,6 @@ function get_phab_diff() {
 alias tbgs_original='/usr/local/bin/tbgs'
 alias tbgs='tbgs -s --color=on'
 
-function logger_stage() {
-    phps LoggerStaging actualize-stage $1 && meerkat
-}
-
-function logger_sync() {
-    phps LoggerSync actualize $1 && meerkat
-}
-
 function logger_gen() {
-    phps CreateTypedLogger $1 && meerkat
+    phps CodegenLogger $1 && meerkat
 }
