@@ -2,8 +2,10 @@ emily-curry.base16-tomorrow-dark-vscode
 nuclide.arclint
 nuclide.biggrep
 nuclide.blame
+nuclide.code-compose
 nuclide.codehub-projects
 nuclide.core
+nuclide.docsnippets
 nuclide.fb-doctor-ui
 nuclide.fb-doctor-workspace
 nuclide.fb-essential
@@ -29,6 +31,7 @@ nuclide.phabricator-comments
 nuclide.remote-connections
 nuclide.sev-notifier
 nuclide.test-runner
+nuclide.toml
 nuclide.working-sets
 ryuta46.multi-command
 vscodevim.vim

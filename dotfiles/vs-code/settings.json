@@ -36,7 +36,6 @@
     "editor.minimap.enabled": false,
     "vim.useSystemClipboard": true,
     "vim.whichwrap": "<,>,h,l,[,]",
-    "intern-tools.showReminderBeforeMeetings": true,
     "workbench.editor.enablePreview": false,
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.fetch": "jf get",
@@ -45,7 +44,6 @@
     "new-file-template.oncall_name": "creative_aware_infra",
     "interactive-smartlog.right-drawer-width": 300,
     "interactive-smartlog.bottom-drawer-height": 500,
-    "fb.vscode-feedback.lastsurveydate": 1596003608274,
     "[cpp]": {
         "editor.defaultFormatter": "nuclide.cpp"
     },
@@ -89,5 +87,19 @@
     ],
     "fb.ms-remote-connections.hosts": [],
     "blame.disableInlineBlame": true,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "interactive-smartlog.autoRunMergeDrivers": true,
+    "fb.doctor.kerberos-keychain": true,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/bin/bash",
+        },
+    },
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "/bin/bash",
+        },
+    },
+    "terminal.integrated.defaultProfile.osx": "bash",
+    "wasabi.interactiveDevelopment.introMessageNumTimesShown": 10,
 }
