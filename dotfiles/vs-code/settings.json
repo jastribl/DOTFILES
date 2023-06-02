@@ -102,4 +102,6 @@
     },
     "terminal.integrated.defaultProfile.osx": "bash",
     "wasabi.interactiveDevelopment.introMessageNumTimesShown": 10,
+    "terminal.integrated.systemd.shouldUse": true,
+    "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
 }
