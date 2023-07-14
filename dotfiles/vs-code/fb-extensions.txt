@@ -28,6 +28,7 @@ nuclide.omni-search
 nuclide.omni-search-ui
 nuclide.phabricator
 nuclide.phabricator-comments
+nuclide.reality-labs-ui
 nuclide.remote-connections
 nuclide.sev-notifier
 nuclide.test-runner
