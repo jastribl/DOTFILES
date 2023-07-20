@@ -96,6 +96,12 @@ function update_stack() {
     done
 }
 
+function update_stack_wip() {
+    while hh && dupdate && hg next && sleep 2; do
+        echo "Updated diff"
+    done
+}
+
 function hh_stack() {
     while hh && hg next && sleep 2; do
         echo "Performing HH on stack!"
