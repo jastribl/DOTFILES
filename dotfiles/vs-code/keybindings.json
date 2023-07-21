@@ -193,9 +193,9 @@
         "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly && editorHasSelection"
     },
     {
-        "key": "cmd+shift+c",
+        "key": "shift+cmd+c",
         "command": "editor.action.formatDocument",
-        "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && !editorReadonly && !editorHasSelection"
+        "when": "((editorHasDocumentSelectionFormattingProvider && !editorHasSelection) || !editorHasDocumentSelectionFormattingProvider) && !editorReadonly"
     },
     {
         "key": "] c",
@@ -249,5 +249,10 @@
     {
         "key": "cmd+'",
         "command": "-fb-hg.show-uncommitted-changes"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
     },
 ]
