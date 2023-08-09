@@ -33,6 +33,7 @@ nuclide.remote-connections
 nuclide.sev-notifier
 nuclide.test-runner
 nuclide.toml
+nuclide.walkthroughs
 nuclide.working-sets
 ryuta46.multi-command
 vscodevim.vim

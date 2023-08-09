@@ -104,4 +104,5 @@
     "wasabi.interactiveDevelopment.introMessageNumTimesShown": 10,
     "terminal.integrated.systemd.shouldUse": true,
     "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
+    "workbench.editor.untitled.hint": "hidden",
 }
