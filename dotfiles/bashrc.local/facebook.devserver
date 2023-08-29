@@ -91,19 +91,19 @@ function format_committed() {
 }
 
 function update_stack() {
-    while hh && dupdate "nowip" && hg next && sleep 2; do
+    while hh && flow && dupdate "nowip" && hg next && sleep 2; do
         echo "Updated diff"
     done
 }
 
 function update_stack_wip() {
-    while hh && dupdate && hg next && sleep 2; do
+    while hh && flow && dupdate && hg next && sleep 2; do
         echo "Updated diff"
     done
 }
 
 function hh_stack() {
-    while hh && hg next && sleep 2; do
+    while hh && flow && hg next && sleep 2; do
         echo "Performing HH on stack!"
     done
 }
