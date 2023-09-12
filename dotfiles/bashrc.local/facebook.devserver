@@ -91,15 +91,41 @@ function format_committed() {
 }
 
 function update_stack() {
-    while hh && flow && dupdate "nowip" && hg next && sleep 2; do
-        echo "Updated diff"
+    start_diff=$(get_current_diff)
+    echo "starting with $start_diff"
+
+    end_diff=""
+    while hh && flow; do
+        if [[ $(hg sl | grep -A1 "@\s*" | tail -1) == *"[WIP]"* ]]; then
+            echo "Not moving to further diffs since it contains [WIP]"
+            break
+        fi
+        end_diff=$(get_current_diff)
+        hg next || break
+        sleep 2
     done
+    if [[ "$end_diff" == "" ]]; then
+        exit
+    fi
+    jf submit --draft -r $start_diff:$end_diff
+    hg checkout $start_diff
 }
 
 function update_stack_wip() {
-    while hh && flow && dupdate && hg next && sleep 2; do
-        echo "Updated diff"
+    start_diff=$(get_current_diff)
+    echo "starting with $start_diff"
+
+    end_diff=""
+    while hh && flow; do
+        end_diff=$(get_current_diff)
+        hg next || break
+        sleep 2
     done
+    if [[ "$end_diff" == "" ]]; then
+        exit
+    fi
+    jf submit --draft -r $start_diff:$end_diff
+    hg checkout $start_diff
 }
 
 function hh_stack() {
