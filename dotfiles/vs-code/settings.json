@@ -105,4 +105,8 @@
     "terminal.integrated.systemd.shouldUse": true,
     "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
     "workbench.editor.untitled.hint": "hidden",
+    "[css]": {
+        "editor.defaultFormatter": "nuclide.prettier"
+    },
+    "window.zoomLevel": -1,
 }
