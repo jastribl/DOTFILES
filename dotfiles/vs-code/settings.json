@@ -108,5 +108,5 @@
     "[css]": {
         "editor.defaultFormatter": "nuclide.prettier"
     },
-    "window.zoomLevel": -1,
+    "meta.global.history.enabled": true,
 }
