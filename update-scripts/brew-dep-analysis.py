@@ -12,6 +12,34 @@ THIS_FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 BREW_LIST_FILE = os.path.join(THIS_FILE_PATH, 'brew', 'brew-list')
 CASK_LIST_FILE = os.path.join(THIS_FILE_PATH, 'brew', 'cask-list')
 
+has_checked_dirs = False
+
+def run_brew_command(command):
+    global has_checked_dirs
+    if not has_checked_dirs:
+        subprocess.getoutput('./update-scripts/fix-brew-dirs-on-devserver.sh')
+        has_checked_dirs = True
+
+    print('\n>', command)
+    p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    while True:
+        try:
+            out = str(p.stdout.read(1), 'utf-8')
+            if out == '' and p.poll() != None:
+                break
+            if out != '':
+                sys.stdout.write(out)
+                sys.stdout.flush()
+        except UnicodeDecodeError:
+            pass
+
+def run_brew_command_set(command, s):
+    if len(s) == 0: return
+    run_brew_command(command.format(' '.join(s)))
+
+
+run_brew_command('brew update')
+
 all_deps = {}
 
 def process(brew):
@@ -41,40 +69,12 @@ extra_casks = [cask for cask in actual_casks if cask not in expected_casks]
 outdated_brews = subprocess.getoutput('brew outdated --formula --quiet').split()
 outdated_casks = subprocess.getoutput('brew outdated --cask --quiet').split()
 
-has_checked_dirs = False
-
-def run_brew_command(command):
-    global has_checked_dirs
-    if not has_checked_dirs:
-        subprocess.getoutput('./update-scripts/fix-brew-dirs-on-devserver.sh')
-        has_checked_dirs = True
-
-    print('\n>', command)
-    p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    while True:
-        try:
-            out = str(p.stdout.read(1), 'utf-8')
-            if out == '' and p.poll() != None:
-                break
-            if out != '':
-                sys.stdout.write(out)
-                sys.stdout.flush()
-        except UnicodeDecodeError:
-            pass
-
-def run_brew_command_set(command, s):
-    if len(s) == 0: return
-    run_brew_command(command.format(' '.join(s)))
-
 if len(extra_brews) + len(missing_brews) + len(extra_casks) + len(missing_casks) > 0:
     print('Brew Dep Analysis:\n')
 
 def print_pre(message, things):
     if len(things) == 0: return
     print('{}: {}'.format(message, ' '.join(things)))
-
-
-run_brew_command('brew update')
 
 print_pre('Extra brews', extra_brews)
 brews_to_uninstall = set()
