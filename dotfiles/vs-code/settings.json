@@ -109,4 +109,6 @@
         "editor.defaultFormatter": "nuclide.prettier"
     },
     "meta.global.history.enabled": true,
+    "interactive-smartlog.prefer-new-isl": true,
+    "notebook.formatOnSave.enabled": true,
 }
