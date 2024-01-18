@@ -1,4 +1,5 @@
 emily-curry.base16-tomorrow-dark-vscode
+facebook.sapling-scm
 nuclide.arclint
 nuclide.biggrep
 nuclide.blame
