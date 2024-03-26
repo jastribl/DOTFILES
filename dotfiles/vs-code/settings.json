@@ -52,7 +52,6 @@
             "ui"
         ],
     },
-    "editor.suggestSelection": "first",
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "fb.ms-remote-connections.odtypes": [
         {
@@ -111,4 +110,5 @@
     "meta.global.history.enabled": true,
     "interactive-smartlog.prefer-new-isl": true,
     "notebook.formatOnSave.enabled": true,
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
 }
