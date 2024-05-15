@@ -9,4 +9,4 @@ ack = sl-short-headers
 wip = commit -m "[WIP]"
 
 [hint]
-ack = sl-short-headers graph-renderer undo
+ack = sl-short-headers graph-renderer undo smartlog-default-command
