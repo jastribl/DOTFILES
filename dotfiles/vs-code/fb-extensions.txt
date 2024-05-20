@@ -6,6 +6,7 @@ nuclide.blame
 nuclide.code-compose
 nuclide.codehub-projects
 nuclide.core
+nuclide.create-a-task
 nuclide.docsnippets
 nuclide.fb-doctor-ui
 nuclide.fb-doctor-workspace
