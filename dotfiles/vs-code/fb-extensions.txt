@@ -1,4 +1,5 @@
 emily-curry.base16-tomorrow-dark-vscode
+facebook.ent
 facebook.sapling-scm
 nuclide.arclint
 nuclide.biggrep
@@ -34,6 +35,7 @@ nuclide.reality-labs-ui
 nuclide.remote-connections
 nuclide.sev-notifier
 nuclide.test-runner
+nuclide.thrift-basics
 nuclide.toml
 nuclide.walkthroughs
 nuclide.working-sets

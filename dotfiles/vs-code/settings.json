@@ -3,7 +3,6 @@
     "editor.renderWhitespace": "selection",
     "workbench.colorTheme": "Base16 Tomorrow Dark",
     "zenMode.hideLineNumbers": false,
-    "zenMode.hideTabs": false,
     "multiCommand.commands": [
         {
             "command": "multiCommand.endLineInsertFromNormal",
@@ -39,13 +38,13 @@
     "workbench.editor.enablePreview": false,
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.fetch": "jf get",
-    "workbench.activityBar.visible": true,
     "workbench.editor.tabSizing": "shrink",
     "new-file-template.oncall_name": "creative_aware_infra",
     "interactive-smartlog.right-drawer-width": 300,
     "interactive-smartlog.bottom-drawer-height": 500,
     "[cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp"
+        "editor.defaultFormatter": "nuclide.cpp",
+        "files.trimTrailingWhitespace": false
     },
     "remote.extensionKind": {
         "ryuta46.multi-command": [
@@ -82,6 +81,16 @@
             "type": "ondemand_configerator",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_www",
+            "flavor": "releng_www",
+            "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": [],
@@ -103,7 +112,6 @@
     "wasabi.interactiveDevelopment.introMessageNumTimesShown": 10,
     "terminal.integrated.systemd.shouldUse": true,
     "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
-    "workbench.editor.untitled.hint": "hidden",
     "[css]": {
         "editor.defaultFormatter": "nuclide.prettier"
     },
@@ -111,4 +119,19 @@
     "interactive-smartlog.prefer-new-isl": true,
     "notebook.formatOnSave.enabled": true,
     "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "remora.focusOnStartup": false,
+    "[python]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "[java]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "[kotlin]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "arcinfer.runOnSave": true,
+    "[rust]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "workbench.editor.empty.hint": "hidden",
 }
