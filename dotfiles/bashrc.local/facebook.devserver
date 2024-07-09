@@ -129,8 +129,20 @@ function update_stack_wip() {
 }
 
 function hh_stack() {
-    while hh && flow && hg next && sleep 2; do
+    while hh && hg next && sleep 2; do
         echo "Performing HH on stack!"
+    done
+}
+
+function flow_stack() {
+    while flow && hg next && sleep 2; do
+        echo "Performing Flow on stack!"
+    done
+}
+
+function check_stack() {
+    while hh && flow && hg next && sleep 2; do
+        echo "Performing HH and Flow on stack!"
     done
 }
 
