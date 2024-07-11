@@ -51,6 +51,10 @@ function dupdate() {
     jf submit --draft
 }
 
+function dupdate_all() {
+    hg ssl | grep "\(local changes\)" | grep -v "Landing" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*" | xargs jf submit --draft
+}
+
 function wipcom() {
     hg commit -m "[WIP] $* [WIP]"
 }
@@ -73,9 +77,7 @@ function rebase_all_diffs_to_here() {
 }
 
 function rebase_all_diffs() {
-    hg pull
-    hg co remote/stable_www_od_stable
-    rebase_all_diffs_to_here
+    hg pull && hg co remote/stable_www_od_stable && rebase_all_diffs_to_here
 }
 
 function format_file() {
