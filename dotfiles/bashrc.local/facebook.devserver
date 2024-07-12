@@ -52,7 +52,7 @@ function dupdate() {
 }
 
 function dupdate_all() {
-    hg ssl | grep "\(local changes\)" | grep -v "Landing" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*" | xargs jf submit --draft
+    hg ssl | grep "\(local changes\)" | grep -v "Landing" | grep -o " [o@x]  \w* " | grep -o "  [a-zA-Z0-9]*" | xargs jf submit --draft
 }
 
 function wipcom() {
