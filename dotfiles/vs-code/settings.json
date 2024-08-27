@@ -94,7 +94,7 @@
         }
     ],
     "fb.ms-remote-connections.hosts": [],
-    "blame.disableInlineBlame": true,
+    "blame.disableInlineBlame": false,
     "workbench.startupEditor": "none",
     "interactive-smartlog.autoRunMergeDrivers": true,
     "fb.doctor.kerberos-keychain": true,
@@ -121,17 +121,34 @@
     "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
     "remora.focusOnStartup": false,
     "[python]": {
-        "files.trimTrailingWhitespace": false
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.pyls"
     },
     "[java]": {
-        "files.trimTrailingWhitespace": false
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.java"
     },
     "[kotlin]": {
-        "files.trimTrailingWhitespace": false
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.java"
     },
     "arcinfer.runOnSave": true,
     "[rust]": {
-        "files.trimTrailingWhitespace": false
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "facebook.rust-analyzer"
     },
     "workbench.editor.empty.hint": "hidden",
+    "extensions.experimental.deferredStartupFinishedActivation": true,
+    "[c]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.cpp"
+    },
+    "[proto]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[starlark]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.pyls"
+    },
 }

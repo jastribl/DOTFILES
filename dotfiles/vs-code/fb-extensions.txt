@@ -25,7 +25,6 @@ nuclide.intern-tools
 nuclide.jest-e2e-screenshot-view
 nuclide.jest-e2e-ui
 nuclide.local-utils
-nuclide.login-modal
 nuclide.new-file-template
 nuclide.omni-search
 nuclide.omni-search-ui
