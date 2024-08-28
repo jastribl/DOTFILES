@@ -177,3 +177,5 @@ alias tbgs='tbgs -s --color=on'
 function logger_gen() {
     phps CodegenLogger $1 && meerkat
 }
+
+alias repl='hphpd -h localhost'
