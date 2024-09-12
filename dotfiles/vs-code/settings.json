@@ -126,11 +126,13 @@
     },
     "[java]": {
         "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "nuclide.java"
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     "[kotlin]": {
         "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "nuclide.java"
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     "arcinfer.runOnSave": true,
     "[rust]": {
