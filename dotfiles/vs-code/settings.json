@@ -39,7 +39,7 @@
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.fetch": "jf get",
     "workbench.editor.tabSizing": "shrink",
-    "new-file-template.oncall_name": "creative_aware_infra",
+    "new-file-template.oncall_name": "creative_asset_liquidity_framework",
     "interactive-smartlog.right-drawer-width": 300,
     "interactive-smartlog.bottom-drawer-height": 500,
     "[cpp]": {
