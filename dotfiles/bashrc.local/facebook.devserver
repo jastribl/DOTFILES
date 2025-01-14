@@ -26,19 +26,15 @@ alias ssh-auth='eval "$(ssh-agent)" && ssh-add ~/.ssh/id_rsa'
 
 HISTIGNORE="$HISTIGNORE:hst:hh"
 function tMeerkat() {
-    if [ -p meerkatTestList ]; then
-        rm meerkatTestList
-    fi
-    mkfifo meerkatTestList
+    all_tests=()
     for tt in "$@"; do
-        (echo "$tt" >> meerkatTestList &)
-        (find flib/__generated__/ -type f -regextype posix-extended -regex ".*${tt}_.*" -exec basename \{} .php \; >> meerkatTestList &)
-        (find flib/intern/__generated__/ -type f -regextype posix-extended -regex ".*${tt}_.*" -exec basename \{} .php \; >> meerkatTestList &)
+        all_tests+=("${tt}")
+        all_tests+=("${tt}_CurrentVersion")
+        all_tests+=("${tt}_LatestVersion")
+        all_tests+=("${tt}_NextVersion")
+        all_tests+=("${tt}_ToBeDeprecated")
     done
-    cat meerkatTestList | uniq | xargs t --timeout 500
-    if [ -p meerkatTestList ]; then
-        rm meerkatTestList
-    fi
+    printf '%s ' "${all_tests[@]}" | uniq | xargs t --timeout 999
 }
 
 function dupdate() {
