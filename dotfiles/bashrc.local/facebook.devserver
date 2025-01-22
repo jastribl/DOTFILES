@@ -73,7 +73,7 @@ function rebase_all_diffs_to_here() {
 }
 
 function rebase_all_diffs() {
-    hg pull && hg co remote/stable_www_od_stable && rebase_all_diffs_to_here
+    hg pull && hg co remote/www/stable_www_od_stable && rebase_all_diffs_to_here
 }
 
 function format_file() {
