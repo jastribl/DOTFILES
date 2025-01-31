@@ -33,6 +33,7 @@ function tMeerkat() {
         all_tests+=("${tt}_LatestVersion")
         all_tests+=("${tt}_NextVersion")
         all_tests+=("${tt}_ToBeDeprecated")
+        all_tests+=("${tt}_PreviousVersion")
     done
     printf '%s ' "${all_tests[@]}" | uniq | xargs t --timeout 999
 }
