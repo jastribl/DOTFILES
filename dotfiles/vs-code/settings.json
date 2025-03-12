@@ -151,7 +151,8 @@
     },
     "[proto]": {
         "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "nuclide.arclint"
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     "[starlark]": {
         "files.trimTrailingWhitespace": false,
@@ -162,10 +163,12 @@
         "editor.defaultFormatter": "nuclide.hack"
     },
     "[objective-c]": {
-        "editor.defaultFormatter": "nuclide.cpp"
+        "editor.defaultFormatter": "nuclide.cpp",
+        "editor.formatOnSave": true
     },
     "[objective-cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp"
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     "[cuda-cpp]": {
         "editor.formatOnSave": true,
