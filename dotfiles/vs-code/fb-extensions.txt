@@ -66,6 +66,7 @@ nuclide.jest-e2e-workspace
 nuclide.katsu
 nuclide.local-utils
 nuclide.loglens
+nuclide.meta-prettier-vscode
 nuclide.meta-snippet-repo
 nuclide.new-file-template
 nuclide.nodeapi
@@ -74,7 +75,6 @@ nuclide.omni-search
 nuclide.omni-search-ui
 nuclide.phabricator
 nuclide.phabricator-comments
-nuclide.prettier
 nuclide.privacy-infra-sidekick
 nuclide.pyls
 nuclide.reality-labs-ui
