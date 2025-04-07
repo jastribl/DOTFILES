@@ -92,6 +92,11 @@
             "type": "ondemand_www_fbsource_configerator",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_fbcode",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": [],

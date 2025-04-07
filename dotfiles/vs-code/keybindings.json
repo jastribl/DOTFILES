@@ -255,4 +255,9 @@
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
     },
+    {
+        "key": "cmd+'",
+        "command": "-sapling.open-comparison-view-uncommitted",
+        "when": "activeWebviewPanelId != 'sapling.isl'"
+    },
 ]
