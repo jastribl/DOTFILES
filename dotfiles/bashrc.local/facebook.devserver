@@ -37,6 +37,10 @@ function tMeerkat() {
     printf '%s ' "${all_tests[@]}" | uniq | xargs t --timeout 9999
 }
 
+function cal_test() {
+    find flib/ads/creative_asset_groups -type f | grep -v ProductIntegrationTest | xargs t
+}
+
 function dupdate() {
     if [[ "$1" == "nowip" ]]; then
         if [[ $(hg sl | grep -A1 "@\s*" | tail -1) == *"[WIP]"* ]]; then
