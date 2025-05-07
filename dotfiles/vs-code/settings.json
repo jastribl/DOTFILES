@@ -189,4 +189,12 @@
     },
     "sapling.isl.openBeside": false,
     "editor.lightbulb.enabled": "on",
+    "[swift]": {
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "git.blame.editorDecoration.enabled": true,
+    "[blueprint]": {
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
 }
