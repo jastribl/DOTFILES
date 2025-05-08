@@ -10,8 +10,8 @@ if [[ ! -e ~/diff-so-fancy ]]; then
 fi
 
 if which fbclone > /dev/null; then
-    env $(fwdproxy-config --format=sh curl) curl https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy > ~/diff-so-fancy/diff-so-fancy
+    env $(fwdproxy-config --format=sh curl) curl https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/diff-so-fancy > ~/diff-so-fancy/diff-so-fancy
 else
-    curl https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy > ~/diff-so-fancy/diff-so-fancy
+    curl https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/diff-so-fancy > ~/diff-so-fancy/diff-so-fancy
 fi
 chmod +x ~/diff-so-fancy/diff-so-fancy
