@@ -10,6 +10,7 @@ facebook.python-debugger
 facebook.rust-analyzer
 facebook.sapling-scm
 facebook.starlark
+facebook.starlark-skycastle
 facebook.testgenerator
 facebook.testify
 facebook.ui-docs-ide
@@ -18,6 +19,7 @@ nuclide.arcanist-task-runner
 nuclide.arclint
 nuclide.biggrep
 nuclide.blame
+nuclide.bloks-ide
 nuclide.buck
 nuclide.code-compose
 nuclide.codehub-projects
@@ -32,6 +34,7 @@ nuclide.dataswarm
 nuclide.docsnippets
 nuclide.drp
 nuclide.eslint
+nuclide.fb-bento
 nuclide.fb-configerator
 nuclide.fb-doctor-ui
 nuclide.fb-doctor-workspace
