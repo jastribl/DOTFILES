@@ -38,7 +38,7 @@ function tMeerkat() {
 }
 
 function cal_test() {
-    find flib/ads/creative_asset_groups -type f | grep -v ProductIntegrationTest grep -v CalShadowAdsIntegrationTest | xargs t
+    find flib/ads/creative_asset_groups -type f | grep -v ProductIntegrationTest | grep -v CalShadowAdsIntegrationTest | xargs t
 }
 
 function dupdate() {
