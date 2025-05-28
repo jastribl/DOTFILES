@@ -67,6 +67,9 @@ spectable_dest_file="$HOME/Library/Application Support/Spectacle/Shortcuts.json"
 rm "$spectable_dest_file"
 ln -f -s $PWD/random-settings/spectacle-shortcuts.json "$spectable_dest_file"
 
+# Link Rectangle settings
+cp $HOME/Library/Preferences/com.knollsoft.Rectangle.plist $PWD/random-settings/com.knollsoft.Rectangle.plist
+
 # Backup list of VS Code extensions
 if which fbclone > /dev/null; then
     code-fb --list-extensions --extensions-dir ~/.vscode-fb-mkt/extensions/ > dotfiles/vs-code/fb-extensions.txt
