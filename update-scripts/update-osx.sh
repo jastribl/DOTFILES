@@ -67,7 +67,8 @@ spectable_dest_file="$HOME/Library/Application Support/Spectacle/Shortcuts.json"
 rm "$spectable_dest_file"
 ln -f -s $PWD/random-settings/spectacle-shortcuts.json "$spectable_dest_file"
 
-# Link Rectangle settings
+# Link Rectangle settings (after converting it to readable)
+plutil -convert xml1 $HOME/Library/Preferences/com.knollsoft.Rectangle.plist
 cp $HOME/Library/Preferences/com.knollsoft.Rectangle.plist $PWD/random-settings/com.knollsoft.Rectangle.plist
 
 # Backup list of VS Code extensions
