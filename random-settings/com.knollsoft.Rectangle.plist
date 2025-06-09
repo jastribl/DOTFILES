@@ -22,8 +22,10 @@
 	<dict/>
 	<key>center</key>
 	<dict/>
-	<key>hideMenubarIcon</key>
+	<key>cycleSizesIsChanged</key>
 	<true/>
+	<key>hideMenubarIcon</key>
+	<false/>
 	<key>internalTilingNotified</key>
 	<true/>
 	<key>larger</key>
@@ -50,6 +52,8 @@
 	</dict>
 	<key>restore</key>
 	<dict/>
+	<key>selectedCycleSizes</key>
+	<integer>7</integer>
 	<key>smaller</key>
 	<dict/>
 	<key>subsequentExecutionMode</key>

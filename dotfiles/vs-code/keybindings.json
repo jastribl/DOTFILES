@@ -30,39 +30,9 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+a",
-        "command": "-extension.vim_ctrl+a",
-        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
-    },
-    {
         "key": "ctrl+e",
         "command": "-cursorLineEnd",
         "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "-extension.vim_ctrl+e",
-        "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "multiCommand.endLineInsertFromNormal",
-        "when": "textInputFocus && vim.active && vim.mode == 'Normal'"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "multiCommand.startLineInsertFromNormal",
-        "when": "textInputFocus && vim.active && vim.mode == 'Normal'"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "multiCommand.endLineInsertFromVisual",
-        "when": "textInputFocus && vim.active && vim.mode == 'Visual'"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "multiCommand.startLineInsertFromVisual",
-        "when": "textInputFocus && vim.active && vim.mode == 'Visual'"
     },
     {
         "key": "ctrl+e",
@@ -259,5 +229,5 @@
         "key": "cmd+'",
         "command": "-sapling.open-comparison-view-uncommitted",
         "when": "activeWebviewPanelId != 'sapling.isl'"
-    },
+    }
 ]

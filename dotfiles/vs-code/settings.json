@@ -1,7 +1,6 @@
 {
     "editor.fontSize": 15,
     "editor.renderWhitespace": "selection",
-    "workbench.colorTheme": "Base16 Tomorrow Dark",
     "zenMode.hideLineNumbers": false,
     "multiCommand.commands": [
         {
@@ -197,4 +196,23 @@
     "[blueprint]": {
         "editor.defaultFormatter": "nuclide.arclint"
     },
+    "workbench.colorTheme": "Tomorrow Night",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "ctrl+e"
+            ],
+            "after": [
+                "S-A"
+            ]
+        },
+        {
+            "before": [
+                "ctrl+a"
+            ],
+            "after": [
+                "S-I"
+            ]
+        }
+    ],
 }
