@@ -76,58 +76,12 @@ function rebase_all_diffs_to_here() {
     rebase_diffs $current_diff $diffs_to_rebase
 }
 
-function rebase_all_diffs() {
-    hg pull && hg co remote/www/stable_www_od_stable && rebase_all_diffs_to_here
-}
-
-function format_file() {
-    hackfmt --in-place "$1"
-}
-
 function format_committed() {
     hg show -X "re:.*codegen" -X "re:.*__generated__" | hackfmt --diff
     clean_dir=`is_clean_dir`
     if [ $clean_dir -ne 1 ]; then
         hg amend
     fi
-}
-
-function update_stack() {
-    start_diff=$(get_current_diff)
-    echo "starting with $start_diff"
-
-    end_diff=""
-    while hh && flow; do
-        if [[ $(hg sl | grep -A1 "@\s*" | tail -1) == *"[WIP]"* ]]; then
-            echo "Not moving to further diffs since it contains [WIP]"
-            break
-        fi
-        end_diff=$(get_current_diff)
-        hg next || break
-        sleep 2
-    done
-    if [[ "$end_diff" == "" ]]; then
-        exit
-    fi
-    jf submit --draft -r $start_diff:$end_diff
-    hg checkout $start_diff
-}
-
-function update_stack_wip() {
-    start_diff=$(get_current_diff)
-    echo "starting with $start_diff"
-
-    end_diff=""
-    while hh && flow; do
-        end_diff=$(get_current_diff)
-        hg next || break
-        sleep 2
-    done
-    if [[ "$end_diff" == "" ]]; then
-        exit
-    fi
-    jf submit --draft -r $start_diff:$end_diff
-    hg checkout $start_diff
 }
 
 function hh_stack() {
@@ -151,11 +105,6 @@ function check_stack() {
 function is_clean_dir() {
     hg identify --id | grep --quiet +;
     echo $?;
-}
-
-function commit() {
-    hg commit -m "$*"
-    format_committed
 }
 
 function amend() {
