@@ -96,6 +96,16 @@
             "type": "ondemand_fbcode",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "confucius",
+            "folders": []
+        },
+        {
+            "type": "ondemand_fbsource",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": [],
@@ -215,4 +225,11 @@
             ]
         }
     ],
+    "[go]": {
+        "editor.defaultFormatter": "nuclide.go"
+    },
+    "[starlark-skycastle]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
 }
