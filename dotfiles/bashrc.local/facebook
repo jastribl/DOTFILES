@@ -23,8 +23,8 @@ function work() {
     # read -p "Press your YUBIKEY: " yubikey
     # printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas East";
     open /Applications/Google\ Chrome.app/
-    open /Applications/Messenger.app/
-    open /Applications/Workplace\ Chat.app/
+    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Messenger.app/
+    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Workchat.app/
     open /Applications/VS\ Code\ \@\ FB.app/
     open /Applications/Sublime\ Text.app/
     open /Applications/Microsoft\ Outlook.app/
