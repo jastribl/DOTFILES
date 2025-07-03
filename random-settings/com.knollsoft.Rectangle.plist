@@ -2,12 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>718 665 620 398 0 0 2056 1285 </string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-05-28T01:32:36Z</date>
+	<date>2025-07-02T19:18:40Z</date>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>2025486486</integer>
 	<key>allowAnyShortcut</key>
@@ -31,7 +33,7 @@
 	<key>larger</key>
 	<dict/>
 	<key>lastVersion</key>
-	<string>93</string>
+	<string>94</string>
 	<key>launchOnLogin</key>
 	<true/>
 	<key>maximize</key>
