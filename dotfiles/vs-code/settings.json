@@ -106,6 +106,11 @@
             "type": "ondemand_fbsource",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_xplat_react",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": [],
@@ -232,4 +237,10 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "nuclide.arclint"
     },
+    "devmate.clickableSparkleDecorator": false,
+    "accessibility.openChatEditedFiles": false,
+    "devmate.inline.assertiveness.enable-inline-buttons-highlighted-text": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.showExpandedAbbreviation": "never",
 }

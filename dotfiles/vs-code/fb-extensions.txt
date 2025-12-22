@@ -1,10 +1,12 @@
 facebook.arcinfer
 facebook.comet-infra
+facebook.debug-hub
 facebook.ent
 facebook.fdb
 facebook.flipper
 facebook.hydra
 facebook.jupyter-renderers
+facebook.lldb-dap
 facebook.memory-view
 facebook.playgroundapps-buck
 facebook.python-debugger
@@ -67,6 +69,7 @@ nuclide.jest-e2e-workspace
 nuclide.katsu
 nuclide.local-utils
 nuclide.loglens
+nuclide.mermaid
 nuclide.meta-prettier-vscode
 nuclide.meta-snippet-repo
 nuclide.new-file-template
