@@ -5,16 +5,16 @@ the_silver_searcher
 vim
 wget
 tmux
-node
-reattach-to-user-namespace
+# node
+# reattach-to-user-namespace
 watch
 bash-completion@2
 cmake
-mosh
-less
+# mosh
+# less
 diff-so-fancy
-cmatrix
+# cmatrix
 python@3.11
-fontconfig
-go
-abseil
+# fontconfig
+# go
+# abseil
