@@ -1,27 +1,27 @@
 git
 htop
 # pandoc
-ssh-copy-id
+# ssh-copy-id
 the_silver_searcher
 vim
 wget
 tmux
 node
-reattach-to-user-namespace
+# reattach-to-user-namespace
 watch
 go
-python@2
-python@3.9
+# python@2
+# python@3.9
 # composer
 # ctop
 bash-completion@2
 cmake
-mosh
-vagrant-completion
-less
-gcc@7
+# mosh
+# vagrant-completion
+# less
+# gcc@7
 diff-so-fancy
-gnu-sed
+# gnu-sed
 # yarn
-fontconfig
-jq
+# fontconfig
+# jq
