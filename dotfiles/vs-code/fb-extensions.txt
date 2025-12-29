@@ -72,6 +72,7 @@ nuclide.loglens
 nuclide.mermaid
 nuclide.meta-prettier-vscode
 nuclide.meta-snippet-repo
+nuclide.metric360-display
 nuclide.new-file-template
 nuclide.nodeapi
 nuclide.ocaml

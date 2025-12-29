@@ -243,4 +243,5 @@
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "emmet.showAbbreviationSuggestions": false,
     "emmet.showExpandedAbbreviation": "never",
+    "window.title": "${devmate:status}${separator}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
 }
