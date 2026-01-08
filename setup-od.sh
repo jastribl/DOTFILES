@@ -21,7 +21,14 @@ fi
 ./update.sh
 
 # Change to work dir
-cd ~/www
+source /etc/ondemand-whoami
+if [[ "$ONDEMAND_TYPE" == "www" ]]; then
+    cd ~/www
+elif [[ "$ONDEMAND_TYPE" == "configerator" ]]; then
+    cd ~/configerator
+else
+    cd ~/fbsource
+fi
 
 # Launch Tmux
 tmux
