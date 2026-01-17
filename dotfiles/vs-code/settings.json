@@ -111,6 +111,11 @@
             "type": "ondemand_xplat_react",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "base_maps_www_fbcode_cfgr",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": [],

@@ -7,6 +7,7 @@ ack = sl-short-headers
 
 [alias]
 wip = commit -m "[WIP]"
+diff = diff --noprefix
 
 [hint]
 ack = sl-short-headers graph-renderer undo smartlog-default-command
