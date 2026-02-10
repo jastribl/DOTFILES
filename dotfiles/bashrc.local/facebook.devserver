@@ -29,10 +29,8 @@ function tMeerkat() {
     all_tests=()
     for tt in "$@"; do
         all_tests+=("${tt}")
-        all_tests+=("${tt}_CurrentVersion")
         all_tests+=("${tt}_LatestVersion")
         all_tests+=("${tt}_NextVersion")
-        all_tests+=("${tt}_ToBeDeprecated")
     done
     printf '%s ' "${all_tests[@]}" | uniq | xargs t --timeout 9999
 }
