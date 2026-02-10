@@ -249,4 +249,6 @@
     "emmet.showAbbreviationSuggestions": false,
     "emmet.showExpandedAbbreviation": "never",
     "window.title": "${devmate:status}${separator}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
+    "window.nativeTabs": true,
+    "window.openNewWindowsInNativeTabs": true,
 }
