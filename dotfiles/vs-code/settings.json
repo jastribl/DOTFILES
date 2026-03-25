@@ -251,4 +251,13 @@
     "window.title": "${devmate:status}${separator}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
     "window.nativeTabs": true,
     "window.openNewWindowsInNativeTabs": true,
+    "python.languageServer": "None",
+    "devmate.inline.modelSelection": [
+        "GPT-5.3 Codex",
+        "Claude Sonnet 4.6"
+    ],
+    "notebook.lineNumbers": "on",
+    "notebook.experimental.generate": false,
+    "chat.disableAIFeatures": true,
+    "editor.accessibilitySupport": "off",
 }
