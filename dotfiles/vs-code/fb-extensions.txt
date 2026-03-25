@@ -15,6 +15,7 @@ facebook.sapling-scm
 facebook.starlark
 facebook.starlark-skycastle
 facebook.testify
+facebook.thrift-data-model
 facebook.xplugins
 facebook.yaml
 ms-vscode.theme-tomorrowkit
@@ -22,6 +23,7 @@ nuclide.arcanist-task-runner
 nuclide.arclint
 nuclide.biggrep
 nuclide.blame
+nuclide.bloks-ide-companion
 nuclide.buck
 nuclide.code-compose
 nuclide.codehub-projects
@@ -79,7 +81,6 @@ nuclide.ocaml
 nuclide.omni-search
 nuclide.omni-search-ui
 nuclide.phabricator
-nuclide.phabricator-comments
 nuclide.privacy-infra-sidekick
 nuclide.pyls
 nuclide.reality-labs-ui
