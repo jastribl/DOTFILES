@@ -5,13 +5,13 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>718 666 620 398 0 0 2056 1285 </string>
 	<key>NSWindow Frame SUUpdateAlert2</key>
-	<string>2742 1174 549 398 2056 596 1920 1169 </string>
+	<string>753 669 550 398 0 0 2056 1290 </string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2026-01-07T15:04:03Z</date>
+	<date>2026-03-02T05:36:51Z</date>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>2025486486</integer>
 	<key>allowAnyShortcut</key>
@@ -28,6 +28,8 @@
 	<dict/>
 	<key>cycleSizesIsChanged</key>
 	<true/>
+	<key>doubleClickTitleBar</key>
+	<integer>0</integer>
 	<key>hideMenubarIcon</key>
 	<false/>
 	<key>internalTilingNotified</key>
