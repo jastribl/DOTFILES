@@ -70,7 +70,8 @@ function get_current_diff() {
 
 function rebase_all_diffs_to_here() {
     current_diff=$(get_current_diff)
-    diffs_to_rebase=$(hg sl | grep -B 1 "^├─╯\|╭─╯" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*")
+    # diffs_to_rebase=$(hg sl | grep -B 1 "^├─╯\|╭─╯" | grep -o " [ox]  \w* " | grep -o "  [a-zA-Z0-9]*")
+    diffs_to_rebase=$(sl log -r 'roots(draft())' -T '{node|short} ')
     rebase_diffs $current_diff $diffs_to_rebase
 }
 
