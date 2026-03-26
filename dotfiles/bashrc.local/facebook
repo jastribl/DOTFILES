@@ -24,7 +24,7 @@ function work() {
     # printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas East";
     open /Applications/Google\ Chrome.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Messenger.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Workchat.app/
+    # open /Users/justinstribling/Applications/Chrome\ Apps.localized/Workchat.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Google\ Chat.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Calendar.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/WorkMail.app/
@@ -35,6 +35,6 @@ function work() {
     open /Applications/Spotify.app/
     # ~/.work-mosh.sh devsmall $yubikey
     # mosh -6 devsmall
-    dev connect --mosh
+    dev connect
 }
 alias vpn_disconnect='/opt/cisco/anyconnect/bin/vpn disconnect'
