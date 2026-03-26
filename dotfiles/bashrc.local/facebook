@@ -26,9 +26,11 @@ function work() {
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Messenger.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Workchat.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Google\ Chat.app/
+    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Calendar.app/
+    open /Users/justinstribling/Applications/Chrome\ Apps.localized/WorkMail.app/
     open /Applications/VS\ Code\ \@\ FB.app/
     open /Applications/Sublime\ Text.app/
-    open /Applications/Microsoft\ Outlook.app/
+    # open /Applications/Microsoft\ Outlook.app/
     open /Applications/iTerm.app/
     open /Applications/Spotify.app/
     # ~/.work-mosh.sh devsmall $yubikey
