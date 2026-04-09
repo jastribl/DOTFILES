@@ -19,6 +19,7 @@ facebook.thrift-data-model
 facebook.xplugins
 facebook.yaml
 ms-vscode.theme-tomorrowkit
+nuclide.agent-plugins
 nuclide.arcanist-task-runner
 nuclide.arclint
 nuclide.biggrep
@@ -71,6 +72,7 @@ nuclide.jest-e2e-workspace
 nuclide.katsu
 nuclide.local-utils
 nuclide.loglens
+nuclide.matelens-capture
 nuclide.mermaid
 nuclide.meta-prettier-vscode
 nuclide.meta-snippet-repo

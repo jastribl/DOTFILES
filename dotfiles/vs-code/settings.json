@@ -116,6 +116,11 @@
             "type": "ondemand_www_fbsource_configerator",
             "flavor": "base_maps_www_fbcode_cfgr",
             "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "dr_patternson_www_fbcode_cfgr",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.hosts": [],
