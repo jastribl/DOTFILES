@@ -26,7 +26,9 @@ nuclide.biggrep
 nuclide.blame
 nuclide.bloks-ide-companion
 nuclide.buck
+nuclide.claude-code-session-restore
 nuclide.code-compose
+nuclide.code-provenance
 nuclide.codehub-projects
 nuclide.command-hub
 nuclide.configerator

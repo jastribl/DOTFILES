@@ -217,7 +217,7 @@
         "editor.defaultFormatter": "nuclide.arclint",
         "editor.formatOnSave": true
     },
-    "git.blame.editorDecoration.enabled": true,
+    "git.blame.editorDecoration.enabled": false,
     "[blueprint]": {
         "editor.defaultFormatter": "nuclide.arclint"
     },
@@ -265,4 +265,6 @@
     "notebook.experimental.generate": false,
     "chat.disableAIFeatures": true,
     "editor.accessibilitySupport": "off",
+    "devmate.sidebar.open-on-startup": false,
+    "terminal.integrated.hideOnStartup": "whenEmpty",
 }
