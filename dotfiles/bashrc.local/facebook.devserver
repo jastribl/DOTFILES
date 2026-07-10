@@ -127,3 +127,45 @@ function logger_gen() {
 }
 
 alias repl='hphpd -h localhost'
+
+function working() {
+  local folder="${1:-www}"
+  local title="${folder##*/}"   # last path component: fbsource/fbcode -> fbcode
+  cd ~/"$folder" || return 1
+  if [ -z "$TMUX" ]; then
+    tmux new-session -d -s "main" -n "$title"
+    tmux split-window -h -t "main"
+    sleep 1
+    tmux send-keys -t "main:$title.1" 'claude' Enter
+    tmux send-keys -t "main:$title.2" 'hg ssl' Enter
+    tmux select-pane -t "main:$title.0"
+    tmux attach-session -t "main"
+  else
+    tmux new-window -n "$title"
+    tmux split-window -h
+    sleep 1
+    tmux send-keys -t "$title.1" 'claude' Enter
+    tmux send-keys -t "$title.2" 'hg ssl' Enter
+    tmux select-pane -t "$title.0"
+  fi
+}
+
+function tAll() {
+    local classname="$1"
+    {
+        echo "$classname"
+        hh_client --inheritance-children "$classname" 2>&1 | grep "inherited by" | sed 's/.*: //' | grep -v '::'
+    } | sort -u | xargs t --timeout 9999
+}
+
+function tAllChanged() {
+    {
+        hg status --change . 2>/dev/null
+        hg status 2>/dev/null
+    } | awk '{print $2}' | grep '\.php$' | sort -u | while read -r f; do
+        hh_client --outline-for-agents "$f" 2>&1 | grep -oP '^(abstract )?(class|trait|interface|enum) \K\S+'
+    done | sort -u | while read -r c; do
+        echo "$c"
+        hh_client --inheritance-children "$c" 2>&1 | grep "inherited by" | sed 's/.*: //' | grep -v '::'
+    done | sort -u | xargs t --timeout 9999
+}

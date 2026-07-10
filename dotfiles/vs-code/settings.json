@@ -267,4 +267,5 @@
     "editor.accessibilitySupport": "off",
     "devmate.sidebar.open-on-startup": false,
     "terminal.integrated.hideOnStartup": "whenEmpty",
+    "git.branchPrefix": "justinstribling/",
 }
