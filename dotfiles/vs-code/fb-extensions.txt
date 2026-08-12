@@ -1,4 +1,3 @@
-facebook.arcinfer
 facebook.comet-infra
 facebook.debug-hub
 facebook.ent
@@ -35,7 +34,6 @@ nuclide.configerator
 nuclide.core
 nuclide.cpp
 nuclide.cppvsdbg
-nuclide.create-a-task
 nuclide.dacu-authoring
 nuclide.data-explorer
 nuclide.dataswarm
@@ -84,6 +82,7 @@ nuclide.nodeapi
 nuclide.ocaml
 nuclide.omni-search
 nuclide.omni-search-ui
+nuclide.perf-mode
 nuclide.phabricator
 nuclide.privacy-infra-sidekick
 nuclide.pyls
@@ -97,7 +96,8 @@ nuclide.testpilot
 nuclide.thrift
 nuclide.thrift-basics
 nuclide.toml
-nuclide.walkthroughs
+nuclide.vscode-platform
 nuclide.wasabi
 nuclide.working-sets
+nuclide.yaml-sql-extension
 vscodevim.vim

@@ -11,7 +11,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2026-05-29T16:49:33Z</date>
+	<date>2026-08-12T21:59:09Z</date>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>2025486486</integer>
 	<key>allowAnyShortcut</key>
@@ -37,7 +37,7 @@
 	<key>larger</key>
 	<dict/>
 	<key>lastVersion</key>
-	<string>101</string>
+	<string>104</string>
 	<key>launchOnLogin</key>
 	<true/>
 	<key>maximize</key>
