@@ -5,7 +5,29 @@ if [ "$PWD" != "$HOME/Github/DOTFILES" ]; then
     exit 1
 fi
 
-if [ ! -f ~/.ssh/id_rsa.pub ]; then
+function usage() {
+    echo "Usage: $0 [-f (force)] [-s (skip SSH-key check)]" 1>&2
+    exit 1
+}
+
+force=0
+skip_ssh_check=0
+
+while getopts ":fs" o; do
+    case "${o}" in
+        f)
+            force=1
+            ;;
+        s)
+            skip_ssh_check=1
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
+if [[ "$skip_ssh_check" != 1 && ! -f "$HOME/.ssh/id_rsa.pub" ]]; then
     echo "Update script requires that an ssh key as been generated and added to Github"
     exit 1
 fi
@@ -35,23 +57,6 @@ if which fbclone > /dev/null; then
     fi
 fi
 
-function usage() {
-    echo "Usage: $0 [-f (force)]" 1>&2; exit 1;
-}
-
-force=0
-
-while getopts ":f" o; do
-    case "${o}" in
-        f)
-            force=1
-            ;;
-        *)
-            usage
-            ;;
-    esac
-done
-
 ONE_SECOND=$(( 1 ))
 ONE_MUNUTE=$(( $ONE_SECOND * 60 ))
 ONE_HOUR=$(( $ONE_MUNUTE * 60 ))
@@ -63,14 +68,14 @@ NOW=$(date +%s)
 UPDATE_SCRIPTS_DIR="update-scripts"
 UPDATE_CACHE_DIR="$UPDATE_SCRIPTS_DIR/cache"
 
-mkdir -p $UPDATE_CACHE_DIR
+mkdir -p "$UPDATE_CACHE_DIR"
 
 declare -a update_scripts
 declare -A update_script_delays
 
 function add_update_script() {
-    update_scripts+=( $1 )
-    update_script_delays[$1]=$2
+    update_scripts+=( "$1" )
+    update_script_delays["$1"]=$2
 }
 
 add_update_script update-submodules.sh $ONE_SECOND
@@ -85,29 +90,42 @@ add_update_script cleanup-files.sh $ONE_DAY
 
 
 function run_update_script() {
-    update_script_to_run=$1
+    local update_script_to_run=$1
+    local cache_file="$UPDATE_CACHE_DIR/$update_script_to_run.last_run"
+    local child_status
 
-    if [[ $force != 1 && -e $UPDATE_CACHE_DIR/$update_script_to_run.last_run ]]; then
-        last_run_time=$(cat $UPDATE_CACHE_DIR/$1.last_run)
+    if [[ $force != 1 && -e "$cache_file" ]]; then
+        local last_run_time
+        local delay_seconds
+        local must_be_after
+        last_run_time=$(cat "$cache_file")
         delay_seconds=${update_script_delays[$update_script_to_run]}
         must_be_after=$((last_run_time + delay_seconds))
         if (( $NOW < $must_be_after )); then
             echo "--- Skipping $update_script_to_run ---"
-            return
+            return 0
         fi
     fi
 
     echo "--- Running $update_script_to_run ---"
 
-    ./$UPDATE_SCRIPTS_DIR/$update_script_to_run
-    echo $NOW > $UPDATE_CACHE_DIR/$1.last_run
+    "./$UPDATE_SCRIPTS_DIR/$update_script_to_run"
+    child_status=$?
+    if [[ $child_status -ne 0 ]]; then
+        echo "--- Failed running $update_script_to_run ---" >&2
+        return "$child_status"
+    fi
+
+    echo "$NOW" > "$cache_file"
 
     echo "--- Done running $update_script_to_run ---"
 }
 
+update_status=0
 for update_script in "${update_scripts[@]}"; do
-    run_update_script $update_script
+    run_update_script "$update_script" || update_status=1
 done
 
 
-touch -a ~/.hushlogin
+touch -a "$HOME/.hushlogin"
+exit "$update_status"

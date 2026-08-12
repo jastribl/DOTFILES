@@ -11,14 +11,8 @@ printf 'facebook.devserver' > update-scripts/cache/prefs/ssh/config.local.pref
 printf 'devserver' > update-scripts/cache/prefs/vimrc-plugins.vim.pref
 printf 'facebook' > update-scripts/cache/prefs/vimrc-pre-local.vim.pref
 
-if sed '9!d'  update.sh | grep -q "Update script requires that an ssh key as been generated and added to Github"; then
-    if sed '10!d'  update.sh | grep -q "exit 1"; then
-        sed -i '10d' update.sh
-    fi
-fi
-
 # Run Update
-./update.sh
+./update.sh -s
 
 # Change to work dir
 source /etc/ondemand-whoami

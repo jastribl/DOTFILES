@@ -18,8 +18,15 @@ function __function_exists {
 
 if __currently_in_bash; then
     # add bash completion if exists
-    [[ `which brew > /dev/null 2>&1` ]] && [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-    [[ `which brew > /dev/null 2>&1` ]] && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ] && . "$(brew --prefix)/share/bash-completion/bash_completion"
+    if command -v brew > /dev/null 2>&1; then
+        brew_prefix=$(brew --prefix)
+        if [[ -r "$brew_prefix/etc/profile.d/bash_completion.sh" ]]; then
+            . "$brew_prefix/etc/profile.d/bash_completion.sh"
+        elif [[ -r "$brew_prefix/share/bash-completion/bash_completion" ]]; then
+            . "$brew_prefix/share/bash-completion/bash_completion"
+        fi
+        unset brew_prefix
+    fi
 
     # bash features
     shopt -s autocd
