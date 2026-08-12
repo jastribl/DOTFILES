@@ -25,10 +25,11 @@ function work() {
     open /Applications/Google\ Chrome.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Messenger.app/
     # open /Users/justinstribling/Applications/Chrome\ Apps.localized/Workchat.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Google\ Chat.app/
+    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Google\ Chat\ 1.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/Calendar.app/
     open /Users/justinstribling/Applications/Chrome\ Apps.localized/WorkMail.app/
-    open /Applications/VS\ Code\ \@\ FB.app/
+    # open /Applications/VS\ Code\ \@\ FB.app/
+    open /Applications/Agent\ Conductor\ Nightly.app/
     open /Applications/Sublime\ Text.app/
     # open /Applications/Microsoft\ Outlook.app/
     open /Applications/iTerm.app/
@@ -38,3 +39,21 @@ function work() {
     dev connect
 }
 alias vpn_disconnect='/opt/cisco/anyconnect/bin/vpn disconnect'
+
+function dupdate() {
+    if [[ "$1" == "nowip" ]]; then
+        if [[ $(hg sl | grep -A1 "@\s*" | tail -1) == *"[WIP]"* ]]; then
+            echo "Not updating diff since it contains [WIP]"
+            return
+        fi  
+    fi  
+    jf submit --draft
+}
+
+function dupdate_all() {
+    hg ssl | grep "\(local changes\)" | grep -v "Landing" | grep -o " [o@x]  \w* " | grep -o "  [a-zA-Z0-9]*" | xargs jf submit --draft
+}
+
+function dupdate_stack() {
+    sl log -r 'draftbranch(.)' -T '{node|short} ' --reason "dupdate_stack - sl help revsets" | xargs jf submit --draft
+}
