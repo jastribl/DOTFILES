@@ -39,7 +39,7 @@ if __currently_in_bash; then
 fi
 
 # remap ctrl-w to behave like vim
-if [[ $- == *i* ]]; then
+if [[ $- == *i* ]] && [ -t 0 ]; then
     stty werase undef
     bind '"\C-w": backward-kill-word'
 fi
