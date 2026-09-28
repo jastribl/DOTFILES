@@ -34,6 +34,7 @@ function work() {
     # open /Applications/Microsoft\ Outlook.app/
     open /Applications/iTerm.app/
     open /Applications/Spotify.app/
+    open /Applications/Muse.app/
     # ~/.work-mosh.sh devsmall $yubikey
     # mosh -6 devsmall
     # dev connect
