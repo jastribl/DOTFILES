@@ -5,13 +5,13 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>718 666 620 398 0 0 2056 1285 </string>
 	<key>NSWindow Frame SUUpdateAlert2</key>
-	<string>753 669 550 398 0 0 2056 1290 </string>
+	<string>750 669 555 398 0 0 2056 1290 </string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2026-08-26T23:18:28Z</date>
+	<date>2026-11-02T08:04:09Z</date>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>2025486486</integer>
 	<key>allowAnyShortcut</key>
@@ -37,7 +37,7 @@
 	<key>larger</key>
 	<dict/>
 	<key>lastVersion</key>
-	<string>106</string>
+	<string>111</string>
 	<key>launchOnLogin</key>
 	<true/>
 	<key>maximize</key>

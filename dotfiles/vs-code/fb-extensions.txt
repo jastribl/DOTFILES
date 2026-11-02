@@ -68,7 +68,6 @@ nuclide.intl-fbt
 nuclide.ios-component-kit
 nuclide.java
 nuclide.jest-e2e-ui
-nuclide.jest-e2e-workspace
 nuclide.katsu
 nuclide.local-utils
 nuclide.loglens
@@ -83,15 +82,11 @@ nuclide.ocaml
 nuclide.omni-search
 nuclide.omni-search-ui
 nuclide.perf-mode
-nuclide.phabricator
 nuclide.privacy-infra-sidekick
 nuclide.pyls
 nuclide.reality-labs-ui
 nuclide.relay-lsp
-nuclide.remote-connections
-nuclide.sev-notifier
 nuclide.swift
-nuclide.test-runner
 nuclide.testpilot
 nuclide.thrift
 nuclide.thrift-basics
