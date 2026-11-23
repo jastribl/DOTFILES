@@ -34,12 +34,10 @@
             ]
         }
     ],
-    "zenMode.hideTabs": false,
     "editor.minimap.enabled": false,
     "vim.useSystemClipboard": true,
     "vim.whichwrap": "<,>,h,l,[,]",
     "workbench.editor.enablePreview": false,
-    "workbench.activityBar.visible": true,
     "workbench.editor.tabSizing": "shrink",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
