@@ -126,10 +126,10 @@ alias gbgone='git branch -vv | grep ": gone"'
 # make auto complete work with aliases
 
 if __currently_in_bash && ! __function_exists __git_complete; then
-    [ -f /usr/share/bash-completion/completions/git ] && . /usr/share/bash-completion/completions/git
+    [ -f $(brew --prefix)/share/bash-completion/completions/git ] && . $(brew --prefix)/share/bash-completion/completions/git
 fi
 if __function_exists __git_complete; then
-    __git_complete g   _git
+    __git_complete g   __git_main
     __git_complete gst _git_status
     __git_complete ga  _git_add
     __git_complete gap _git_add
