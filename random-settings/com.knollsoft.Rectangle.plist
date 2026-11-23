@@ -2,42 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>718 666 620 398 0 0 2056 1285 </string>
-	<key>NSWindow Frame SUUpdateAlert2</key>
-	<string>750 669 555 398 0 0 2056 1290 </string>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2026-11-02T08:04:09Z</date>
-	<key>SUUpdateGroupIdentifier</key>
-	<integer>2025486486</integer>
 	<key>allowAnyShortcut</key>
 	<true/>
 	<key>alternateDefaultShortcuts</key>
 	<false/>
 	<key>bottomHalf</key>
 	<dict/>
-	<key>bottomLeft</key>
-	<dict/>
 	<key>bottomRight</key>
-	<dict/>
+	<dict>
+		<key>keyCode</key>
+		<integer>123</integer>
+		<key>modifierFlags</key>
+		<integer>1441792</integer>
+	</dict>
 	<key>center</key>
 	<dict/>
-	<key>cycleSizesIsChanged</key>
-	<true/>
-	<key>doubleClickTitleBar</key>
-	<integer>0</integer>
-	<key>hideMenubarIcon</key>
-	<false/>
+	<key>installVersion</key>
+	<string>112</string>
 	<key>internalTilingNotified</key>
 	<true/>
+	<key>landscapeSnapAreas</key>
+	<string>[5,{"compound":-3},4,{"compound":-2},1,{"action":15},8,{"action":14},6,{"action":13},3,{"action":16},7,{"compound":-4},2,{"action":2}]</string>
 	<key>larger</key>
 	<dict/>
 	<key>lastVersion</key>
-	<string>111</string>
+	<string>112</string>
 	<key>launchOnLogin</key>
 	<true/>
 	<key>maximize</key>
@@ -49,33 +42,15 @@
 	</dict>
 	<key>maximizeHeight</key>
 	<dict/>
-	<key>reflowTodo</key>
-	<dict>
-		<key>keyCode</key>
-		<integer>45</integer>
-		<key>modifierFlags</key>
-		<integer>786432</integer>
-	</dict>
 	<key>restore</key>
 	<dict/>
-	<key>selectedCycleSizes</key>
-	<integer>7</integer>
 	<key>smaller</key>
 	<dict/>
 	<key>subsequentExecutionMode</key>
 	<integer>0</integer>
-	<key>toggleTodo</key>
-	<dict>
-		<key>keyCode</key>
-		<integer>11</integer>
-		<key>modifierFlags</key>
-		<integer>786432</integer>
-	</dict>
 	<key>topHalf</key>
 	<dict/>
-	<key>topLeft</key>
-	<dict/>
-	<key>topRight</key>
-	<dict/>
+	<key>wasWelcomeDisplayed</key>
+	<true/>
 </dict>
 </plist>
