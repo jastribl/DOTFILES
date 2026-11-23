@@ -7,8 +7,8 @@ source ~/.bashrc.plugables/osx/bashrc
 # . ~/.fbchef/environment
 # END: Block added by chefh
 
-export FBANDROID_DIR=/Users/justinstribling/fbsource/fbandroid
-alias quicklog_update=/Users/justinstribling/fbsource/fbandroid/scripts/quicklog/quicklog_update.sh
+export FBANDROID_DIR=~/fbsource/fbandroid
+alias quicklog_update=~/fbsource/fbandroid/scripts/quicklog/quicklog_update.sh
 alias qlu=quicklog_update
 
 # added by setup_fb4a.sh
@@ -23,13 +23,13 @@ function work() {
     # read -p "Press your YUBIKEY: " yubikey
     # printf "$yubikey" | /opt/cisco/anyconnect/bin/vpn -s connect "Americas East";
     open /Applications/Google\ Chrome.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Messenger.app/
-    # open /Users/justinstribling/Applications/Chrome\ Apps.localized/Workchat.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Google\ Chat\ 1.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Calendar.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/WorkMail.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Metamate\ 3.app/
-    open /Users/justinstribling/Applications/Chrome\ Apps.localized/Slack.app/
+    open ~/Applications/Chrome\ Apps.localized/Messenger.app/
+    # open ~/Applications/Chrome\ Apps.localized/Workchat.app/
+    open ~/Applications/Chrome\ Apps.localized/Google\ Chat\ 1.app/
+    open ~/Applications/Chrome\ Apps.localized/Calendar.app/
+    open ~/Applications/Chrome\ Apps.localized/WorkMail.app/
+    open ~/Applications/Chrome\ Apps.localized/Metamate\ 3.app/
+    open ~/Applications/Chrome\ Apps.localized/Slack.app/
     # open /Applications/VS\ Code\ \@\ FB.app/
     # open /Applications/Agent\ Conductor\ Nightly.app/
     open /Applications/Sublime\ Text.app/
