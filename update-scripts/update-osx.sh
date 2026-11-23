@@ -32,7 +32,6 @@ defaults write -g com.apple.swipescrolldirection -bool false                # Re
 # Save come preferences for personal machine
 if ! which fbclone > /dev/null; then
     defaults read /Library/Preferences/com.apple.TimeMachine.plist SkipPaths > random-settings/time-machine-excludes.txt
-    defaults read com.piriform.ccleaner CookiesToKeep > random-settings/cookies-to-keep.txt
 fi
 
 if ! which brew > /dev/null; then

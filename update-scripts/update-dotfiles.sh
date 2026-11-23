@@ -88,7 +88,6 @@ register_local_file vimrc-plugins.vim "$HOME/.vim/plugins.vim"
 if [[ "$OS" == "Darwin" ]]; then
     register_local_file brew-list "$UPDATE_SCRIPTS_DIR/brew/brew-list"
     register_local_file cask-list "$UPDATE_SCRIPTS_DIR/brew/cask-list"
-    register_local_file cookies-to-keep.local "random-settings/cookies-to-keep.txt"
     register_local_file time-machine-excludes.local "random-settings/time-machine-excludes.txt"
 
     if which fbclone > /dev/null; then
