@@ -54,12 +54,13 @@ if [[ "$SHELL" != $(brew --prefix)/bin/bash ]]; then
 fi
 
 # Link Sublime settings
-sublime_dest_dir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
-if [[ $(uname -m) == 'arm64' ]]; then
-    sublime_dest_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
+sublime_dest_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
+if [[ $(uname -m) != 'arm64' ]]; then
+    sublime_dest_dir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 fi
 rm -rf "$sublime_dest_dir"
-ln -f -s $PWD/Sublime/User "$sublime_dest_dir"
+mkdir -p "$(dirname "$sublime_dest_dir")"
+ln -f -s "$PWD/Sublime/User" "$sublime_dest_dir"
 
 # Link Rectangle settings (after converting it to readable)
 plutil -convert xml1 $HOME/Library/Preferences/com.knollsoft.Rectangle.plist
