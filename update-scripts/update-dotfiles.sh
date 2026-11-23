@@ -91,11 +91,11 @@ if [[ "$OS" == "Darwin" ]]; then
     register_local_file time-machine-excludes.local "random-settings/time-machine-excludes.txt"
 
     if which fbclone > /dev/null; then
-        register_global_file vs-code/settings.json "/Users/justinstribling/Library/Application Support/VS Code @ FB/User/settings.json"
-        register_global_file vs-code/keybindings.json "/Users/justinstribling/Library/Application Support/VS Code @ FB/User/keybindings.json"
+        register_global_file vs-code/settings.json "$HOME/Library/Application Support/VS Code @ FB/User/settings.json"
+        register_global_file vs-code/keybindings.json "$HOME/Library/Application Support/VS Code @ FB/User/keybindings.json"
     else
-        register_global_file vs-code-personal/settings.json "/Users/justinstribling/Library/Application Support/Code/User/settings.json"
-        register_global_file vs-code-personal/keybindings.json "/Users/justinstribling/Library/Application Support/Code/User/keybindings.json"
+        register_global_file vs-code-personal/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+        register_global_file vs-code-personal/keybindings.json "$HOME/Library/Application Support/Code/User/keybindings.json"
     fi
 fi
 
