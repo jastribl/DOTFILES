@@ -227,4 +227,4 @@ function weather() {
 if [[ -e ~/.bashrc.local ]]; then
     source ~/.bashrc.local
 fi
-alias python=/opt/homebrew/bin/python3
+alias python=$(brew --prefix)/bin/python3
