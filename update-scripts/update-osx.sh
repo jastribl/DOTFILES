@@ -61,11 +61,6 @@ fi
 rm -rf "$sublime_dest_dir"
 ln -f -s $PWD/Sublime/User "$sublime_dest_dir"
 
-# Link Spectacle settings
-spectable_dest_file="$HOME/Library/Application Support/Spectacle/Shortcuts.json"
-rm "$spectable_dest_file"
-ln -f -s $PWD/random-settings/spectacle-shortcuts.json "$spectable_dest_file"
-
 # Link Rectangle settings (after converting it to readable)
 plutil -convert xml1 $HOME/Library/Preferences/com.knollsoft.Rectangle.plist
 cp $HOME/Library/Preferences/com.knollsoft.Rectangle.plist $PWD/random-settings/com.knollsoft.Rectangle.plist
