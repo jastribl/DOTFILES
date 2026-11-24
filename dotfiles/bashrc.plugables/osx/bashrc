@@ -3,7 +3,14 @@ alias find_ds_store_files="find . -name '.DS_Store' -type f"
 alias remove_ds_store_files="sudo find . -name '.DS_Store' -type f -delete"
 
 # my trusty brew hacks
-alias brew_dep_list='brew list | while read cask; do echo -en "\e[33m $cask \e[31m"; brew deps $cask | awk '"'"'{printf(" %s ", $0)}'"'"'; echo ""; done'
+brew_dep_list() {
+    local formulae
+    formulae=$(brew list --formula) || return $?
+    [[ -n "$formulae" ]] || return 0
+
+    brew deps --for-each --formula $formulae |
+        awk -F': ' '{ printf "\033[33m %s \033[31m %s\n", $1, $2 }'
+}
 
 alias copy_location='pwd | pbcopy'
 alias cd_clipboard='cd `pbpaste`'
