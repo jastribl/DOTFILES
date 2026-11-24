@@ -8,6 +8,12 @@ else
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+# Build the personal spell dictionary from its editable word list if needed.
+spellfile="$HOME/.vim/spell/en.utf-8.add"
+if [[ -f "$spellfile" && ! -f "$spellfile.spl" ]]; then
+    vim -Nu NONE -n -es -c "mkspell! $spellfile" -c 'qa!'
+fi
+
 # Install missing plugins
 vim +PlugInstall +qall
 

@@ -1,4 +1,5 @@
 .netrwhist
+spell/*.add.spl
 swapfiles/*
 plugged/
 vimrc-pre-local.vim

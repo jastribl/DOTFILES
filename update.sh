@@ -93,8 +93,13 @@ function run_update_script() {
     local update_script_to_run=$1
     local cache_file="$UPDATE_CACHE_DIR/$update_script_to_run.last_run"
     local child_status
+    local missing_vim_spellfile=0
 
-    if [[ $force != 1 && -e "$cache_file" ]]; then
+    if [[ "$update_script_to_run" == "update-vim.sh" && ! -f "$HOME/.vim/spell/en.utf-8.add.spl" ]]; then
+        missing_vim_spellfile=1
+    fi
+
+    if [[ $force != 1 && $missing_vim_spellfile != 1 && -e "$cache_file" ]]; then
         local last_run_time
         local delay_seconds
         local must_be_after
