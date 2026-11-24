@@ -29,20 +29,20 @@ if __currently_in_bash; then
     fi
 
     # bash features
-    shopt -s autocd
-    shopt -s cdable_vars
-    shopt -s checkjobs
-    shopt -s checkwinsize
-    shopt -s direxpand
-    shopt -s dirspell
-    shopt -s dotglob
-    shopt -s expand_aliases
-    shopt -s extglob
-    shopt -s globstar
-    shopt -s hostcomplete
-    shopt -s histappend
-    shopt -s cmdhist
-    shopt -s lithist
+    shopt -s autocd          # Enter a directory by typing its name.
+    shopt -s cdable_vars     # Let cd use a variable's value as a directory path.
+    shopt -s checkjobs       # Show running or stopped jobs when exiting the shell.
+    shopt -s checkwinsize    # Refresh LINES and COLUMNS after external commands.
+    shopt -s direxpand       # Expand directory names in tab-completion results.
+    shopt -s dirspell        # Correct minor directory-name typos during completion.
+    shopt -s dotglob         # Include hidden files in filename globs.
+    shopt -s expand_aliases  # Expand aliases in non-interactive Bash too.
+    shopt -s extglob         # Enable extended glob patterns such as +(pattern).
+    shopt -s globstar        # Let ** match files in nested directories.
+    shopt -s hostcomplete    # Complete hostnames after an @ during completion.
+    shopt -s histappend      # Append history on exit instead of replacing the history file.
+    shopt -s cmdhist         # Save a multi-line command as one history entry.
+    shopt -s lithist         # Preserve newlines in multi-line history entries where possible.
 fi
 
 # remap ctrl-w to behave like vim
