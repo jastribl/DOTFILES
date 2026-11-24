@@ -9,5 +9,5 @@ watch
 bash-completion@2
 cmake
 diff-so-fancy
-python@3.11
+python@3.15
 go
