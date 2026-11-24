@@ -23,8 +23,12 @@ alias cddownloads='cd_downloads'
 alias cdgo='cd_go'
 alias cdpictures='cd_pictures'
 
-# unsure what this does...
-PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+# Prefer Homebrew GNU sed when installed, using the active Homebrew prefix.
+gnu_sed_prefix=$(brew --prefix gnu-sed 2>/dev/null)
+if [[ -x "$gnu_sed_prefix/libexec/gnubin/sed" ]]; then
+    PATH="$gnu_sed_prefix/libexec/gnubin:$PATH"
+fi
+unset gnu_sed_prefix
 
 # Open man page as PDF
 function manpdf() {
