@@ -10,6 +10,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false             # Allow key p
 defaults write -g InitialKeyRepeat -int 20                         # Normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1                                 # Normal minimum is 2 (30 ms)
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false # Turn off double space period
+defaults write -g com.apple.keyboard.fnState -bool true            # Function keys inverse
 
 # Dock customization
 defaults write com.apple.dock autohide -bool true                 # Autohide dock
