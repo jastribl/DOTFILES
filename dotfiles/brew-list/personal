@@ -9,3 +9,5 @@ bash-completion@2
 cmake
 diff-so-fancy
 python@3.15
+node
+yarn
