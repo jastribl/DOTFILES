@@ -23,7 +23,7 @@ The first run may ask which profile to use for machine-specific settings. Select
 
 Profile variants are stored in directories under `dotfiles/`, including `bashrc.local/`, `gitconfig.local/`, `ssh/config.local/`, `brew-list/`, and `cask-list/`. The profile name represents the machine or context, such as `personal`, `facebook`, or `facebook.devserver`. OS-specific settings use `osx` and `linux` variants.
 
-On macOS, the selected Homebrew and cask inventory is copied to ignored runtime files under `update-scripts/brew/`. Edit the tracked profile in `dotfiles/brew-list/` or `dotfiles/cask-list/`; do not edit the generated runtime copy.
+On macOS, the selected Homebrew and cask inventories are symlinked into ignored runtime paths under `update-scripts/brew/`. Each symlink points to the selected tracked profile in `dotfiles/brew-list/` or `dotfiles/cask-list/`, so edits made through the runtime path update the profile.
 
 ## Updating
 
