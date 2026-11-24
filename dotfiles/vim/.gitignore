@@ -1,4 +1,5 @@
 .netrwhist
+autoload/plug.vim
 spell/*.add.spl
 swapfiles/*
 plugged/

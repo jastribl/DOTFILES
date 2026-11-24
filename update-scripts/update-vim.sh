@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 
-# update vim plugin manager
-if which fbclone > /dev/null; then
-    env $(fwdproxy-config --format=sh curl) curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-else
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# install vim plugin manager if it is missing
+if [[ ! -f "$HOME/.vim/autoload/plug.vim" ]]; then
+    if which fbclone > /dev/null; then
+        env $(fwdproxy-config --format=sh curl) curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    else
+        curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    fi
 fi
 
 # Build the personal spell dictionary from its editable word list if needed.
