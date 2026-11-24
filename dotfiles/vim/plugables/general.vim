@@ -50,18 +50,6 @@ vnoremap A :EasyAlign
 Plug 'terryma/vim-multiple-cursors'
 let g:multi_cursor_exit_from_insert_mode = 0
 
-" A modern vim plugin for editing LaTeX files.
-Plug 'lervag/vimtex', {'for': ['tex']}
-let g:Tex_DefaultTargetFormat = 'pdf' " Change default target to pdf, if not dvi is used
-let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
-let g:vimtex_view_general_options = '-r -g @line @pdf @tex'
-let g:vimtex_echo_ignore_wait = 1
-let g:vimtex_compiler_latexmk = {'callback' : 0}
-let g:vimtex_imaps_leader = '~'
-" mapping F5 to build latex
-autocmd Filetype tex nnoremap <buffer> <F5> :w<CR>:VimtexView<CR>
-autocmd Filetype tex inoremap <buffer> <F5> <ESC>:w<CR>:VimtexView<CR>a
-
 " Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
 Plug 'bronson/vim-trailing-whitespace'
 " trim extra whitespaces at ends of lines
@@ -77,18 +65,6 @@ inoremap <silent> <C-l> <ESC> :TmuxNavigateRight<CR>
 
 " Search Dash.app from Vim
 Plug 'rizzatti/dash.vim', {'on': ['Dash']}
-
-" pandoc integration and utilities for vim
-Plug 'vim-pandoc/vim-pandoc', {'for': ['markdown']}
-autocmd Filetype markdown nnoremap <buffer> <F5> :w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>
-autocmd Filetype markdown inoremap <buffer> <F5> <ESC>:w<CR>:Pandoc pdf -V geometry:margin=1.00in --table-of-contents --number-sections<CR>a
-autocmd Filetype markdown nnoremap <buffer> <F6> :w<CR>:Pandoc pdf -V geometry:margin=1.00in<CR>
-autocmd Filetype markdown inoremap <buffer> <F6> <ESC>:w<CR>:Pandoc pdf -V geometry:margin=1.00in<CR>a
-
-
-" pandoc markdown syntax, to be installed alongside vim-pandoc
-Plug 'vim-pandoc/vim-pandoc-syntax', {'for': ['markdown']}
-let g:pandoc#modules#disabled = ['folding']
 
 " Vim motions on speed!
 Plug 'easymotion/vim-easymotion'

@@ -4,4 +4,6 @@ call plug#begin('~/.vim/plugged')
 
 source ~/.vim/plugables/general.vim
 
+source ~/.vim/plugables/document-tools.vim
+
 call plug#end()
